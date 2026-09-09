@@ -47,6 +47,382 @@
  display:none!important;
 }
 
+/* ==========================================================================
+   BORADEN APPLE / DELOITTE COMMERCIAL BRAND FILM THEATER
+   ========================================================================== */
+.brand-film[data-cinema-theater="true"] {
+  position: relative;
+  background: #060e17;
+  padding: 40px 0 60px;
+  overflow: hidden;
+}
+
+.brand-film[data-cinema-theater="true"] .apple-cinema-stage {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  background: #02060b;
+}
+
+/* Ambient Backlight Glow (Apple TV Style) */
+.apple-cinema-glow {
+  position: absolute;
+  inset: -30px;
+  background: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.25), rgba(16, 185, 129, 0.14) 45%, transparent 75%);
+  filter: blur(50px);
+  z-index: 1;
+  pointer-events: none;
+  animation: cinemaGlowPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes cinemaGlowPulse {
+  0% { opacity: 0.55; transform: scale(0.98); }
+  100% { opacity: 0.95; transform: scale(1.02); }
+}
+
+/* Apple Top Navigation Bar */
+.apple-film-header {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+}
+
+.apple-film-title-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.apple-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f8fafc;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+  animation: liveBlink 1.8s infinite;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.apple-film-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.apple-film-tech-specs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-spec-pill {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cinema-sound-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.cinema-sound-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.cinema-sound-toggle[aria-pressed="true"] {
+  background: #0284c7;
+  border-color: #38bdf8;
+  box-shadow: 0 0 16px rgba(2, 132, 199, 0.5);
+}
+
+/* Apple 5-Chapter Interactive Timeline Scrubber */
+.apple-film-chapters {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 0 36px;
+}
+
+.apple-chapter-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 6px 0;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.apple-chapter-tab:hover {
+  color: #f8fafc;
+}
+
+.apple-chapter-tab.is-active {
+  color: #ffffff;
+}
+
+.apple-chapter-tab .chapter-idx {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #38bdf8;
+}
+
+.apple-chapter-tab .chapter-name {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.apple-chapter-tab .chapter-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.apple-chapter-tab .chapter-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  border-radius: 999px;
+  box-shadow: 0 0 8px #38bdf8;
+  transition: width 0.1s linear;
+}
+
+/* Video Stage & Layering */
+.apple-cinema-stage .sector-film-video {
+  width: 100%;
+  height: clamp(580px, 80svh, 860px);
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.apple-cinema-stage .brand-film-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 14, 23, 0.7) 0%, rgba(6, 14, 23, 0.25) 28%, rgba(6, 14, 23, 0.5) 60%, rgba(6, 14, 23, 0.96) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Typography & Subtitles */
+.apple-cinema-stage .brand-film-caption {
+  position: absolute;
+  bottom: 105px;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  padding: 0 36px;
+  text-align: left;
+}
+
+.apple-cinema-stage .brand-film-message {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: clamp(32px, 4.2vw, 60px);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: #ffffff;
+  max-width: 26ch;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  margin-bottom: 22px;
+}
+
+.apple-cinema-stage .brand-film-message span {
+  display: inline-block;
+  animation: appleSubtitleFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes appleSubtitleFade {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Bottom Control Deck */
+.apple-control-deck {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.deck-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.apple-play-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: #fff;
+  padding: 7px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.apple-play-toggle:hover {
+  background: #0284c7;
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+.cinema-replay-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: #e2e8f0;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cinema-replay-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.cinema-timecode {
+  font-family: monospace, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.05em;
+}
+
+.deck-notice {
+  font-size: 11px;
+  color: #64748b;
+  margin: 0;
+}
+
+.sector-film-instruction {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* Service Deliverables Bullet List in Expertise Cards */
+.card-deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border-top: 1px dashed rgba(148, 163, 184, 0.25);
+  padding-top: 12px;
+}
+
+.card-deliverables-list li {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.35;
+}
+
+.deliv-bullet {
+  color: #d97706;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
 .opening-identity{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:16px 0;background:transparent!important;border:none!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background-image:none!important}
 .opening-mark-badge{display:none!important}
 .opening-title-group{display:flex;flex-direction:column;align-items:center;gap:8px}

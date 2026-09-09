@@ -508,4 +508,170 @@ export function initBoradenEarth() {
   }
 
   animate();
+  initAppleBrandFilm();
 }
+
+// ==========================================================================
+// BORADEN APPLE & DELOITTE COMMERCIAL FILM INTERACTIVE CONTROLLER
+// ==========================================================================
+export function initAppleBrandFilm() {
+  if (typeof document === 'undefined') return;
+  const video = document.getElementById('brand-film-video');
+  const stage = document.querySelector('.apple-cinema-stage');
+  if (!video || !stage) return;
+
+  const chapterTabs = document.querySelectorAll('.apple-chapter-tab');
+  const timeDisplay = document.getElementById('cinema-time-display');
+  const replayBtn = document.getElementById('cinema-replay');
+  const soundBtn = document.getElementById('cinema-sound-btn');
+
+  const chapters = [
+    { start: 0, end: 4 },
+    { start: 4, end: 8 },
+    { start: 8, end: 12 },
+    { start: 12, end: 16 },
+    { start: 16, end: 20 }
+  ];
+
+  function updateTimeline() {
+    const curTime = video.currentTime || 0;
+    const dur = Number.isFinite(video.duration) && video.duration > 0 ? video.duration : 20;
+
+    if (timeDisplay) {
+      const curM = String(Math.floor(curTime / 60)).padStart(2, '0');
+      const curS = String(Math.floor(curTime % 60)).padStart(2, '0');
+      const durM = String(Math.floor(dur / 60)).padStart(2, '0');
+      const durS = String(Math.floor(dur % 60)).padStart(2, '0');
+      timeDisplay.textContent = `${curM}:${curS} / ${durM}:${durS}`;
+    }
+
+    chapterTabs.forEach((tab, idx) => {
+      const ch = chapters[idx];
+      if (!ch) return;
+      const fill = tab.querySelector('.chapter-fill');
+      const isActive = curTime >= ch.start && (idx === chapters.length - 1 ? curTime <= ch.end + 0.5 : curTime < ch.end);
+
+      tab.classList.toggle('is-active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+
+      if (fill) {
+        if (curTime < ch.start) {
+          fill.style.width = '0%';
+        } else if (curTime >= ch.end) {
+          fill.style.width = '100%';
+        } else {
+          const progress = Math.min(100, Math.max(0, ((curTime - ch.start) / (ch.end - ch.start)) * 100));
+          fill.style.width = progress + '%';
+        }
+      }
+    });
+  }
+
+  video.addEventListener('timeupdate', updateTimeline);
+  video.addEventListener('loadedmetadata', updateTimeline);
+
+  chapterTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const targetTime = Number(tab.dataset.jumpTo || 0);
+      if (!video.src && video.dataset.src) {
+        video.src = video.dataset.src;
+      }
+      video.currentTime = targetTime;
+      video.play().catch(() => {});
+      updateTimeline();
+    });
+  });
+
+  if (replayBtn) {
+    replayBtn.addEventListener('click', () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+      updateTimeline();
+    });
+  }
+
+  let audioCtx = null;
+  let masterGain = null;
+  let synthNodes = [];
+  let isSoundActive = false;
+
+  function initAmbientSynth() {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return false;
+      audioCtx = new AudioContext();
+
+      masterGain = audioCtx.createGain();
+      masterGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(480, audioCtx.currentTime);
+      filter.Q.setValueAtTime(1.2, audioCtx.currentTime);
+
+      const lfo = audioCtx.createOscillator();
+      const lfoGain = audioCtx.createGain();
+      lfo.frequency.setValueAtTime(0.12, audioCtx.currentTime);
+      lfoGain.gain.setValueAtTime(140, audioCtx.currentTime);
+      lfo.connect(filter.frequency);
+      lfo.start();
+
+      const chordFreqs = [65.41, 130.81, 196.00, 293.66, 329.63];
+      chordFreqs.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const oscGain = audioCtx.createGain();
+        osc.type = i === 0 ? 'sine' : (i % 2 === 0 ? 'triangle' : 'sine');
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        osc.detune.setValueAtTime((i - 2) * 3.5, audioCtx.currentTime);
+
+        const volume = i === 0 ? 0.35 : 0.18 / (i + 1);
+        oscGain.gain.setValueAtTime(volume, audioCtx.currentTime);
+
+        osc.connect(oscGain);
+        oscGain.connect(filter);
+        osc.start();
+        synthNodes.push(osc);
+      });
+
+      filter.connect(masterGain);
+      masterGain.connect(audioCtx.destination);
+      return true;
+    } catch (e) {
+      console.warn('Web Audio Ambient Synth unavailable:', e);
+      return false;
+    }
+  }
+
+  if (soundBtn) {
+    soundBtn.addEventListener('click', () => {
+      if (!isSoundActive) {
+        if (!audioCtx) {
+          initAmbientSynth();
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        if (masterGain && audioCtx) {
+          masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+          masterGain.gain.setTargetAtTime(0.18, audioCtx.currentTime, 0.6);
+        }
+        isSoundActive = true;
+        soundBtn.setAttribute('aria-pressed', 'true');
+        soundBtn.innerHTML = '<span class="sound-icon">🔊</span><span class="sound-label">Atmosfer Ses: Açık</span>';
+        video.muted = false;
+      } else {
+        if (masterGain && audioCtx) {
+          masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+          masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.4);
+        }
+        isSoundActive = false;
+        soundBtn.setAttribute('aria-pressed', 'false');
+        soundBtn.innerHTML = '<span class="sound-icon">🔇</span><span class="sound-label">Atmosfer Ses</span>';
+        video.muted = true;
+      }
+    });
+  }
+
+  updateTimeline();
+}
+

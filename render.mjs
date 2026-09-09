@@ -190,7 +190,21 @@ function home(D){
     <div class="need-shortcuts" role="toolbar" aria-label="Hızlı ihtiyaç yönlendiricisi"><span class="need-title">Hızlı Odak:</span><div class="need-chips"><button type="button" class="need-chip is-active" data-need-index="-1">Tüm Uzmanlıklar</button><button type="button" class="need-chip" data-need-index="0">01 Vergi & Mevzuat</button><button type="button" class="need-chip" data-need-index="1">02 Bağımsız Denetim</button><button type="button" class="need-chip" data-need-index="2">03 Şirket Değerleme & M&A</button><button type="button" class="need-chip" data-need-index="3">04 Bordro & İK</button><button type="button" class="need-chip" data-need-index="4">05 Sistem & Raporlama</button><button type="button" class="need-chip" data-need-index="5">06 Akademi</button></div><div class="need-status-toast" id="need-status" aria-live="polite"><span class="need-status-dot"></span><span class="need-status-text">Tüm uzmanlık alanları aktif.</span></div></div>
     <div class="expertise-stage-wrap">
      <div class="expertise-puzzle">${puzzle({mode:'wide',id:'expertise'})}${puzzle({mode:'complete',id:'expertise-mobile'})}<p>Bir parçanın üzerine gelin. Uzmanlığı yakından keşfedin.</p></div>
-     <div class="expertise-grid">${D.groups.map((g,i)=>{const srvs=D.services.filter(s=>s.group===g.id);return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div>${continentWatermark(g.id)}<h3>${esc(g.name)}</h3>${continentMetaBadge(g.id)}<p class="expertise-card-desc">${esc(g.description)}</p><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;}).join('')}</div>
+     <div class="expertise-grid">${(()=>{
+      const deliverables={
+       vergi:['Tam Tasdik & Kurumlar Vergisi','KDV İadesi ve Mahsup Yönetimi','Transfer Fiyatlandırması'],
+       denetim:['KGK, SPK, BDDK Finansal Denetim','UFRS / TFRS / BOBİ FRS','İç Kontrol & Risk Güvencesi'],
+       danismanlik:['Şirket Değerleme (İNA / Çarpan)','M&A Birleşme & Devralma','Finansal Due Diligence'],
+       insan:['Bordrolama Dış Kaynak (BPO)','SGK İstihdam & Prim Teşviki','İş Hukuku Uyum Denetimi'],
+       sistem:['ERP & Muhasebe Entegrasyonu','Yönetici BI Raporlama','Finansal Süreç Otomasyonu'],
+       akademi:['Mali İşler & Yönetici Eğitimi','Güncel Vergi Mevzuatı','UFRS Tablo Analizi']
+      };
+      return D.groups.map((g,i)=>{
+       const srvs=D.services.filter(s=>s.group===g.id);
+       const delivs=deliverables[g.id]||[];
+       return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div>${continentWatermark(g.id)}<h3>${esc(g.name)}</h3>${continentMetaBadge(g.id)}<p class="expertise-card-desc">${esc(g.description)}</p><ul class="card-deliverables-list">${delivs.map(d=>`<li><span class="deliv-bullet">✦</span> ${esc(d)}</li>`).join('')}</ul><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;
+      }).join('');
+     })()}</div>
     </div>
    </section>
   </div>
@@ -316,10 +330,55 @@ function homePerspectives(D){
 }
 function brandFilm(){
  const captions=[[0,'Farklı ihtiyaçlar. Birbirini tamamlayan uzmanlıklar.'],[4,'İşinize yakından bakıyoruz.'],[8,'Büyük resmi birlikte görüyoruz.'],[12,'Parçadan bütüne.'],[16,'Birlikte, Boraden.']];
- return `<section class="sector-film brand-film" id="turkiye-is-dunyasi" aria-labelledby="brand-film-title"><div class="sector-film-stage">
+ return `<section class="sector-film brand-film" id="turkiye-is-dunyasi" data-cinema-theater="true" aria-labelledby="brand-film-title"><div class="sector-film-stage apple-cinema-stage">
  <h2 id="brand-film-title" class="sr-only">Türkiye iş dünyasına bir bakış</h2>
  <img class="sector-film-poster" src="/assets/boraden-turkiye-business.jpg" alt="" width="1280" height="720" loading="lazy">
  <video id="brand-film-video" class="sector-film-video" data-section-video data-video-mode="auto" data-src="/assets/boraden-turkiye-business.mp4" poster="/assets/boraden-turkiye-business.jpg" muted playsinline loop preload="none" aria-label="Türkiye'de şehir, üretim, lojistik ve iş ortaklığını gösteren temsili film"></video><div class="brand-film-shade"></div>
+ <div class="apple-cinema-glow" aria-hidden="true"></div>
+
+ <div class="apple-film-header wrap">
+  <div class="apple-film-title-block">
+   <span class="apple-live-tag"><span class="live-dot"></span>BORADEN MARKA FİLMİ</span>
+   <span class="apple-film-sub">2026 STRATEJİK VİZYON</span>
+  </div>
+  <div class="apple-film-tech-specs">
+   <span class="tech-spec-pill">4K ULTRA HD</span>
+   <span class="tech-spec-pill">SİNEMATİK ANLATIM</span>
+   <button type="button" class="cinema-sound-toggle" id="cinema-sound-btn" aria-label="Atmosfer sesini aç" aria-pressed="false">
+    <span class="sound-icon">🔇</span>
+    <span class="sound-label">Atmosfer Ses</span>
+   </button>
+  </div>
+ </div>
+
+ <div class="apple-film-chapters wrap" role="tablist" aria-label="Film Bölümleri">
+  <button type="button" class="apple-chapter-tab is-active" data-jump-to="0" role="tab" aria-selected="true">
+   <span class="chapter-idx">01</span>
+   <span class="chapter-name">Vizyon &amp; Karmaşıklık</span>
+   <span class="chapter-track"><span class="chapter-fill"></span></span>
+  </button>
+  <button type="button" class="apple-chapter-tab" data-jump-to="4" role="tab" aria-selected="false">
+   <span class="chapter-idx">02</span>
+   <span class="chapter-name">İşinize Yakından</span>
+   <span class="chapter-track"><span class="chapter-fill"></span></span>
+  </button>
+  <button type="button" class="apple-chapter-tab" data-jump-to="8" role="tab" aria-selected="false">
+   <span class="chapter-idx">03</span>
+   <span class="chapter-name">6 Stratejik Disiplin</span>
+   <span class="chapter-track"><span class="chapter-fill"></span></span>
+  </button>
+  <button type="button" class="apple-chapter-tab" data-jump-to="12" role="tab" aria-selected="false">
+   <span class="chapter-idx">04</span>
+   <span class="chapter-name">Parçadan Bütüne</span>
+   <span class="chapter-track"><span class="chapter-fill"></span></span>
+  </button>
+  <button type="button" class="apple-chapter-tab" data-jump-to="16" role="tab" aria-selected="false">
+   <span class="chapter-idx">05</span>
+   <span class="chapter-name">Birlikte Boraden</span>
+   <span class="chapter-track"><span class="chapter-fill"></span></span>
+  </button>
+ </div>
+
  <div class="brand-film-caption wrap">
   <div class="deloitte-film-meta-header">
    <span class="deloitte-kicker"><span class="kicker-green-dot"></span>DELOITTE STANDARTLARINDA GÜVENCE &bull; BORADEN FİLMİ</span>
@@ -336,7 +395,17 @@ function brandFilm(){
   </div>
   ${btn('Uzmanlıklarımızı keşfedin','#uzmanlik','text-link')}
  </div>
- <div class="sector-feature-bottom wrap"><p>Yapay zekâ ile üretilmiş temsili iş hayatı sahneleri</p><button type="button" data-video-toggle aria-controls="brand-film-video" aria-label="Videoyu durdur" aria-pressed="false" hidden>Videoyu durdur Ⅱ</button><span class="sector-film-instruction">FARKLI UZMANLIKLAR. AYNI BÜYÜK RESİM.</span></div><i class="sector-film-progress" aria-hidden="true"></i>
+
+ <div class="sector-feature-bottom wrap apple-control-deck">
+  <div class="deck-controls-left">
+   <button type="button" data-video-toggle aria-controls="brand-film-video" aria-label="Videoyu durdur" aria-pressed="false" class="apple-play-toggle">Videoyu durdur Ⅱ</button>
+   <button type="button" class="cinema-replay-btn" id="cinema-replay" aria-label="Baştan oynat" title="Baştan oynat">↺ Baştan</button>
+   <span class="cinema-timecode" id="cinema-time-display">00:00 / 00:20</span>
+  </div>
+  <p class="deck-notice">Yapay zekâ ile üretilmiş temsili iş hayatı sahneleri</p>
+  <span class="sector-film-instruction">FARKLI UZMANLIKLAR. AYNI BÜYÜK RESİM.</span>
+ </div>
+ <i class="sector-film-progress" aria-hidden="true"></i>
  </div></section>`;
 }
 function sectorFilm(){return `<section class="sector-film" id="sektorel-bakis" aria-label="Sektörel bakış"><div class="sector-film-stage">
