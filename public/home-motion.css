@@ -598,14 +598,18 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  100%{opacity:1;transform:scale(1.2)}
 }
 
-/* 3. 3D EARTH COSMIC HERO SECTION */
+/* 3. 3D EARTH COSMIC HERO SECTION (CENTER STAGE) */
 .space-earth-hero{
  position:relative;
- min-height:100vh;
- background:radial-gradient(circle at 50% 38%, #071526 0%, #02060e 65%, #010308 100%);
+ width:100%;
+ height:100vh;
+ min-height:680px;
+ background:#02060e;
+ background:radial-gradient(circle at 50% 50%, #06172d 0%, #02060e 70%, #010307 100%);
  color:#ffffff;
  display:flex;
  flex-direction:column;
+ align-items:center;
  justify-content:space-between;
  overflow:hidden;
  z-index:2;
@@ -613,207 +617,102 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .earth-canvas-container{
  position:absolute;
  inset:0;
+ width:100%;
+ height:100%;
  z-index:1;
  pointer-events:auto;
+ cursor:grab;
 }
-.space-hero-content{
+.earth-canvas-container:active{
+ cursor:grabbing;
+}
+.earth-canvas-container canvas{
+ display:block;
+ width:100%!important;
+ height:100%!important;
+}
+
+/* Minimalist, Clean, Non-Obstructive Top Overlay */
+.space-hero-minimal-overlay{
  position:relative;
  z-index:2;
- height:100%;
- min-height:calc(100vh - 84px);
+ margin-top:110px;
+ text-align:center;
+ pointer-events:none;
+ padding:0 20px;
  display:flex;
  flex-direction:column;
- justify-content:space-between;
- padding:40px 0 28px;
- pointer-events:none;
+ align-items:center;
 }
-.space-hero-lead{
- max-width:680px;
- pointer-events:auto;
-}
-.space-tag-pill{
+.space-minimal-kicker{
  display:inline-flex;
  align-items:center;
  gap:8px;
- padding:6px 14px;
+ padding:6px 16px;
  border-radius:9999px;
  background:rgba(255,255,255,0.06);
  border:1px solid rgba(255,255,255,0.12);
  font-size:11px;
  font-weight:750;
- letter-spacing:.12em;
+ letter-spacing:.14em;
  color:#38bdf8;
  text-transform:uppercase;
- backdrop-filter:blur(8px);
- margin-bottom:18px;
-}
-.tag-pulse{
- width:6px;
- height:6px;
- border-radius:50%;
- background:#22c55e;
- box-shadow:0 0 8px #22c55e;
-}
-.space-hero-title{
- font-family:Manrope,sans-serif;
- font-size:clamp(38px,4.6vw,72px);
- font-weight:700;
- letter-spacing:-.035em;
- line-height:1.12;
- color:#ffffff;
- margin-bottom:18px;
-}
-.space-hero-title em{
- font-family:Instrument,Georgia,serif;
- font-style:italic;
- color:#38bdf8;
- font-weight:400;
- margin-left:6px;
-}
-.space-hero-desc{
- font-size:clamp(14px,1.2vw,17px);
- line-height:1.8;
- color:#94a8bc;
- max-width:540px;
-}
-
-/* HERO TRUST METRIC GRID */
-.space-hero-trust-grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
- gap:12px;
- margin-top:28px;
- max-width:620px;
-}
-.trust-stat-box{
- background:rgba(255,255,255,0.04);
- border:1px solid rgba(255,255,255,0.08);
- border-radius:12px;
- padding:14px 16px;
  backdrop-filter:blur(10px);
- transition:all .25s ease;
+ -webkit-backdrop-filter:blur(10px);
+ margin-bottom:12px;
 }
-.trust-stat-box:hover{
- background:rgba(255,255,255,0.08);
- border-color:rgba(56,189,248,0.4);
- transform:translateY(-2px);
-}
-.trust-stat-num{
- font-size:20px;
+.space-minimal-title{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(32px, 4.4vw, 56px);
  font-weight:800;
- color:#38bdf8;
- display:block;
+ letter-spacing:-.03em;
  line-height:1.1;
-}
-.trust-stat-title{
- font-size:12px;
- font-weight:700;
  color:#ffffff;
- margin-top:4px;
- display:block;
+ text-shadow:0 4px 24px rgba(0,0,0,0.65);
+ margin-bottom:6px;
 }
-.trust-stat-sub{
- font-size:10px;
- color:#94a3b8;
- margin-top:2px;
- display:block;
- line-height:1.4;
-}
-
-/* FLOATING EARTH HUD CARD */
-.earth-hud-card{
- position:absolute;
- right:0;
- bottom:80px;
- width:360px;
- max-width:90vw;
- background:rgba(5, 15, 28, 0.85);
- border:1px solid rgba(56, 189, 248, 0.3);
- border-radius:12px;
- padding:22px 24px;
- backdrop-filter:blur(24px) saturate(180%);
- -webkit-backdrop-filter:blur(24px) saturate(180%);
- box-shadow:0 24px 60px rgba(0,0,0,0.6);
- opacity:1;
- transform:translateY(0);
- pointer-events:auto;
-}
-.hud-accent-bar{
- position:absolute;
- top:0;
- left:0;
- right:0;
- height:3px;
- background:linear-gradient(90deg,#0284c7,#22c55e,#ff4a36);
- border-radius:12px 12px 0 0;
-}
-.hud-kicker{
- font-size:9.5px;
- font-weight:750;
+.space-minimal-sub{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(12px, 1.2vw, 15px);
+ font-weight:700;
  letter-spacing:.14em;
  text-transform:uppercase;
- color:#38bdf8;
-}
-#hud-continent-title{
- font-family:Manrope,sans-serif;
- font-size:17px;
- font-weight:700;
- letter-spacing:-.01em;
- color:#ffffff;
- margin:6px 0 10px;
-}
-.hud-service-title{
- font-size:13px;
- color:#9cb9d0;
- line-height:1.6;
- margin-bottom:14px;
-}
-.hud-bottom{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding-top:12px;
- border-top:1px solid rgba(255,255,255,0.08);
-}
-.hud-badge{
- font-size:10px;
- font-weight:650;
- background:rgba(255,255,255,0.08);
- color:#cbd5e1;
- padding:3px 8px;
- border-radius:4px;
-}
-.hud-cta{
- font-size:11.5px;
- font-weight:700;
- color:#e2b153;
- text-decoration:none;
- transition:color .2s;
-}
-.hud-cta:hover{
- color:#ffffff;
+ color:#94a3b8;
+ text-shadow:0 2px 12px rgba(0,0,0,0.65);
 }
 
-/* SCROLL DOWN INDICATOR */
-.space-scroll-down{
+/* Bottom Scroll Hint */
+.space-hero-bottom-hint{
+ position:relative;
+ z-index:2;
+ margin-bottom:34px;
  pointer-events:auto;
+}
+.space-scroll-hint{
  display:inline-flex;
  align-items:center;
  gap:10px;
  font-size:11px;
- font-weight:700;
- letter-spacing:.12em;
- color:#88a8c2;
+ font-weight:750;
+ letter-spacing:.14em;
+ color:#94a3b8;
  text-decoration:none;
- margin-top:20px;
- align-self:center;
- transition:color .2s;
+ padding:8px 18px;
+ border-radius:9999px;
+ background:rgba(255,255,255,0.05);
+ border:1px solid rgba(255,255,255,0.1);
+ backdrop-filter:blur(10px);
+ -webkit-backdrop-filter:blur(10px);
+ transition:all .25s ease;
 }
-.space-scroll-down:hover{
+.space-scroll-hint:hover{
  color:#ffffff;
+ background:rgba(255,255,255,0.12);
+ border-color:rgba(255,255,255,0.25);
+ transform:translateY(-2px);
 }
-.scroll-down-arrow{
- font-size:14px;
+.scroll-arrow{
+ font-size:13px;
  animation:scrollBounce 1.8s infinite ease-in-out;
 }
 @keyframes scrollBounce{

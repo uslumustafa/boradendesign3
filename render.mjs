@@ -103,58 +103,21 @@ function home(D){
  const featured=D.publications.blog.filter(published).slice(0,3);
  return `
  <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden 3D Dünya ve Bağımsız Denetim">
-  <div class="stars-backdrop"></div>
   <div id="earth-canvas-container" class="earth-canvas-container"></div>
   
-  <div class="space-hero-content wrap">
-   <div class="space-hero-lead">
-    <div class="space-tag-pill">
-     <span class="tag-pulse"></span>
-     <span>1993'TEN BUGÜNE &bull; ANKARA &bull; İSTANBUL</span>
-    </div>
-    <h2 class="space-hero-title">Türkiye'nin Güven Üssü.<br><em>Küresel Standartta Bağımsız Denetim.</em></h2>
-    <p class="space-hero-desc">Kamu Gözetimi Kurumu (KGK), SPK ve BDDK yetkili 50 kişilik uzman kadromuzla; bağımsız denetim, tam tasdik, finansal raporlama ve kurumsal danışmanlıkta 33 yıldır şirketlerin güvenilir çözüm ortağıyız.</p>
-    
-    <div class="space-hero-trust-grid">
-     <div class="trust-stat-box">
-      <span class="trust-stat-num">33+ YIL</span>
-      <span class="trust-stat-title">Kurumsal Miras</span>
-      <span class="trust-stat-sub">1993'ten bugüne kesintisiz güven</span>
-     </div>
-     <div class="trust-stat-box">
-      <span class="trust-stat-num">KGK • SPK</span>
-      <span class="trust-stat-title">Resmî Denetim Yetkisi</span>
-      <span class="trust-stat-sub">BDDK lisanslı bağımsız denetçi</span>
-     </div>
-     <div class="trust-stat-box">
-      <span class="trust-stat-num">50+ UZMAN</span>
-      <span class="trust-stat-title">Deneyimli Kadro</span>
-      <span class="trust-stat-sub">YMM, SMMM & denetçi ekibi</span>
-     </div>
-     <div class="trust-stat-box">
-      <span class="trust-stat-num">47 ÇÖZÜM</span>
-      <span class="trust-stat-title">Bütünleşik Hizmet</span>
-      <span class="trust-stat-sub">6 temel sektörel uzmanlık</span>
-     </div>
-    </div>
+  <div class="space-hero-minimal-overlay">
+   <div class="space-minimal-kicker">
+    <span class="tag-pulse"></span>
+    <span>1993'TEN BUGÜNE &bull; ANKARA &bull; İSTANBUL</span>
    </div>
+   <h1 class="space-minimal-title">Türkiye'nin Güven Üssü.</h1>
+   <p class="space-minimal-sub">Bağımsız Denetim ve Danışmanlık A.Ş.</p>
+  </div>
 
-   <div id="earth-hud-card" class="earth-hud-card" aria-live="polite">
-    <div class="hud-accent-bar"></div>
-    <div class="hud-top">
-     <span class="hud-kicker">GENEL MERKEZ</span>
-     <h4 id="hud-continent-title">BORADEN • TÜRKİYE</h4>
-    </div>
-    <p id="hud-service-name" class="hud-service-title">Bağımsız Denetim ve Yeminli Mali Müşavirlik</p>
-    <div class="hud-bottom">
-     <span id="hud-service-tag" class="hud-badge">KGK, SPK, BDDK Yetkili</span>
-     <a href="/hizmetler/" class="hud-cta">Hizmetleri Keşfedin &rarr;</a>
-    </div>
-   </div>
-
-   <a class="space-scroll-down" href="#deloitte-content-sheet" aria-label="Kurumsal çözümlere kaydırın">
-    <span>AŞAĞI KAYDIRIN &bull; DELOITTE DÜZEYİ KURUMSAL ÇÖZÜMLER</span>
-    <span class="scroll-down-arrow">&darr;</span>
+  <div class="space-hero-bottom-hint">
+   <a class="space-scroll-hint" href="#deloitte-content-sheet" aria-label="Aşağı kaydırın">
+    <span>KEŞFETMEK İÇİN AŞAĞI KAYDIRIN</span>
+    <span class="scroll-arrow">&darr;</span>
    </a>
   </div>
  </section>
