@@ -54,6 +54,7 @@ if(header){
   const locked=atTopEdge||overHeader||header.contains(document.activeElement)||!!header.querySelector('details[open]')||!!dialog?.open;
   state=headerScrollState(state,y,locked);
   header.classList.toggle('is-hidden',state.hidden);
+  header.classList.toggle('is-scrolled',y>80);
  }
  function scheduleHeader(){if(!frame)frame=requestAnimationFrame(updateHeader);}
  window.addEventListener('scroll',scheduleHeader,{passive:true});

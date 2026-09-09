@@ -337,11 +337,28 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 
 /* 2. NAVBAR REFINEMENT (3-COLUMN CENTER LOGO & PILL CTA) */
 .boraden-navbar{
- background:rgba(2, 6, 14, 0.72)!important;
+/* 2. THREE-COLUMN HEADER NAVBAR ARCHITECTURE */
+.boraden-navbar{
+ position:fixed;
+ top:0;
+ left:0;
+ right:0;
+ z-index:100;
+ transition:background .3s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease;
+ background:rgba(2, 6, 14, 0.78)!important;
  backdrop-filter:blur(24px) saturate(180%)!important;
  -webkit-backdrop-filter:blur(24px) saturate(180%)!important;
  border-bottom:1px solid rgba(255,255,255,0.08)!important;
  color:#e2e8f0;
+}
+/* White Deloitte Scrolled Navbar State */
+.boraden-navbar.is-scrolled, body:not(.home) .boraden-navbar{
+ background:rgba(255, 255, 255, 0.96)!important;
+ backdrop-filter:blur(24px) saturate(180%)!important;
+ -webkit-backdrop-filter:blur(24px) saturate(180%)!important;
+ border-bottom:1px solid rgba(15, 23, 42, 0.08)!important;
+ box-shadow:0 4px 20px rgba(0,0,0,0.04)!important;
+ color:#0f172a;
 }
 .boraden-navbar .header-inner{
  display:flex;
@@ -368,6 +385,12 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .desktop-nav-left a:hover{
  color:#ffffff;
 }
+.is-scrolled .desktop-nav-left a, body:not(.home) .desktop-nav-left a{
+ color:#334155;
+}
+.is-scrolled .desktop-nav-left a:hover, body:not(.home) .desktop-nav-left a:hover{
+ color:#0f172a;
+}
 .nav-center-brand-wrap{
  flex:0 0 auto;
  display:flex;
@@ -377,26 +400,96 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .nav-center-brand-wrap .brand-center{
  display:inline-flex;
  align-items:center;
- gap:12px;
- font-family:Manrope,sans-serif;
- font-size:24px;
- font-weight:800;
- letter-spacing:.1em;
- color:#ffffff;
+ gap:14px;
  text-decoration:none;
  padding:6px 14px;
- border-radius:8px;
+ border-radius:10px;
  transition:all .25s ease;
 }
 .nav-center-brand-wrap .brand-center:hover{
  background:rgba(255,255,255,0.06);
  transform:scale(1.02);
 }
-.brand-mark-svg svg{
- width:42px;
- height:28px;
+.is-scrolled .nav-center-brand-wrap .brand-center:hover, body:not(.home) .nav-center-brand-wrap .brand-center:hover{
+ background:rgba(15, 23, 42, 0.04);
+}
+/* Boraden 3-Check Brand Mark SVG */
+.brand-mark-svg{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.brand-mark-svg svg, .boraden-mark-svg{
+ width:48px;
+ height:32px;
  display:block;
 }
+.boraden-mark-svg path{
+ stroke-width:4.8px;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+ fill:none;
+ transition:stroke .25s ease, filter .25s ease;
+}
+/* Luminous Neon on Dark Hero */
+.boraden-navbar:not(.is-scrolled) .mark-blue{
+ stroke:#0284c7!important;
+ filter:drop-shadow(0 0 8px rgba(2, 132, 199, 0.6));
+}
+.boraden-navbar:not(.is-scrolled) .mark-red{
+ stroke:#ff4a36!important;
+ filter:drop-shadow(0 0 8px rgba(255, 74, 54, 0.6));
+}
+.boraden-navbar:not(.is-scrolled) .mark-green{
+ stroke:#22c55e!important;
+ filter:drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+}
+/* Crisp Royal Contrast on Light / Scrolled */
+.is-scrolled .mark-blue, body:not(.home) .mark-blue{
+ stroke:#00547c!important;
+ filter:none;
+}
+.is-scrolled .mark-red, body:not(.home) .mark-red{
+ stroke:#e94d2a!important;
+ filter:none;
+}
+.is-scrolled .mark-green, body:not(.home) .mark-green{
+ stroke:#16a34a!important;
+ filter:none;
+}
+.brand-text-block{
+ display:flex;
+ flex-direction:column;
+ align-items:flex-start;
+ justify-content:center;
+ gap:2px;
+}
+.brand-text{
+ font-family:Manrope,sans-serif;
+ font-size:22px;
+ font-weight:800;
+ letter-spacing:.12em;
+ color:#ffffff;
+ line-height:1;
+ transition:color .25s ease;
+}
+.is-scrolled .brand-text, body:not(.home) .brand-text{
+ color:#0f172a;
+}
+.brand-subtext{
+ font-family:Manrope,sans-serif;
+ font-size:7.5px;
+ font-weight:750;
+ letter-spacing:.14em;
+ text-transform:uppercase;
+ color:#94a3b8;
+ line-height:1;
+ transition:color .25s ease;
+}
+.is-scrolled .brand-subtext, body:not(.home) .brand-subtext{
+ color:#64748b;
+}
+
 .desktop-nav-right{
  flex:1;
  display:flex;
@@ -412,6 +505,12 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 }
 .desktop-nav-right .nav-link:hover{
  color:#ffffff;
+}
+.is-scrolled .desktop-nav-right .nav-link, body:not(.home) .desktop-nav-right .nav-link{
+ color:#334155;
+}
+.is-scrolled .desktop-nav-right .nav-link:hover, body:not(.home) .desktop-nav-right .nav-link:hover{
+ color:#0f172a;
 }
 .nav-search-btn{
  display:inline-flex;
@@ -432,6 +531,15 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  color:#ffffff;
  border-color:rgba(255,255,255,0.25);
 }
+.is-scrolled .nav-search-btn, body:not(.home) .nav-search-btn{
+ background:#f1f5f9;
+ border-color:#e2e8f0;
+ color:#334155;
+}
+.is-scrolled .nav-search-btn:hover, body:not(.home) .nav-search-btn:hover{
+ background:#e2e8f0;
+ color:#0f172a;
+}
 .nav-search-btn svg{
  width:14px;
  height:14px;
@@ -440,8 +548,8 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  display:inline-flex;
  align-items:center;
  gap:10px;
- background:linear-gradient(135deg,rgba(53,110,145,0.22) 0%,rgba(65,136,95,0.28) 100%);
- border:1px solid rgba(255,255,255,0.18);
+ background:rgba(255,255,255,0.08);
+ border:1px solid rgba(255,255,255,0.2);
  padding:9px 18px;
  border-radius:9999px;
  color:#ffffff;
@@ -453,10 +561,21 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  transition:all .28s cubic-bezier(.16,1,.3,1);
 }
 .nav-cta-pill:hover{
- background:linear-gradient(135deg,#356e91 0%,#41885f 100%);
+ background:rgba(255,255,255,0.16);
  border-color:#ffffff;
  transform:translateY(-2px);
- box-shadow:0 8px 24px rgba(53,110,145,0.35);
+}
+.is-scrolled .nav-cta-pill, body:not(.home) .nav-cta-pill{
+ background:#0f172a;
+ border-color:#0f172a;
+ color:#ffffff;
+ box-shadow:0 4px 14px rgba(15, 23, 42, 0.16);
+}
+.is-scrolled .nav-cta-pill:hover, body:not(.home) .nav-cta-pill:hover{
+ background:#1e293b;
+ border-color:#1e293b;
+ transform:translateY(-2px);
+ box-shadow:0 8px 20px rgba(15, 23, 42, 0.25);
 }
 .nav-cta-pill svg{
  width:13px;
@@ -470,8 +589,8 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  width:7px;
  height:7px;
  border-radius:50%;
- background:#4ade80;
- box-shadow:0 0 10px #4ade80;
+ background:#22c55e;
+ box-shadow:0 0 10px #22c55e;
  animation:pulseDot 2s infinite alternate;
 }
 @keyframes pulseDot{
@@ -523,7 +642,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  font-size:11px;
  font-weight:750;
  letter-spacing:.12em;
- color:#93b8d4;
+ color:#38bdf8;
  text-transform:uppercase;
  backdrop-filter:blur(8px);
  margin-bottom:18px;
@@ -532,8 +651,8 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  width:6px;
  height:6px;
  border-radius:50%;
- background:#e2b153;
- box-shadow:0 0 8px #e2b153;
+ background:#22c55e;
+ box-shadow:0 0 8px #22c55e;
 }
 .space-hero-title{
  font-family:Manrope,sans-serif;
@@ -547,7 +666,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .space-hero-title em{
  font-family:Instrument,Georgia,serif;
  font-style:italic;
- color:#e2b153;
+ color:#38bdf8;
  font-weight:400;
  margin-left:6px;
 }
@@ -558,52 +677,47 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  max-width:540px;
 }
 
-/* CONTINENTS SELECTOR BAR & CHIPS */
-.space-continents-nav{
- pointer-events:auto;
- margin-top:auto;
- padding:18px 0;
+/* HERO TRUST METRIC GRID */
+.space-hero-trust-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+ gap:12px;
+ margin-top:28px;
+ max-width:620px;
 }
-.continents-nav-title{
- font-size:11px;
- font-weight:700;
- letter-spacing:.12em;
- text-transform:uppercase;
- color:#7897b0;
- margin-bottom:10px;
- display:block;
-}
-.continents-chips{
- display:flex;
- flex-wrap:wrap;
- gap:8px;
-}
-.c-chip{
- display:inline-flex;
- align-items:center;
- gap:8px;
- padding:9px 16px;
- border-radius:30px;
- background:rgba(10,24,40,0.65);
- border:1px solid rgba(255,255,255,0.14);
- color:#cbd5e1;
- font-size:12px;
- font-weight:600;
- cursor:pointer;
- backdrop-filter:blur(12px);
+.trust-stat-box{
+ background:rgba(255,255,255,0.04);
+ border:1px solid rgba(255,255,255,0.08);
+ border-radius:12px;
+ padding:14px 16px;
+ backdrop-filter:blur(10px);
  transition:all .25s ease;
 }
-.c-chip:hover,.c-chip.is-active{
- background:rgba(255,255,255,0.18);
- border-color:#ffffff;
- color:#ffffff;
+.trust-stat-box:hover{
+ background:rgba(255,255,255,0.08);
+ border-color:rgba(56,189,248,0.4);
  transform:translateY(-2px);
- box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
-.c-dot{
- width:7px;
- height:7px;
- border-radius:50%;
+.trust-stat-num{
+ font-size:20px;
+ font-weight:800;
+ color:#38bdf8;
+ display:block;
+ line-height:1.1;
+}
+.trust-stat-title{
+ font-size:12px;
+ font-weight:700;
+ color:#ffffff;
+ margin-top:4px;
+ display:block;
+}
+.trust-stat-sub{
+ font-size:10px;
+ color:#94a3b8;
+ margin-top:2px;
+ display:block;
+ line-height:1.4;
 }
 
 /* FLOATING EARTH HUD CARD */
@@ -613,19 +727,13 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  bottom:80px;
  width:360px;
  max-width:90vw;
- background:rgba(5, 15, 28, 0.78);
- border:1px solid rgba(100, 180, 240, 0.3);
+ background:rgba(5, 15, 28, 0.85);
+ border:1px solid rgba(56, 189, 248, 0.3);
  border-radius:12px;
  padding:22px 24px;
  backdrop-filter:blur(24px) saturate(180%);
  -webkit-backdrop-filter:blur(24px) saturate(180%);
  box-shadow:0 24px 60px rgba(0,0,0,0.6);
- opacity:0;
- transform:translateY(14px);
- transition:all .32s cubic-bezier(.16,1,.3,1);
- pointer-events:none;
-}
-.earth-hud-card.is-active{
  opacity:1;
  transform:translateY(0);
  pointer-events:auto;
@@ -636,7 +744,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  left:0;
  right:0;
  height:3px;
- background:linear-gradient(90deg,#356e91,#e2b153,#41885f);
+ background:linear-gradient(90deg,#0284c7,#22c55e,#ff4a36);
  border-radius:12px 12px 0 0;
 }
 .hud-kicker{
@@ -644,7 +752,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  font-weight:750;
  letter-spacing:.14em;
  text-transform:uppercase;
- color:#e2b153;
+ color:#38bdf8;
 }
 #hud-continent-title{
  font-family:Manrope,sans-serif;
@@ -739,12 +847,134 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .deloitte-sheet-top-accent{
  width:68px;
  height:4px;
- background:#cbd5e1;
+/* 6. DELOITTE EXECUTIVE OVERVIEW SECTION */
+.deloitte-executive-overview{
+ padding:80px 0 60px;
+ border-bottom:1px solid rgba(15, 23, 42, 0.08);
+}
+.deloitte-overview-grid{
+ display:grid;
+ grid-template-columns:1.2fr 1fr;
+ gap:clamp(32px, 5vw, 70px);
+ align-items:start;
+}
+.deloitte-kicker{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:.14em;
+ color:#0284c7;
+ text-transform:uppercase;
+ margin-bottom:18px;
+}
+.kicker-green-dot{
+ width:7px;
+ height:7px;
+ border-radius:2px;
+ background:#16a34a;
+}
+.deloitte-headline{
+ font-size:clamp(32px, 3.4vw, 48px);
+ font-weight:800;
+ letter-spacing:-.03em;
+ line-height:1.15;
+ color:#0f172a;
+}
+.deloitte-headline em{
+ font-family:Instrument,Georgia,serif;
+ font-style:italic;
+ color:#0284c7;
+ font-weight:400;
+}
+.deloitte-lead{
+ font-size:16px;
+ line-height:1.8;
+ color:#475569;
+ margin:22px 0 28px;
+}
+.deloitte-badges-row{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+}
+.deloitte-pill-badge{
+ font-size:11.5px;
+ font-weight:700;
+ color:#0f172a;
+ background:#f1f5f9;
+ border:1px solid #e2e8f0;
+ padding:6px 14px;
  border-radius:9999px;
- margin:12px auto 28px;
+ letter-spacing:.02em;
+}
+.deloitte-overview-right{
+ display:flex;
+ flex-direction:column;
+ gap:16px;
+}
+.deloitte-feature-card{
+ background:#ffffff;
+ border:1px solid rgba(15, 23, 42, 0.08);
+ border-radius:14px;
+ padding:22px 24px;
+ box-shadow:0 4px 16px rgba(0,0,0,0.02);
+ transition:all .25s ease;
+}
+.deloitte-feature-card:hover{
+ border-color:#0284c7;
+ box-shadow:0 12px 28px rgba(2, 132, 199, 0.08);
+ transform:translateY(-2px);
+}
+.feature-num{
+ font-size:12px;
+ font-weight:800;
+ color:#0284c7;
+ letter-spacing:.1em;
+ margin-bottom:8px;
+}
+.deloitte-feature-card h3{
+ font-size:17px;
+ font-weight:750;
+ color:#0f172a;
+ margin-bottom:8px;
+}
+.deloitte-feature-card p{
+ font-size:13.5px;
+ line-height:1.7;
+ color:#64748b;
+}
+
+/* COMPLETION OFFICE PILLS */
+.completion-offices{
+ display:flex;
+ flex-wrap:wrap;
+ gap:14px;
+ margin:24px 0 10px;
+}
+.office-pill{
+ display:flex;
+ flex-direction:column;
+ gap:3px;
+ background:#ffffff;
+ border:1px solid rgba(15, 23, 42, 0.1);
+ padding:12px 18px;
+ border-radius:10px;
+ font-size:13px;
+ box-shadow:0 2px 8px rgba(0,0,0,0.02);
+}
+.office-pill strong{
+ font-weight:750;
+ color:#0f172a;
+}
+.office-pill span{
+ color:#64748b;
+ font-size:12px;
 }
 
 @media(max-width:900px){
+ .deloitte-overview-grid{grid-template-columns:1fr;gap:35px}
  .desktop-nav-left,.desktop-nav-right{display:none}
  .nav-center-brand-wrap{margin-right:auto}
  .earth-hud-card{position:static;width:100%;margin-top:20px}

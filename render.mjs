@@ -11,7 +11,7 @@ export const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 export const safeURL=s=>typeof s==='string'&&(/^(https?:\/\/|mailto:|tel:|\/(?!\/)|#)/i.test(s))?s:'#';
 const arrow='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>';
 const chevron='<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg>';
-const mark='<svg viewBox="0 0 66 45" aria-hidden="true"><path d="m3 27 11 11L37 9" stroke="#00547c"/><path d="m18 27 11 11L52 9" stroke="#e94d2a"/><path d="m33 27 11 11L63 9" stroke="#259e3c"/></svg>';
+const mark='<svg viewBox="0 0 66 45" aria-hidden="true" class="boraden-mark-svg"><path d="m3 27 11 11L37 9" class="mark-blue" stroke="#00547c" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="m18 27 11 11L52 9" class="mark-red" stroke="#e94d2a" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="m33 27 11 11L63 9" class="mark-green" stroke="#259e3c" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
 const logo=`<a class="brand" href="/" aria-label="Boraden ana sayfa">${mark}<span>BORADEN</span></a>`;
 const institutionLinks=JSON.parse(fs.readFileSync(new URL('data/institutions.json',import.meta.url),'utf8'));
 const serviceURL=s=>'/hizmetler/'+s.id+'/';
@@ -47,9 +47,9 @@ function header(D){
    <details class="nav-services">
     <summary>Hizmetlerimiz ${chevron}</summary>
     <div class="nav-dropdown">
-     <p class="dropdown-title">İşinizin her parçası için bütünleşik uzmanlık.</p>
+     <p class="dropdown-title">33 yıllık güvenilirlik ile bütünleşik kurumsal hizmetler.</p>
      <div class="dropdown-links">
-      ${D.groups.map((g,i)=>`<a href="${groupURL(g)}" onmouseenter="window.focusContinent&&window.focusContinent('${g.id}')"><span class="mini-piece" style="--tone:${palette[i]}">${String(i+1).padStart(2,'0')}</span>${esc(g.name)}${arrow}</a>`).join('')}
+      ${D.groups.map((g,i)=>`<a href="${groupURL(g)}"><span class="mini-piece" style="--tone:${palette[i]}">${String(i+1).padStart(2,'0')}</span>${esc(g.name)}${arrow}</a>`).join('')}
      </div>
      <a class="nav-all" href="/hizmetler/">Tüm 47 hizmeti keşfedin ${arrow}</a>
     </div>
@@ -59,9 +59,12 @@ function header(D){
   </nav>
 
   <div class="nav-center-brand-wrap">
-   <a class="brand brand-center" href="/" aria-label="Boraden ana sayfa" onmouseenter="window.focusContinent&&window.focusContinent('hq')" onmouseleave="window.focusContinent&&window.focusContinent('all')">
+   <a class="brand brand-center" href="/" aria-label="Boraden ana sayfa" onmouseenter="window.focusContinent&&window.focusContinent('hq')">
     <span class="brand-mark-svg">${mark}</span>
-    <span class="brand-text">BORADEN</span>
+    <span class="brand-text-block">
+     <span class="brand-text">BORADEN</span>
+     <span class="brand-subtext">BAĞIMSIZ DENETİM &amp; DANIŞMANLIK</span>
+    </span>
    </a>
   </div>
 
@@ -99,44 +102,57 @@ function journalCard(p,kind){return `<article class="journal-card"><a href="/${k
 function home(D){
  const featured=D.publications.blog.filter(published).slice(0,3);
  return `
- <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden Küresel Çözüm Ağı ve 3D Dünya">
+ <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden 3D Dünya ve Bağımsız Denetim">
   <div class="stars-backdrop"></div>
   <div id="earth-canvas-container" class="earth-canvas-container"></div>
   
   <div class="space-hero-content wrap">
    <div class="space-hero-lead">
-    <div class="space-tag-pill"><span class="tag-pulse"></span>TÜRKİYE'DEN DÜNYAYA GÜVENİLİR BÜTÜNLÜK</div>
-    <h2 class="space-hero-title">Yedi Kıtada Uzmanlık.<br><em>Tek Bir Merkezde Güven.</em></h2>
-    <p class="space-hero-desc">1993’ten bugüne; Türkiye merkezli bağımsız denetim, vergi, kurumsal danışmanlık ve insan kaynakları çözümlerimizle küresel standartta iş ortaklığı sunuyoruz.</p>
-   </div>
-
-   <div class="space-continents-nav" role="toolbar" aria-label="Kıta ve Uzmanlık Alanı Seçimi">
-    <span class="continents-nav-title">Kıtaları ve Hizmetleri Keşfedin:</span>
-    <div class="continents-chips">
-     <button type="button" class="c-chip is-active" onmouseenter="window.focusContinent&&window.focusContinent('all')" onclick="window.focusContinent&&window.focusContinent('all')">Tüm Dünya</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('vergi')" onclick="window.focusContinent&&window.focusContinent('vergi')"><span class="c-dot" style="background:#356e91"></span>01 Avrupa / Vergi</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('denetim')" onclick="window.focusContinent&&window.focusContinent('denetim')"><span class="c-dot" style="background:#cb6651"></span>02 K. Amerika / Denetim</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('danismanlik')" onclick="window.focusContinent&&window.focusContinent('danismanlik')"><span class="c-dot" style="background:#41885f"></span>03 Körfez / Danışmanlık</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('insan')" onclick="window.focusContinent&&window.focusContinent('insan')"><span class="c-dot" style="background:#3c7a9c"></span>04 Afrika / Bordro</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('sistem')" onclick="window.focusContinent&&window.focusContinent('sistem')"><span class="c-dot" style="background:#c46c57"></span>05 Asya / Sistemler</button>
-     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('akademi')" onclick="window.focusContinent&&window.focusContinent('akademi')"><span class="c-dot" style="background:#488c65"></span>06 G. Amerika / Akademi</button>
+    <div class="space-tag-pill">
+     <span class="tag-pulse"></span>
+     <span>1993'TEN BUGÜNE &bull; ANKARA &bull; İSTANBUL</span>
+    </div>
+    <h2 class="space-hero-title">Türkiye'nin Güven Üssü.<br><em>Küresel Standartta Bağımsız Denetim.</em></h2>
+    <p class="space-hero-desc">Kamu Gözetimi Kurumu (KGK), SPK ve BDDK yetkili 50 kişilik uzman kadromuzla; bağımsız denetim, tam tasdik, finansal raporlama ve kurumsal danışmanlıkta 33 yıldır şirketlerin güvenilir çözüm ortağıyız.</p>
+    
+    <div class="space-hero-trust-grid">
+     <div class="trust-stat-box">
+      <span class="trust-stat-num">33+ YIL</span>
+      <span class="trust-stat-title">Kurumsal Miras</span>
+      <span class="trust-stat-sub">1993'ten bugüne kesintisiz güven</span>
+     </div>
+     <div class="trust-stat-box">
+      <span class="trust-stat-num">KGK • SPK</span>
+      <span class="trust-stat-title">Resmî Denetim Yetkisi</span>
+      <span class="trust-stat-sub">BDDK lisanslı bağımsız denetçi</span>
+     </div>
+     <div class="trust-stat-box">
+      <span class="trust-stat-num">50+ UZMAN</span>
+      <span class="trust-stat-title">Deneyimli Kadro</span>
+      <span class="trust-stat-sub">YMM, SMMM & denetçi ekibi</span>
+     </div>
+     <div class="trust-stat-box">
+      <span class="trust-stat-num">47 ÇÖZÜM</span>
+      <span class="trust-stat-title">Bütünleşik Hizmet</span>
+      <span class="trust-stat-sub">6 temel sektörel uzmanlık</span>
+     </div>
     </div>
    </div>
 
    <div id="earth-hud-card" class="earth-hud-card" aria-live="polite">
     <div class="hud-accent-bar"></div>
     <div class="hud-top">
-     <span class="hud-kicker">KÜRESEL ODAK</span>
-     <h4 id="hud-continent-title">BORADEN MERKEZ (TÜRKİYE)</h4>
+     <span class="hud-kicker">GENEL MERKEZ</span>
+     <h4 id="hud-continent-title">BORADEN • TÜRKİYE</h4>
     </div>
-    <p id="hud-service-name" class="hud-service-title">7 Kıtaya Yayılan Çözüm Mimarisi</p>
+    <p id="hud-service-name" class="hud-service-title">Bağımsız Denetim ve Yeminli Mali Müşavirlik</p>
     <div class="hud-bottom">
-     <span id="hud-service-tag" class="hud-badge">Vergi, Denetim, Danışmanlık & Bordro</span>
-     <a href="/hizmetler/" class="hud-cta">Uzmanlığı Keşfedin &rarr;</a>
+     <span id="hud-service-tag" class="hud-badge">KGK, SPK, BDDK Yetkili</span>
+     <a href="/hizmetler/" class="hud-cta">Hizmetleri Keşfedin &rarr;</a>
     </div>
    </div>
 
-   <a class="space-scroll-down" href="#deloitte-content-sheet" aria-label="Deloitte düzeyinde çözümlere kaydırın">
+   <a class="space-scroll-down" href="#deloitte-content-sheet" aria-label="Kurumsal çözümlere kaydırın">
     <span>AŞAĞI KAYDIRIN &bull; DELOITTE DÜZEYİ KURUMSAL ÇÖZÜMLER</span>
     <span class="scroll-down-arrow">&darr;</span>
    </a>
@@ -159,11 +175,44 @@ function home(D){
 
   <div class="expertise-sheet">
    <div class="stats-ribbon wrap">
-    <div class="stat-cell"><span class="stat-value">33<em>+</em></span><span class="stat-meta">Yıllık Güvenilir Tecrübe<small>1993’ten bugüne bağımsız duruş</small></span></div>
-    <div class="stat-cell"><span class="stat-value">06</span><span class="stat-meta">Temel Uzmanlık Alanı<small>Tüm süreçleriniz için tek bütün</small></span></div>
+    <div class="stat-cell"><span class="stat-value">33<em>+</em></span><span class="stat-meta">Yıllık Bağımsız Güven<small>1993’ten bugüne kurumsal miras</small></span></div>
+    <div class="stat-cell"><span class="stat-value">50<em>+</em></span><span class="stat-meta">Deneyimli Uzman Kadro<small>YMM, SMMM ve yetkili denetçiler</small></span></div>
+    <div class="stat-cell"><span class="stat-value">03</span><span class="stat-meta">Resmî Denetim Yetkisi<small>KGK, SPK ve BDDK yetkili kuruluş</small></span></div>
     <div class="stat-cell"><span class="stat-value">47</span><span class="stat-meta">Bütünleşik Çözüm & Hizmet<small>Mevzuat, denetim, bordro, değerleme</small></span></div>
-    <div class="stat-cell"><span class="stat-value">07<em>+</em></span><span class="stat-meta">Resmî Kurum Akreditasyonu<small>KGK, SPK, BDDK, TÜRMOB uyumlu</small></span></div>
    </div>
+
+   <section class="deloitte-executive-overview wrap" aria-label="Boraden Hakkında">
+    <div class="deloitte-overview-grid">
+     <div class="deloitte-overview-left">
+      <span class="deloitte-kicker"><span class="kicker-green-dot"></span>BİZ KİMİZ &amp; KURUMSAL MİRAS</span>
+      <h2 class="deloitte-headline">Rakamların arkasındaki güven.<br><em>33 yıllık bağımsız duruş.</em></h2>
+      <p class="deloitte-lead">Boraden Bağımsız Denetim ve Danışmanlık A.Ş.’nin temelleri 1993 yılında atılmıştır. Kamu kurum ve kuruluşları ile özel sektör şirketlerine; bağımsız denetim, yeminli mali müşavirlik, vergi, muhasebe sistemleri ve finansal raporlama alanlarında en yüksek kalitede hizmet sunmaktayız.</p>
+      <div class="deloitte-badges-row">
+       <span class="deloitte-pill-badge">KGK Yetkili</span>
+       <span class="deloitte-pill-badge">SPK Akredite</span>
+       <span class="deloitte-pill-badge">BDDK Lisanslı</span>
+       <span class="deloitte-pill-badge">TÜRMOB Üyesi</span>
+      </div>
+     </div>
+     <div class="deloitte-overview-right">
+      <div class="deloitte-feature-card">
+       <div class="feature-num">01</div>
+       <h3>Müşteriye Özel Çözüm Mimarisi</h3>
+       <p>Her şirketin mali yapısını detaylı analiz ederek işletmeye özel stratejiler ve denetim planları geliştiriyoruz.</p>
+      </div>
+      <div class="deloitte-feature-card">
+       <div class="feature-num">02</div>
+       <h3>Tam Bağımsızlık ve Güven</h3>
+       <p>Etik değerlerimiz ve tarafsızlık ilkemizle, finansal piyasalar ve yatırımcılar nezdinde tam itibar sağlıyoruz.</p>
+      </div>
+      <div class="deloitte-feature-card">
+       <div class="feature-num">03</div>
+       <h3>Uluslararası Raporlama Gücü</h3>
+       <p>TFRS, UFRS, BOBİ FRS ve US GAAP standartlarında finansal tablolar ve sürdürülebilirlik raporlamaları üretiyoruz.</p>
+      </div>
+     </div>
+    </div>
+   </section>
 
    <section class="expertise-overview wrap" id="uzmanlik" data-expertise aria-labelledby="expertise-title">
     <div class="expertise-heading"><p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ</p><h2 id="expertise-title">Size nasıl<br><em>yardımcı olabiliriz?</em></h2><p>Vergi ve denetimden şirketinizin geleceğine, insan kaynaklarından iş süreçlerinize.<br>İhtiyacınıza uygun uzmanlığı seçin.</p></div>
