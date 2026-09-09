@@ -32,10 +32,10 @@ function applyScrollParam() {
   window.scrollTo(0, Number(scrollParam));
  }
 }
-if (document.readyState === 'loading') {
+if (typeof window !== 'undefined') {
+ window.addEventListener('load', () => setTimeout(applyScrollParam, 50));
  document.addEventListener('DOMContentLoaded', applyScrollParam);
-} else {
- applyScrollParam();
+ setTimeout(applyScrollParam, 200);
 }
 const serviceInput=$('#service-search');
 serviceInput?.addEventListener('input',()=>{const term=norm(serviceInput.value);let count=0;$$('[data-filter-group]').forEach(group=>{let groupCount=0;group.querySelectorAll('[data-filter-text]').forEach(row=>{row.hidden=!norm(row.dataset.filterText).includes(term);if(!row.hidden){groupCount++;count++;}});group.hidden=!groupCount;});$('#service-count').textContent=count?`${count} hizmet`:'Sonuç bulunamadı. Başka bir terim deneyin.';});
