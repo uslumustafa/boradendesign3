@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "cb8812d00ecf7739d2158627ecbb38333df0148e",
+  "snapshotFiles": 458,
+  "groups": 6,
+  "services": 47,
+  "sectors": 6,
+  "perspectives": 14,
+  "publications": {
+    "circulars": 2,
+    "announcements": 1,
+    "blog": 3,
+    "stories": 0,
+    "news": 6
+  },
+  "legacyPages": 85,
+  "documents": 247,
+  "notice": "Preserved source data, not a new factual/legal verification. Browser localStorage records are not included."
+}

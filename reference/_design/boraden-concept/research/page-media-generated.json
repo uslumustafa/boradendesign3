@@ -1,0 +1,295 @@
+{
+  "generated": [
+    {
+      "id": "hizmetler",
+      "path": "assets/pages/hizmetler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c66d238d-035c-4da6-817c-fcbefef22985.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "c83ddde43a19e32af131cab674ac62dd4e7214b6cc64899e9e6c4a3e316e1101",
+      "bytes": 322697,
+      "sha256": "6e2c071265861759aec1588319494766005f104ee559763ee15c9812cb9a1f79"
+    },
+    {
+      "id": "blog",
+      "path": "assets/pages/blog.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-d150b367-6359-4886-bc32-43dc1038d036.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "d4c26036a20e9a33a6c5ba2594990e812bc928e036e0b58ed3ff3a2cf5fe5905",
+      "bytes": 192646,
+      "sha256": "7aa9c1cabd3bff63733362e49724e3d51d96bdba38d96580fff1c4eebffcb3ce"
+    },
+    {
+      "id": "sirkuler",
+      "path": "assets/pages/sirkuler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-2da751f4-ac52-41fa-8265-7f1291f38cb3.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "381c45c04bba3e01a09407cf016a3e14765b939518c3b18491de2e18cb3e7632",
+      "bytes": 202051,
+      "sha256": "76fa7a6d09aa95c0e51fee9fb467b5537f9327eb990bb94f1c8388bcb6f0c5a9"
+    },
+    {
+      "id": "haberler",
+      "path": "assets/pages/haberler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-0af80d58-a57f-4a5f-8d0d-f91554998622.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "2c4a1df95a07e360638f6feccb64e0979754229ce3d123d6807c12dcdc387564",
+      "bytes": 204667,
+      "sha256": "2f6036ca462eb1cdc3969146a6f6a403c113f8bd85590d7cc857230b39eacfbb"
+    },
+    {
+      "id": "duyurular",
+      "path": "assets/pages/duyurular.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-d9ab51db-8375-4688-be09-b6cbf116d9ab.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "150c899bcd680e20f6fea2fee96acca529f3793c08a7f5838605cc45e4a5f844",
+      "bytes": 324426,
+      "sha256": "4c43af58082d8c067a157813017a187d5e1657475d7184405ccde012a608f03c"
+    },
+    {
+      "id": "basari-hikayeleri",
+      "path": "assets/pages/basari-hikayeleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-252face5-692f-46fe-b3b5-ec4bf485c3cc.png",
+      "mode": "built-in-imagegen",
+      "refinement": {
+        "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-96c3994a-b127-4103-90d3-4eeaeb82bc6c.png",
+        "prompt": "Edit the provided image for an independent audit and business advisory firm. Keep both people, hands, composition, table and natural light exactly. Replace the interior-design photographs, color swatches and floor plans on the table with realistic FINANCIAL working papers and a simple BUSINESS PROCESS diagram: fine non-legible accounting table columns, an open financial report folio, and connected plain rectangular process steps. Absolutely no interior design samples, fabric swatches, building photographs, landscape pictures or floor plans. No company names, figures readable as performance claims or readable private text. It should communicate joint business analysis, never an interior design studio."
+      },
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "8f68dbf99600026d5e9d5638874a5f47d1711a2814a6b23bc4ed208dc085634b",
+      "bytes": 305809,
+      "sha256": "cfbf766941d20a0f840d3c96d4b479457c89f856619e5a0f1f099c633524b598"
+    },
+    {
+      "id": "iletisim",
+      "path": "assets/pages/iletisim.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-041c086b-bfcb-4749-a35b-709bcbc000ae.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "9716dce155857bc9dae2052f5d0beec54ba7de2673cabba814cc4018388cc1c9",
+      "bytes": 270217,
+      "sha256": "315aa40ccc0cbc1acce502d560027df9250682fbca3ccd8dcfcc1dd0ca66e3a7"
+    },
+    {
+      "id": "hesaplama",
+      "path": "assets/pages/hesaplama.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-8a179c8d-e62f-4ef3-8e0f-851695ec8e2f.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "db54991469bbaf56451631b5351c81661d596d6fbb64f74f98841f139da32042",
+      "bytes": 209538,
+      "sha256": "71baf16c6593e5d062794526c7232b926c9d52797d2965081bec497dcbccc176"
+    },
+    {
+      "id": "kurumsal-arsiv",
+      "path": "assets/pages/kurumsal-arsiv.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-cbe74295-48e4-4b6e-ad3c-e2e75e582d7e.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "dd5a3a233729a89da6fec0dad03a4200690f05c4d8b58ed256e48a1750235358",
+      "bytes": 254038,
+      "sha256": "7ffcc3683e7c6e608f5a5feb3998c70e1dba6d90c83721af97df594c12e27ac3"
+    },
+    {
+      "id": "perspektifler",
+      "path": "assets/pages/perspektifler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c535c50b-d36a-41a4-970a-f2cb5ea1c2f7.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "73169d7bf03e3af8e9a0742ea1f92b20c6c33229357cab3521add37182bab548",
+      "bytes": 227004,
+      "sha256": "ce614a9f5ab3db23f2cd08e55da4d996649efdc3ca86e9d53d2b1674a64fb743"
+    },
+    {
+      "id": "yayin-ilkeleri",
+      "path": "assets/pages/yayin-ilkeleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-bbd78d81-f2cc-4a81-b4c9-4043bebe5d64.png",
+      "mode": "built-in-imagegen",
+      "refinement": {
+        "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-68299ddc-bf84-4ea0-868e-7c442c775ae2.png",
+        "prompt": "Edit the provided image for a professional financial-advisory publisher's editorial principles page. Keep the hand, pencil, exact camera, paper, light, color and composition. Replace BOTH landscape photographs printed on the paper with dense typeset editorial TEXT columns and small footnote/reference lines, deliberately too small to read. Add one subtle proofreading mark near a margin. NO photographs, scenery, illustration, architectural plans or decorative artwork on the paper. This must clearly show textual proofreading / source checking rather than photo retouching. No legible private information, logos or fabricated financial statistics."
+      },
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "2c66cd837968d6f518a027b113212c1d574fd38d0878ab7c6f61da8ff25c4b00",
+      "bytes": 349006,
+      "sha256": "bffc3e14d6302fa2c4cb53d204d4742e5770b5fc5e50b7eebc2dd9b2ffde105e"
+    },
+    {
+      "id": "alan-vergi",
+      "path": "assets/pages/alan-vergi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-31ed9f0a-cf2f-421e-a60f-807d0f18772b.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "3fbd7936a718ab37e7e467acaaf847a7e06579ae7973be0a170201bc5f026dbb",
+      "bytes": 339338,
+      "sha256": "0dd662ff64c93d3e333e24e49871f2ed98213a7598ef8fd2c4da67ce95b4d670"
+    },
+    {
+      "id": "alan-denetim",
+      "path": "assets/pages/alan-denetim.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-2e80d82b-58af-4fc1-98cb-a30340b27d1e.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "a841aad901935b1427f86d62c9a0e400a37986e4211364c0b96918680de24a3b",
+      "bytes": 220523,
+      "sha256": "6c2e552d8ed4ddf4469606bbbb4167bdd84f9309b6cc88bc5a4887224ab0e4d4"
+    },
+    {
+      "id": "alan-kurumsal",
+      "path": "assets/pages/alan-kurumsal.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-00939f20-db45-4eeb-9ebc-33cb91f826c8.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "d2828232346f21a838a29715034901cf0d8c16af95fa84ef598bb601c07cbca7",
+      "bytes": 252091,
+      "sha256": "a5f7f48617523e64fa80b2495e3ce22ce1b7c500d9e6e179f0e33728a4223c78"
+    },
+    {
+      "id": "alan-insan",
+      "path": "assets/pages/alan-insan.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-535c4f4e-632c-4389-895c-13e7c48b6431.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "0d406e91fb87563ba1b02ec0ad3540bea7454b803e03dfa29c5caadd9bd16124",
+      "bytes": 284553,
+      "sha256": "fd84a98aa68e3f48fa5bb8554cf80fc96fb352189152d824e173b70a6a395b6d"
+    },
+    {
+      "id": "alan-sistemler",
+      "path": "assets/pages/alan-sistemler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-fb7ea530-46a8-454e-8335-290b1faf88b8.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "06e9fd88d4ea1d8d3c38ed05d9ed74a829e274f7c5ed2cddf949d9b37b4ff81e",
+      "bytes": 252649,
+      "sha256": "d3c8abc9ccb2970f4aee11d0faad7c51b6e9e18ddf1a0ded1de7cccf8c05ebcd"
+    },
+    {
+      "id": "alan-akademi",
+      "path": "assets/pages/alan-akademi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-a5284163-68c3-4a21-9e80-8695bd484aa9.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "c8ea6dda5e5dd9aaf2d8fcfebab9a03f6f45bffd3e47ec06b697ab2f0401fc7a",
+      "bytes": 252210,
+      "sha256": "e9ca77c39d5c380f1da1cd0a33819075f6c910cb9fcf7429a9ca7666383b4c5d"
+    },
+    {
+      "id": "hesap-gelir",
+      "path": "assets/pages/hesap-gelir.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-886b1368-e958-4dd6-955e-49783d7df267.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "7d50592f19a6e8bcceb824aa9fa6dd9564d1f0b9b736af8ddcfbe2cafd8b2155",
+      "bytes": 321084,
+      "sha256": "819ee9e6bf5a4da29979b975ec920cea7b6e6a0a836c750ca952f36e25b7f4fc"
+    },
+    {
+      "id": "hesap-kdv",
+      "path": "assets/pages/hesap-kdv.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c38b1c44-172d-4807-bbf4-032e2191743e.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "443a08d4564473746c1faf486f46732e2bb97ab06aaa9f31615ef3561ec8235f",
+      "bytes": 251713,
+      "sha256": "d5a8cf1b9d98018d27eb599fe99b703407ea08840ac8424b6d7e87a1c4cb1609"
+    },
+    {
+      "id": "hesap-maas",
+      "path": "assets/pages/hesap-maas.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-95cc22ca-6d57-4703-af0f-d2af77738235.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "c1b00205be901a7390c451b62f782cd14be10a6aebfc198f82ba18bc36070144",
+      "bytes": 222640,
+      "sha256": "bc1df520c9cf0cbe8e4696afd24f168cbbb45e34fb39ee0f47e56a7f8ca3277f"
+    },
+    {
+      "id": "blog-degerleme",
+      "path": "assets/pages/blog-degerleme.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-b545727a-b1ba-4cba-8141-0e9541b8af29.png",
+      "mode": "built-in-imagegen",
+      "refinement": {
+        "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-3ff5f121-5ba7-4fe1-85b3-78f2bef63d2d.png",
+        "prompt": "Edit this exact photograph. Preserve framing, experienced analyst's hand, warm side lighting, notebook and physical precision component at center. The five paper cards surrounding the component must visibly represent five company valuation questions: replace empty cards with subtle fine-pencil cash-flow line diagrams, small financial comparison tables and restrained abbreviated handwritten notes; no readable names, values or claims. The analyst should appear actively assessing assumptions, not looking at blank flash cards. No oversized icons, no render-like graphics, no arrows shooting upwards, no coins. Photorealistic small markings integrated on the existing paper."
+      },
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "80bf2e2c67735b8488ad2db69941d9395733c87d6e739f9002a6bb0d1ea24494",
+      "bytes": 239599,
+      "sha256": "75836054f36d17495742d25037d943e4a42ceaf86bea64784297b197e1eacc89"
+    },
+    {
+      "id": "blog-kurulus",
+      "path": "assets/pages/blog-kurulus.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c127dfea-664a-457e-b2eb-8aa2ed0505d6.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "9c906a1cf875cf9dd86ab0a54ec95c9397d23cf3238d47affef822ae09043d07",
+      "bytes": 205759,
+      "sha256": "9e60db549cdc6344666c50db2698e31bff47d0b49df9f4ec74004d7d27a37543"
+    },
+    {
+      "id": "blog-bordro",
+      "path": "assets/pages/blog-bordro.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-63804a32-b83f-4790-bfe6-dcc81bc5a614.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "4c0609d8e21d60a847d62aaeb326a19f271cc4076254fdfc8bd2581bc091909a",
+      "bytes": 181032,
+      "sha256": "5e074a943c905aab7c700f4123b894d534eb74852d1280dc01ea07ad0fb4a28c"
+    },
+    {
+      "id": "haber-otv",
+      "path": "assets/pages/haber-otv.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-e014d569-dc12-461f-b6e5-19ec5d18dba1.png",
+      "mode": "built-in-imagegen",
+      "refinement": {
+        "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ad2fe198-d9ee-425a-b65a-56d8986b291f.png",
+        "prompt": "Edit this exact photograph. Preserve camera composition, dark desktop printer, sage table, light and realistic materials. Correct ONLY the paper contents: this is a professional fiscal regulation bulletin with appendix tax tables, NOT a travel or architecture magazine. REMOVE ALL scenic photographs, architecture photographs and coloured photo panels from EVERY sheet. Replace them with dense fine neutral black editorial text paragraphs and structured restrained grey grid tables. Keep all small text out of focus and illegible, no actual names/rates/dates, no official logos. Maintain expensive cinematic editorial photography."
+      },
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "9da2034c8c21a23b69c1877a0dc18997bd87660b188d1aa9eb46a4b8fad5b64c",
+      "bytes": 311277,
+      "sha256": "7b171ae02c8af5390180739d26d28b4612b1ceab087ef208862508bfe814b130"
+    },
+    {
+      "id": "hakkimizda-sahne",
+      "path": "assets/pages/hakkimizda-sahne.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c04c7736-8293-4297-84ee-5aab11d2cea0.png",
+      "mode": "built-in-imagegen",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "79de92dbccfcfe19cf158b352f3bd68e77ec3f4a5d92e1f471031cfb08f2aaf3",
+      "bytes": 146503,
+      "sha256": "d0497c809eef9b9058ebceaffd794cf0bb1d40182df56da19f31fa769f0a5ea6"
+    }
+  ]
+}

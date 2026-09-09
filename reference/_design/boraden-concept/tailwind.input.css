@@ -1,0 +1,12 @@
+@import "tailwindcss" source(none);
+@source "./index.html";
+@source "./app.js";
+@source "./pages.js";
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --color-ink: #111a19;
+  --color-cloud: #f5f5ee;
+  --color-seaglass: #dce9e0;
+  --color-champagne: #e9dfc7;
+  --ease-cinematic: cubic-bezier(.22, 1, .36, 1);
+}

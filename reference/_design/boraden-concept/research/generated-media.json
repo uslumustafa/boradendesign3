@@ -1,0 +1,323 @@
+{
+  "mode": "built-in-imagegen",
+  "generated": [
+    {
+      "id": "sirket-degerlemesi",
+      "path": "assets/services/sirket-degerlemesi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ab0d1b5a-fa93-4b92-b0d9-e0283d424bed.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "sirket-kurulus-danismanligi",
+      "path": "assets/services/sirket-kurulus-danismanligi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-fb3b4705-d374-4ed1-a75b-c9acf71d92cd.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "insan-kaynaklari-ve-bordro",
+      "path": "assets/services/insan-kaynaklari-ve-bordro.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-a8a7a606-5fc6-4f13-bc23-826d9d25c237.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "mali-musavirlik-ve-muhasebe",
+      "path": "assets/services/mali-musavirlik-ve-muhasebe.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-b91431c6-156c-4fa7-a599-bd5c86065f02.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "diger-dolayli-vergiler",
+      "path": "assets/services/diger-dolayli-vergiler.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-2147c221-979b-440c-acca-774318958c36.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "bireysel-danismanlik-hizmetleri",
+      "path": "assets/services/bireysel-danismanlik-hizmetleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-88c2d696-7073-4ce6-95e4-5fd8316328af.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ar-ge-hizmetleri",
+      "path": "assets/services/ar-ge-hizmetleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-f9c20dc3-454d-4b9d-83b2-9dd73cf289b7.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "tam-tasdik-islemleri",
+      "path": "assets/services/tam-tasdik-islemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-97265d89-12dc-495e-afb4-2c2bd92e76e8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "kdv-iade-islemleri",
+      "path": "assets/services/kdv-iade-islemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-39be7012-c070-401a-a526-1234005dc457.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "kurumlar-vergisi-denetim-ve-tasdik",
+      "path": "assets/services/kurumlar-vergisi-denetim-ve-tasdik.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-d345ffc2-64fc-481a-961a-f39c61a80956.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "transfer-fiyatlandirma",
+      "path": "assets/services/transfer-fiyatlandirma.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5d5c437b-83ec-437c-ada4-27df2ba23660.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "cari-hesap-mutabakatlarinin-yapilmasi",
+      "path": "assets/services/cari-hesap-mutabakatlarinin-yapilmasi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5b41f87a-b95f-4e4e-93b7-8f7ae73812b8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "otv-hizmetleri",
+      "path": "assets/services/otv-hizmetleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-6147db5b-c852-4c0b-8993-cfaddb131b98.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "bagimsiz-denetim",
+      "path": "assets/services/bagimsiz-denetim.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-7f3fb9ff-f7f5-4939-b673-c439deaaece7.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "kurumsal-raporlama",
+      "path": "assets/services/kurumsal-raporlama.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5b2427d9-c3a1-4aae-8698-5397d41e63c2.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ufrs-tfrs-raporlama",
+      "path": "assets/services/ufrs-tfrs-raporlama.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-8a2ac349-c908-48b2-83b3-ff7be00072e6.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "finansal-tablo-denetimi",
+      "path": "assets/services/finansal-tablo-denetimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-6324639f-e9fb-496e-b244-9b7daddaa121.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "mali-tablolarin-denetimi",
+      "path": "assets/services/mali-tablolarin-denetimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ca5f3e35-c06f-4c1b-b844-245c5c438cf9.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "usulsuzluk-ve-hile-denetimi",
+      "path": "assets/services/usulsuzluk-ve-hile-denetimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ba84c368-ffe4-44b2-b792-be6ec991ee27.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ic-denetim-ve-ic-kontrol",
+      "path": "assets/services/ic-denetim-ve-ic-kontrol.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c192decb-2246-4733-9cd3-48af641d07da.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "suistimal-inceleme-ve-onleme",
+      "path": "assets/services/suistimal-inceleme-ve-onleme.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-bbf9dc9a-ba70-4333-8670-bf308e578f78.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "sgk-dosya-acilisi",
+      "path": "assets/services/sgk-dosya-acilisi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-f196566d-853d-4f40-acb7-705ef83d2d5d.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ev-hizmetlisi-sgk-dosya-acilisi",
+      "path": "assets/services/ev-hizmetlisi-sgk-dosya-acilisi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-904b84c5-c8b2-46f7-be20-6abf5acb4505.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "bordrolama",
+      "path": "assets/services/bordrolama.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-0cac848c-dd7d-4868-bd77-8822c1354f21.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "istihdam-tesvik",
+      "path": "assets/services/istihdam-tesvik.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-9d09cbe2-15c9-43f7-97a2-734aa316e023.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "sgk-protokolu",
+      "path": "assets/services/sgk-protokolu.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-1f53b435-e4f0-4b84-b841-684eaf8dc8ea.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "asgari-iscilik-ve-ilisiksizlik-belgesi",
+      "path": "assets/services/asgari-iscilik-ve-ilisiksizlik-belgesi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-2097f1bc-230a-4f22-955e-10e7f519f430.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "borclanma-islemleri",
+      "path": "assets/services/borclanma-islemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5ceddd7c-cf77-41f9-81d8-b223b2a0c7a5.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "emeklilik-danismanligi",
+      "path": "assets/services/emeklilik-danismanligi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-eb07fa39-ee1b-44a1-8751-b271fe3384d5.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "insan-kiymetleri-surec-yonetimi",
+      "path": "assets/services/insan-kiymetleri-surec-yonetimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-6d03dfc0-65d7-4386-86ee-bd3ffca8e3c4.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "yabanci-uyruklu-ikamet-izini",
+      "path": "assets/services/yabanci-uyruklu-ikamet-izini.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ec83af10-7a0c-4d3c-8461-4c207dcff144.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "calisma-izni-alma-ve-iptali",
+      "path": "assets/services/calisma-izni-alma-ve-iptali.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-91823476-d2a6-4ad2-9e87-240a4dad727f.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "yurtdisina-isci-gonderimi",
+      "path": "assets/services/yurtdisina-isci-gonderimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-fe1ffe0d-b1e1-49fb-ab80-7d6d80d8aaa2.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "isveren-denetimi-ve-raporlamasi",
+      "path": "assets/services/isveren-denetimi-ve-raporlamasi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-4ad34f93-eae8-4ecc-b43e-ce38cb438095.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "sgk-dosya-kapanisi",
+      "path": "assets/services/sgk-dosya-kapanisi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-db62b4e1-850b-474b-814e-07dff8ccc25c.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ticaret-sicil-islemleri",
+      "path": "assets/services/ticaret-sicil-islemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-4467cb0f-6e08-4d4a-8ee5-a00d1bc9ccf0.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "raporlama",
+      "path": "assets/services/raporlama.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-3ae88708-deb4-4194-8a39-7db62aff72d8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "yonetim-danismanligi",
+      "path": "assets/services/yonetim-danismanligi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-fb44abc0-e17d-44f6-8ecc-dce08ab1eb03.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "mali-danismanlik",
+      "path": "assets/services/mali-danismanlik.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-0f8b5a8a-b299-44bc-b23a-b9883d5aced8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "muhasebe-sistemleri",
+      "path": "assets/services/muhasebe-sistemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-4a91a987-4bbb-4d9f-9b8b-1d7d4c377cd8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "veri-analiz-sistemleri",
+      "path": "assets/services/veri-analiz-sistemleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-122f4310-ce86-4acd-95c6-29aaba8634c1.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "cozum-prosedurleri",
+      "path": "assets/services/cozum-prosedurleri.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-d84d4a56-8b6d-4055-9c5e-4798570a189c.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "muhasebe-ve-vergi",
+      "path": "assets/services/muhasebe-ve-vergi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-d458cbca-6a9d-49fe-97ae-f659d50a8d30.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ufrs",
+      "path": "assets/services/ufrs.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-fc6b2817-95af-4619-acf8-06a62b180572.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "finansal-analiz",
+      "path": "assets/services/finansal-analiz.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-facb8670-36dd-486b-9196-9b8a2cc13e87.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ic-denetim",
+      "path": "assets/services/ic-denetim.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5e0ec6d5-9745-47e5-966d-b3eda1b62036.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "insan-kiymetleri-egitimi",
+      "path": "assets/services/insan-kiymetleri-egitimi.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-f9346d26-6bcf-48e6-8095-07f17813348d.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "uretim",
+      "path": "assets/sectors/uretim.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-74253af6-3b23-4731-8952-b23c8f3068c8.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "ticaret",
+      "path": "assets/sectors/ticaret.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ecb5bb88-889c-49b3-aece-68220f3d764d.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "teknoloji",
+      "path": "assets/sectors/teknoloji.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-2f4d5a2f-f732-44c3-a64a-c2d04e73f297.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "perakende",
+      "path": "assets/sectors/perakende.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-beaabe70-46e1-4ce4-afcc-7acc43034786.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "insaat",
+      "path": "assets/sectors/insaat.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-f65202e4-9077-4927-aff6-7388ed39946b.png",
+      "mode": "built-in-imagegen"
+    },
+    {
+      "id": "hizmet",
+      "path": "assets/sectors/hizmet.jpg",
+      "source": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-c623f6fc-b293-4c2d-a852-7546f81b8ed5.png",
+      "mode": "built-in-imagegen"
+    }
+  ]
+}

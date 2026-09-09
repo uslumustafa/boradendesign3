@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "hakkimizda",
+    "biz-kimiz",
+    "misyon-vizyon",
+    "ekibimiz",
+    "kariyer",
+    "hizmetler",
+    "sektorler",
+    "blog",
+    "haberler",
+    "sirkuler",
+    "duyurular",
+    "basari-hikayeleri",
+    "iletisim",
+    "hesaplama",
+    "kurumsal-arsiv",
+    "perspektifler",
+    "yayin-ilkeleri"
+  ],
+  "categories": {
+    "vergi": "vergi-ve-mali-musavirlik",
+    "denetim": "denetim-ve-raporlama",
+    "danismanlik": "kurumsal-danismanlik",
+    "insan": "insan-kaynaklari-ve-bordro",
+    "sistem": "sistemler-ve-is-zekasi",
+    "akademi": "boraden-akademi"
+  },
+  "kinds": {
+    "blog": "blog",
+    "news": "haberler",
+    "circulars": "sirkuler",
+    "announcements": "duyurular",
+    "stories": "basari-hikayeleri"
+  },
+  "calculators": {
+    "income": "gelir-vergisi",
+    "vat": "kdv",
+    "salary": "brut-net-maas"
+  }
+}

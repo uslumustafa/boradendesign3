@@ -1,0 +1,31 @@
+{
+  "prompts": [
+    [
+      "ekonomi",
+      "An original high-end editorial photograph for a Turkish corporate advisory journal, wide landscape 1536x1024. Topic: economic outlook and scenario planning. A considered, cinematic panorama of Istanbul's contemporary commercial skyline across the Bosphorus in a cool pearl-grey early morning, photographed through the expansive clean window of a quiet executive analysis room. Foreground to the right: a single open notebook and a pencil on a pale natural stone desk; no people. Restrained sage and silver palette, real architectural detail, premium financial newspaper weekend magazine art direction, atmospheric depth, optically plausible natural photography. City and horizon dominate, not office furniture. No yellow filter, no slogans, no logos, no text, no numerical forecasts, no fabricated graphs. A symbolic editorial cover, not a claimed Boraden office."
+    ],
+    [
+      "raporlama",
+      "An original sophisticated editorial photograph for a financial reporting article, wide landscape 1536x1024. Macro still-life of three substantial charcoal-grey financial report volumes, one open with subtly ruled pages, slim metal page markers and a crystal-clear magnifying loupe laid across the paper on a cool ivory desk. Soft natural sidelight reveals beautiful paper texture and precise bound edges. Different depths and diagonals, elegant magazine composition, desaturated sage shadows and neutral whites, honest photographic realism, no people or buildings. No readable writing, no logos, no printed claims or numbers, no golden lighting, no neon. It must feel like rigorous documentation and standards, not a generic SaaS image."
+    ],
+    [
+      "takvim",
+      "Original premium magazine photograph for a Turkish corporate tax calendar article, landscape 1536x1024. Overhead carefully art-directed working desk with a large blank monthly paper planner composed of a subtle grid (absolutely no letters or numbers), a hand using a deep forest-green pencil to mark one small square, three neatly folded neutral-grey sticky notes and a small brushed-steel desk clock at the far edge. Off-centre dynamic diagonal framing, fine pale-grey paper texture, cool morning light, sage green and quiet white palette. Real tactile professional planning, editorial minimalism with purposeful objects. Not a UI screenshot. No yellow, no logos, no readable text or fake deadline dates."
+    ],
+    [
+      "veri-haber",
+      "An original editorial photograph illustrating how to read economic data methodology, wide landscape 1536x1024. A close-up of a precision analogue scientific plotting instrument drawing a single dark-green line across fine blank graph paper; moving pen assembly and its finely machined metal mechanism in focus, other pages softly out of focus behind. No scale numbers, no axes labels, no text, no logos. A beautiful physical metaphor for measurement, not an actual economic chart or asserted trend. Cool off-white, slate grey and restrained sage. Dramatic soft lateral daylight, elegant negative space, macro photographic realism, crisp paper fibres, luxury editorial magazine quality. No yellow or gold filter, no digital screens or neon."
+    ],
+    [
+      "denetim-haber",
+      "An original premium editorial photograph for a legal audit documentation article, landscape 1536x1024. Side view of a professional woman's hands meticulously comparing two orderly paper dossiers on a sophisticated quiet law-library reading table, foreground transparent page ruler and small steel binder clips; distant dark shelving and soft daylight create cinematic depth. Only the hands and tailored charcoal sleeves, no visible face, no judges, no courtroom symbols or invented company. Restrained slate blue, neutral paper whites and dark natural wood, formal yet contemporary, forensic care and professional attention. Documents have soft non-legible lines only: absolutely no readable text, numbers, logos or signatures. Optically convincing photography, not illustration, no yellow wash."
+    ]
+  ],
+  "sources": {
+    "ekonomi": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5660fd79-00a5-478f-93e3-63f09207ac6a.png",
+    "raporlama": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ff8475f0-82fd-4be8-b059-6230d4fc1824.png",
+    "takvim": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ac079db5-7661-4909-84ce-8d0a6e52e737.png",
+    "veri-haber": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-ee1f675a-d9af-40af-bb43-d6b63b60b9d7.png",
+    "denetim-haber": "/Users/mustafauslu/.codex/generated_images/01a072d8-63da-7472-8b57-f54f3a461fc4/exec-5c0f9bd8-be93-49be-90d2-21c7a866dc94.png"
+  }
+}

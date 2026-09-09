@@ -1,0 +1,66 @@
+[
+  {
+    "id": "epdk",
+    "name": "Enerji Piyasası Düzenleme Kurumu",
+    "href": "https://www.epdk.org.tr/",
+    "path": "assets/institutions/epdk.png",
+    "source": "https://boraden.com.tr/upload/banner-3.png",
+    "sha256": "d0ba9c4ed8f39cba22fe9c724c17d5aedc0920033bb44e4bfd4327e2f0b22b9a",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  },
+  {
+    "id": "tspb",
+    "name": "Türkiye Sermaye Piyasaları Birliği",
+    "href": "https://www.tspb.org.tr/tr/",
+    "path": "assets/institutions/tspb.png",
+    "source": "https://boraden.com.tr/upload/banner-4.png",
+    "sha256": "17dd05139713398cf78a42abd73b779c86de4a4cf5286e6b4f2f3e801a5cb00a",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  },
+  {
+    "id": "gib",
+    "name": "Gelir İdaresi Başkanlığı",
+    "href": "https://www.gib.gov.tr/",
+    "path": "assets/institutions/gib.png",
+    "source": "https://boraden.com.tr/upload/banner-2.png",
+    "sha256": "68cd83da39fe5b6299c826dabe2f090d0780bb2e6361ed05f54f191ac860dcfc",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim.",
+    "note": "The legacy banner linked to HMB but its image visibly identifies Gelir İdaresi Başkanlığı. The new label and destination match the actual GİB logo; official destination verified 2026-09-06."
+  },
+  {
+    "id": "spk",
+    "name": "Sermaye Piyasası Kurulu",
+    "href": "https://www.spk.gov.tr/",
+    "path": "assets/institutions/spk.png",
+    "source": "https://boraden.com.tr/upload/banner-1.png",
+    "sha256": "d6c01ad56d9ca11a5478b2716ab4dfb807b6fd7ac982c6a7de478223cc96afbb",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  },
+  {
+    "id": "tdub",
+    "name": "Türkiye Değerleme Uzmanları Birliği",
+    "href": "https://www.tdub.org.tr/",
+    "path": "assets/institutions/tdub.png",
+    "source": "https://boraden.com.tr/upload/banner-5.png",
+    "sha256": "0ccec6851ec657b44fba15c3abb3547e2464c070404f0b9622d5485cfd205cec",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  },
+  {
+    "id": "kgk",
+    "name": "Kamu Gözetimi Kurumu",
+    "href": "https://www.kgk.gov.tr/",
+    "path": "assets/institutions/kgk.png",
+    "source": "https://boraden.com.tr/upload/banner-8.png",
+    "sha256": "b0c67262a9bbaef6cee25d80e61c5843e51877e257a84e03b523aac2ecd84a6e",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  },
+  {
+    "id": "tcmb",
+    "name": "Türkiye Cumhuriyet Merkez Bankası",
+    "href": "https://www.tcmb.gov.tr/",
+    "path": "assets/institutions/tcmb.png",
+    "source": "https://boraden.com.tr/upload/banner-9.png",
+    "sha256": "fed9c0ecdedd080f71e1a5ef07fd1a4673e311b4499538a738fe7e6fe6009208",
+    "context": "Legacy Boraden public institution link; not a client, partner or endorsement claim."
+  }
+]

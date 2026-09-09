@@ -1,0 +1,46 @@
+/* Page-specific campaign imagery; text and picture remain separate reading areas. */
+.context-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:6vw;padding-top:155px;padding-bottom:65px;min-height:0;position:relative}
+.context-hero>.context-hero-copy{display:block;min-width:0}
+.context-hero-copy h1{font-size:clamp(48px,6.3vw,108px);line-height:1.055;letter-spacing:-.055em;margin:28px 0 30px;overflow-wrap:break-word}
+.context-hero-copy>.eyebrow{margin-bottom:22px}
+.context-hero-copy>.breadcrumbs{margin-bottom:35px;flex-wrap:wrap;line-height:1.7}
+.context-hero-copy>p:not(.eyebrow),.context-hero-copy>div>p{max-width:50ch;font-size:18px;line-height:1.8;color:#3c4d3c}
+.context-hero-copy .directory-hero-bottom{display:block;margin-top:30px}
+.context-visual{margin:0;min-width:0;align-self:center;display:flex;flex-direction:column}
+.context-visual img{width:100%;height:clamp(330px,35vw,600px);object-fit:cover;object-position:64% center;border-radius:2px 72px 2px 2px;background:#dce2d2}
+.context-visual figcaption{margin-top:14px;font-size:10px;line-height:1.7;color:#4b5e46;letter-spacing:.025em}
+.context-panorama{grid-template-columns:1fr;gap:38px}
+.context-panorama .context-hero-copy{max-width:1200px}
+.context-panorama .context-visual img{height:clamp(250px,26vw,430px);border-radius:2px 2px 68px 2px;object-position:center 56%}
+.context-panorama .context-hero-copy>div{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.context-panorama .context-hero-copy>div>span{font-family:'Instrument Serif',Georgia,serif;font-size:100px;color:#6b805f;line-height:1}
+.context-hero .calc-year{position:static;display:inline-block;font-family:inherit;font-size:13px;line-height:1.5;letter-spacing:.08em;margin-top:14px;padding:9px 15px;border:1px solid #a8b59c;border-radius:30px;color:#344c32}
+.context-contact-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:6vw;align-items:center;margin-bottom:70px}
+.context-contact-intro h1{font-size:clamp(55px,7.2vw,116px);line-height:1.06;margin:30px 0;letter-spacing:-.06em}
+.context-contact-intro .context-visual img{height:clamp(300px,29vw,470px);object-position:center}
+.context-contact-intro .breadcrumbs{margin-bottom:28px;flex-wrap:wrap}
+@media(min-width:1001px){
+ .context-panorama{gap:28px;padding-bottom:45px}
+ .context-panorama .context-hero-copy{max-width:none;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.7fr);gap:0 6vw;align-items:end}
+ .context-panorama .context-hero-copy>.eyebrow,.context-panorama .context-hero-copy>.breadcrumbs{grid-column:1/-1}
+ .context-panorama .context-hero-copy h1{margin:14px 0 22px;font-size:clamp(54px,5.6vw,100px)}
+ .context-panorama .context-hero-copy>div,.context-panorama .context-hero-copy>p:not(.eyebrow){margin:0 0 26px;align-items:end;font-size:16px}
+ .context-panorama .context-hero-copy>div>p{font-size:16px}
+ .context-panorama .context-hero-copy>div>span{font-size:70px}
+ .context-panorama .context-visual img{height:clamp(250px,22vw,380px)}
+}
+@media(min-width:1800px){.context-hero{padding-top:190px;padding-bottom:95px}.context-hero-copy h1{font-size:112px}.context-panorama .context-hero-copy{max-width:1400px}}
+@media(max-width:1000px){.context-hero,.context-contact-intro{gap:4vw}.context-hero-copy h1{font-size:clamp(43px,6vw,64px)}.context-visual img{height:390px}.context-hero-copy>p:not(.eyebrow),.context-hero-copy>div>p{font-size:16px}}
+@media(max-width:760px){
+ .context-hero,.context-contact-intro{grid-template-columns:1fr;gap:32px}
+ .context-hero{padding-top:125px;padding-bottom:45px}
+ .context-hero-copy h1,.context-contact-intro h1{font-size:clamp(42px,10.6vw,70px);line-height:1.08;margin:25px 0}
+ .context-hero-copy>.breadcrumbs{margin-bottom:28px}
+ .context-hero-copy>p:not(.eyebrow),.context-hero-copy>div>p{font-size:16px;line-height:1.85;max-width:50ch}
+ .context-visual img,.context-contact-intro .context-visual img{height:auto;aspect-ratio:1.35;max-height:420px;border-radius:2px 48px 2px 2px}
+ .context-panorama .context-visual img{height:auto;aspect-ratio:1.65;border-radius:2px 2px 45px 2px;object-position:center}
+ .context-visual figcaption{font-size:10px;margin-top:12px}
+ .context-contact-intro{margin-bottom:45px}
+ .context-hero-copy .directory-hero-bottom{margin-top:25px}
+ .context-panorama .context-hero-copy>div>span{font-size:72px}
+}

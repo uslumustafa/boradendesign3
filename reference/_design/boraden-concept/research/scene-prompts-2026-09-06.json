@@ -1,0 +1,30 @@
+{
+  "tool": "built-in image_gen",
+  "kind": "AI-generated illustrative photography; not actual Boraden employees",
+  "prompts": [
+    {
+      "id": "vergi",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. Close study of an experienced financial professional's hands reconciling paper receipts and a restrained bound ledger at a desk beside a large window, out-of-focus archive shelves, the physical trail of evidence as the visual idea; top-down oblique 50mm view. No readable numbers. Distinctive tactile paper and graphite textures."
+    },
+    {
+      "id": "denetim",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. A woman auditor and a male operations engineer examining a manufacturing line from a glass mezzanine, both standing, discussing a slim document folder; large clean factory softly visible behind. Wide off-center composition, architectural depth, real machinery, dignified tailoring, slate and pale green. No meeting table."
+    },
+    {
+      "id": "danismanlik",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. Three senior professionals standing around a detailed physical architectural model of a real mixed-use urban district, considering an investment decision. Tight foreground model, people on opposite sides, diagonal sunlight softened by glass, spacious contemporary office. Cool neutral premium corporate photography, no handshake, no staged smiles."
+    },
+    {
+      "id": "insan",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. A natural one-to-one mentoring conversation between two adult professionals, a woman in her forties and a younger man, in an airy quiet office library. Eye level portrait framing with both people visible, thoughtful exchange, notebook, human warmth without staged smiles; light textile chairs, glass wall and leafy courtyard. No large boardroom table."
+    },
+    {
+      "id": "veri",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. A financial data analyst in side profile in a calm daylight operations workspace, two refined monitors display minimal indistinct rows and softly drawn charts with no readable labels; a colleague is farther in depth by a glass wall. Foreground glasses and notebook slightly out of focus. No sci-fi dashboard, no code rain. Cinematic cool grey and muted sage."
+    },
+    {
+      "id": "akademi",
+      "prompt": "Use case: photorealistic-natural. Create one landscape editorial photograph, 1536x1024, for Boraden, a Turkish audit and professional advisory company's website. Sophisticated, believable professional documentary photography; authentic materials and quiet concentration, cool neutral daylight, pale mineral green and graphite, clean whites without yellow cast. Not an abstract sculpture, not CGI, no decorative neon, no text, no logos, no watermark. Photographic depth, precise composition. This is an illustrative scene, not actual company employees. A small professional seminar in progress in a bright architectural studio, a woman instructor in profile draws a simple diagram on a large whiteboard while four adult professionals listen in a loose semicircle. Architectural daylight through blinds creates delicate shadows, editorial documentary framing from the back of the room. No legible writing, no logos. Authentic contemporary learning scene."
+    }
+  ]
+}

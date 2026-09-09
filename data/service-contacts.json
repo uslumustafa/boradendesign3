@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "vergi": { "name": "", "role": "", "email": "", "photo": "" },
+    "denetim": { "name": "", "role": "", "email": "", "photo": "" },
+    "danismanlik": { "name": "", "role": "", "email": "", "photo": "" },
+    "insan": { "name": "", "role": "", "email": "", "photo": "" },
+    "sistem": { "name": "", "role": "", "email": "", "photo": "" },
+    "akademi": { "name": "", "role": "", "email": "", "photo": "" }
+  },
+  "services": {}
+}

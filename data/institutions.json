@@ -1,0 +1,69 @@
+[
+  {
+    "id": "spk",
+    "label": "SPK",
+    "name": "Sermaye Piyasası Kurulu",
+    "href": "https://www.spk.gov.tr/",
+    "logo": "/assets/institutions/spk.png",
+    "source": "https://boraden.com.tr/upload/banner-1.png",
+    "checked": "2026-09-09"
+  },
+  {
+    "id": "kgk",
+    "label": "KGK",
+    "name": "Kamu Gözetimi, Muhasebe ve Denetim Standartları Kurumu",
+    "href": "https://www.kgk.gov.tr/",
+    "logo": "/assets/institutions/kgk.png",
+    "source": "https://boraden.com.tr/upload/banner-8.png",
+    "checked": "2026-09-09"
+  },
+  {
+    "id": "tcmb",
+    "label": "TCMB",
+    "name": "Türkiye Cumhuriyet Merkez Bankası",
+    "href": "https://www.tcmb.gov.tr/",
+    "logo": "/assets/institutions/tcmb.png",
+    "source": "https://boraden.com.tr/upload/banner-9.png",
+    "checked": "2026-09-09"
+  },
+  {
+    "id": "gib",
+    "label": "GİB",
+    "name": "Gelir İdaresi Başkanlığı",
+    "href": "https://www.gib.gov.tr/",
+    "logo": "/assets/institutions/gib.png",
+    "source": "https://boraden.com.tr/upload/banner-2.png",
+    "checked": "2026-09-09",
+    "note": "Korunan görsel Gelir İdaresi Başkanlığını gösterir; eski HMB bağlantısı yerine GİB ana sayfası kullanılır."
+  },
+  {
+    "id": "epdk",
+    "label": "EPDK",
+    "name": "Enerji Piyasası Düzenleme Kurumu",
+    "href": "https://www.epdk.gov.tr/",
+    "logo": "/assets/institutions/epdk.png",
+    "source": "https://boraden.com.tr/upload/banner-3.png",
+    "checked": "2026-09-09",
+    "note": "Eski https://www.epdk.org.tr/ adresi sertifika alan adı uyuşmazlığı verdi. Resmî .gov.tr ana sayfası HTTP 200 ile doğrulandı."
+  },
+  {
+    "id": "tspb",
+    "label": "TSPB",
+    "name": "Türkiye Sermaye Piyasaları Birliği",
+    "href": "https://tspb.org.tr/",
+    "logo": "/assets/institutions/tspb.svg",
+    "source": "https://tspb.org.tr/wp-content/uploads/2023/03/tspb-ikon.svg",
+    "checked": "2026-09-09",
+    "note": "Eski https://www.tspb.org.tr/tr/ adresi https://tspb.org.tr/tr/ adresine yönlenip HTTP 404 döndü. Güncel ana sayfa ve sitenin kullandığı özgün SVG HTTP 200 ile doğrulandı; eski PNG korunmuştur."
+  },
+  {
+    "id": "tdub",
+    "label": "TDUB",
+    "name": "Türkiye Değerleme Uzmanları Birliği",
+    "href": "https://tdub.org.tr/",
+    "logo": "/assets/institutions/tdub.png",
+    "source": "https://boraden.com.tr/upload/banner-5.png",
+    "checked": "2026-09-09",
+    "note": "Resmî ana sayfa web erişim aracıyla doğrulandı. www ve www olmayan adreslere doğrudan HTTP kontrolü zaman aşımına uğradı."
+  }
+]

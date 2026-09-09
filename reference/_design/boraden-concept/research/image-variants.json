@@ -1,0 +1,2162 @@
+{
+  "assets/decision-room.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 257657,
+    "sha256": "08ff25d5f437a9e90ed4110011fd09a667233bae7ada2e9da6acc7236724331a",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/decision-room-640.webp",
+        "bytes": 11732
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/decision-room-1280.webp",
+        "bytes": 28606
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/decision-room-1672.webp",
+        "bytes": 42480
+      }
+    ]
+  },
+  "assets/enterprise-landscape.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 579637,
+    "sha256": "61343c9440eca17dfdf4b7276d83610d2ed973c0b2fccb2e2ab5d757e5638629",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/enterprise-landscape-640.webp",
+        "bytes": 40908
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/enterprise-landscape-1280.webp",
+        "bytes": 130792
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/enterprise-landscape-1672.webp",
+        "bytes": 197442
+      }
+    ]
+  },
+  "assets/expertise-table.jpg": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 440196,
+    "sha256": "2782243c7cb74d24050363a3309d684dfe10839b17db799842492418596b2093",
+    "variants": [
+      {
+        "width": 640,
+        "height": 427,
+        "src": "assets/responsive/expertise-table-640.webp",
+        "bytes": 32412
+      },
+      {
+        "width": 1280,
+        "height": 853,
+        "src": "assets/responsive/expertise-table-1280.webp",
+        "bytes": 89086
+      },
+      {
+        "width": 1536,
+        "height": 1024,
+        "src": "assets/responsive/expertise-table-1536.webp",
+        "bytes": 117290
+      }
+    ]
+  },
+  "assets/pages/alan-akademi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 252210,
+    "sha256": "e9ca77c39d5c380f1da1cd0a33819075f6c910cb9fcf7429a9ca7666383b4c5d",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-akademi-640.webp",
+        "bytes": 22492
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-akademi-1280.webp",
+        "bytes": 54700
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-akademi-1672.webp",
+        "bytes": 79768
+      }
+    ]
+  },
+  "assets/pages/alan-denetim.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 220523,
+    "sha256": "6c2e552d8ed4ddf4469606bbbb4167bdd84f9309b6cc88bc5a4887224ab0e4d4",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-denetim-640.webp",
+        "bytes": 17410
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-denetim-1280.webp",
+        "bytes": 45920
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-denetim-1672.webp",
+        "bytes": 67818
+      }
+    ]
+  },
+  "assets/pages/alan-insan.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 284553,
+    "sha256": "fd84a98aa68e3f48fa5bb8554cf80fc96fb352189152d824e173b70a6a395b6d",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-insan-640.webp",
+        "bytes": 25552
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-insan-1280.webp",
+        "bytes": 67104
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-insan-1672.webp",
+        "bytes": 97044
+      }
+    ]
+  },
+  "assets/pages/alan-kurumsal.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 252091,
+    "sha256": "a5f7f48617523e64fa80b2495e3ce22ce1b7c500d9e6e179f0e33728a4223c78",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-kurumsal-640.webp",
+        "bytes": 22394
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-kurumsal-1280.webp",
+        "bytes": 55970
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-kurumsal-1672.webp",
+        "bytes": 79994
+      }
+    ]
+  },
+  "assets/pages/alan-sistemler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 252649,
+    "sha256": "d3c8abc9ccb2970f4aee11d0faad7c51b6e9e18ddf1a0ded1de7cccf8c05ebcd",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-sistemler-640.webp",
+        "bytes": 19924
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-sistemler-1280.webp",
+        "bytes": 55938
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-sistemler-1672.webp",
+        "bytes": 84776
+      }
+    ]
+  },
+  "assets/pages/alan-vergi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 339338,
+    "sha256": "0dd662ff64c93d3e333e24e49871f2ed98213a7598ef8fd2c4da67ce95b4d670",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/alan-vergi-640.webp",
+        "bytes": 16836
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/alan-vergi-1280.webp",
+        "bytes": 75148
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/alan-vergi-1672.webp",
+        "bytes": 129864
+      }
+    ]
+  },
+  "assets/pages/basari-hikayeleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 305809,
+    "sha256": "cfbf766941d20a0f840d3c96d4b479457c89f856619e5a0f1f099c633524b598",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/basari-hikayeleri-640.webp",
+        "bytes": 27480
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/basari-hikayeleri-1280.webp",
+        "bytes": 79650
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/basari-hikayeleri-1672.webp",
+        "bytes": 116110
+      }
+    ]
+  },
+  "assets/pages/blog-bordro.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 181032,
+    "sha256": "5e074a943c905aab7c700f4123b894d534eb74852d1280dc01ea07ad0fb4a28c",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/blog-bordro-640.webp",
+        "bytes": 15096
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/blog-bordro-1280.webp",
+        "bytes": 34594
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/blog-bordro-1672.webp",
+        "bytes": 49596
+      }
+    ]
+  },
+  "assets/pages/blog-degerleme.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 239599,
+    "sha256": "75836054f36d17495742d25037d943e4a42ceaf86bea64784297b197e1eacc89",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/blog-degerleme-640.webp",
+        "bytes": 19572
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/blog-degerleme-1280.webp",
+        "bytes": 58144
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/blog-degerleme-1672.webp",
+        "bytes": 85476
+      }
+    ]
+  },
+  "assets/pages/blog-kurulus.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 205759,
+    "sha256": "9e60db549cdc6344666c50db2698e31bff47d0b49df9f4ec74004d7d27a37543",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/blog-kurulus-640.webp",
+        "bytes": 18076
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/blog-kurulus-1280.webp",
+        "bytes": 41796
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/blog-kurulus-1672.webp",
+        "bytes": 60168
+      }
+    ]
+  },
+  "assets/pages/blog.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 192646,
+    "sha256": "7aa9c1cabd3bff63733362e49724e3d51d96bdba38d96580fff1c4eebffcb3ce",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/blog-640.webp",
+        "bytes": 11790
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/blog-1280.webp",
+        "bytes": 34844
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/blog-1672.webp",
+        "bytes": 55092
+      }
+    ]
+  },
+  "assets/pages/duyurular.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 324426,
+    "sha256": "4c43af58082d8c067a157813017a187d5e1657475d7184405ccde012a608f03c",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/duyurular-640.webp",
+        "bytes": 13824
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/duyurular-1280.webp",
+        "bytes": 80670
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/duyurular-1672.webp",
+        "bytes": 151546
+      }
+    ]
+  },
+  "assets/pages/haber-otv.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 311277,
+    "sha256": "7b171ae02c8af5390180739d26d28b4612b1ceab087ef208862508bfe814b130",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/haber-otv-640.webp",
+        "bytes": 20226
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/haber-otv-1280.webp",
+        "bytes": 74476
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/haber-otv-1672.webp",
+        "bytes": 119916
+      }
+    ]
+  },
+  "assets/pages/haberler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 204667,
+    "sha256": "2f6036ca462eb1cdc3969146a6f6a403c113f8bd85590d7cc857230b39eacfbb",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/haberler-640.webp",
+        "bytes": 16828
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/haberler-1280.webp",
+        "bytes": 41884
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/haberler-1672.webp",
+        "bytes": 59098
+      }
+    ]
+  },
+  "assets/pages/hakkimizda-sahne.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 146503,
+    "sha256": "d0497c809eef9b9058ebceaffd794cf0bb1d40182df56da19f31fa769f0a5ea6",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hakkimizda-sahne-640.webp",
+        "bytes": 11384
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hakkimizda-sahne-1280.webp",
+        "bytes": 26842
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hakkimizda-sahne-1672.webp",
+        "bytes": 37964
+      }
+    ]
+  },
+  "assets/pages/hesap-gelir.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 321084,
+    "sha256": "819ee9e6bf5a4da29979b975ec920cea7b6e6a0a836c750ca952f36e25b7f4fc",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hesap-gelir-640.webp",
+        "bytes": 24358
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hesap-gelir-1280.webp",
+        "bytes": 83258
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hesap-gelir-1672.webp",
+        "bytes": 131364
+      }
+    ]
+  },
+  "assets/pages/hesap-kdv.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 251713,
+    "sha256": "d5a8cf1b9d98018d27eb599fe99b703407ea08840ac8424b6d7e87a1c4cb1609",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hesap-kdv-640.webp",
+        "bytes": 19332
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hesap-kdv-1280.webp",
+        "bytes": 54406
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hesap-kdv-1672.webp",
+        "bytes": 83290
+      }
+    ]
+  },
+  "assets/pages/hesap-maas.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 222640,
+    "sha256": "bc1df520c9cf0cbe8e4696afd24f168cbbb45e34fb39ee0f47e56a7f8ca3277f",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hesap-maas-640.webp",
+        "bytes": 19264
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hesap-maas-1280.webp",
+        "bytes": 49214
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hesap-maas-1672.webp",
+        "bytes": 71368
+      }
+    ]
+  },
+  "assets/pages/hesaplama.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 209538,
+    "sha256": "71baf16c6593e5d062794526c7232b926c9d52797d2965081bec497dcbccc176",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hesaplama-640.webp",
+        "bytes": 19096
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hesaplama-1280.webp",
+        "bytes": 48128
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hesaplama-1672.webp",
+        "bytes": 69206
+      }
+    ]
+  },
+  "assets/pages/hizmetler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 322697,
+    "sha256": "6e2c071265861759aec1588319494766005f104ee559763ee15c9812cb9a1f79",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/hizmetler-640.webp",
+        "bytes": 29766
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/hizmetler-1280.webp",
+        "bytes": 83894
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/hizmetler-1672.webp",
+        "bytes": 123766
+      }
+    ]
+  },
+  "assets/pages/iletisim.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 270217,
+    "sha256": "315aa40ccc0cbc1acce502d560027df9250682fbca3ccd8dcfcc1dd0ca66e3a7",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/iletisim-640.webp",
+        "bytes": 19726
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/iletisim-1280.webp",
+        "bytes": 57286
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/iletisim-1672.webp",
+        "bytes": 92682
+      }
+    ]
+  },
+  "assets/pages/kurumsal-arsiv.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 254038,
+    "sha256": "7ffcc3683e7c6e608f5a5feb3998c70e1dba6d90c83721af97df594c12e27ac3",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/kurumsal-arsiv-640.webp",
+        "bytes": 26710
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/kurumsal-arsiv-1280.webp",
+        "bytes": 64804
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/kurumsal-arsiv-1672.webp",
+        "bytes": 92528
+      }
+    ]
+  },
+  "assets/pages/perspektifler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 227004,
+    "sha256": "ce614a9f5ab3db23f2cd08e55da4d996649efdc3ca86e9d53d2b1674a64fb743",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/perspektifler-640.webp",
+        "bytes": 22112
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/perspektifler-1280.webp",
+        "bytes": 50574
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/perspektifler-1672.webp",
+        "bytes": 70078
+      }
+    ]
+  },
+  "assets/pages/sirkuler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 202051,
+    "sha256": "76fa7a6d09aa95c0e51fee9fb467b5537f9327eb990bb94f1c8388bcb6f0c5a9",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/sirkuler-640.webp",
+        "bytes": 17740
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/sirkuler-1280.webp",
+        "bytes": 39726
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/sirkuler-1672.webp",
+        "bytes": 55218
+      }
+    ]
+  },
+  "assets/pages/yayin-ilkeleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 349006,
+    "sha256": "bffc3e14d6302fa2c4cb53d204d4742e5770b5fc5e50b7eebc2dd9b2ffde105e",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/pages/yayin-ilkeleri-640.webp",
+        "bytes": 28310
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/pages/yayin-ilkeleri-1280.webp",
+        "bytes": 96618
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/pages/yayin-ilkeleri-1672.webp",
+        "bytes": 147946
+      }
+    ]
+  },
+  "assets/sectors/hizmet.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 333387,
+    "sha256": "cebd4339ae5d4334e49ea47d79dcbfe92330c5875b5bf66039f56b5584b5913c",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/hizmet-640.webp",
+        "bytes": 28890
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/hizmet-1280.webp",
+        "bytes": 69468
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/hizmet-1672.webp",
+        "bytes": 96944
+      }
+    ]
+  },
+  "assets/sectors/insaat.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 300656,
+    "sha256": "6d6024b59ec441933f6deb8d16d027bcc8f7e4671ad517f6f715f85d6bf08680",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/insaat-640.webp",
+        "bytes": 21744
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/insaat-1280.webp",
+        "bytes": 53452
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/insaat-1672.webp",
+        "bytes": 76126
+      }
+    ]
+  },
+  "assets/sectors/perakende.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 346327,
+    "sha256": "e7815b2937f709542cc4346812182d985c3082a5986023bc4fa16f5a8b34de36",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/perakende-640.webp",
+        "bytes": 28986
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/perakende-1280.webp",
+        "bytes": 66620
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/perakende-1672.webp",
+        "bytes": 92476
+      }
+    ]
+  },
+  "assets/sectors/teknoloji.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 293294,
+    "sha256": "3d1c52ccc785cce9ecc4b208016466f48fe42064d3586538548ca7224fbc04df",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/teknoloji-640.webp",
+        "bytes": 20236
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/teknoloji-1280.webp",
+        "bytes": 49536
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/teknoloji-1672.webp",
+        "bytes": 70122
+      }
+    ]
+  },
+  "assets/sectors/ticaret.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 391982,
+    "sha256": "3210baddf85d247d9795f544f7985b26512d9c28f1ab4c25fdca0ae70c881042",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/ticaret-640.webp",
+        "bytes": 25392
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/ticaret-1280.webp",
+        "bytes": 74300
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/ticaret-1672.webp",
+        "bytes": 110630
+      }
+    ]
+  },
+  "assets/sectors/uretim.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 309224,
+    "sha256": "ca9177294003154a15da0c1f6a3331a6fec702f24ea73622ddeee773931a5880",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/sectors/uretim-640.webp",
+        "bytes": 23072
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/sectors/uretim-1280.webp",
+        "bytes": 56282
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/sectors/uretim-1672.webp",
+        "bytes": 78306
+      }
+    ]
+  },
+  "assets/services/ar-ge-hizmetleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 304762,
+    "sha256": "a0c43cc65f016fa7c458c2251af1bbacca8d9015efce975f8b482c11d19ca2e4",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ar-ge-hizmetleri-640.webp",
+        "bytes": 20590
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ar-ge-hizmetleri-1280.webp",
+        "bytes": 53610
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ar-ge-hizmetleri-1672.webp",
+        "bytes": 77736
+      }
+    ]
+  },
+  "assets/services/asgari-iscilik-ve-ilisiksizlik-belgesi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 236687,
+    "sha256": "206f9d3e72469c731a064558492563002b5cae301b4b296f5491fac6d7c0cdef",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/asgari-iscilik-ve-ilisiksizlik-belgesi-640.webp",
+        "bytes": 14370
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/asgari-iscilik-ve-ilisiksizlik-belgesi-1280.webp",
+        "bytes": 35200
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/asgari-iscilik-ve-ilisiksizlik-belgesi-1672.webp",
+        "bytes": 51090
+      }
+    ]
+  },
+  "assets/services/bagimsiz-denetim.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 261157,
+    "sha256": "55772f2ff237a392ff23f13e779379311ee12e3806efc6b83beb46053552e435",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/bagimsiz-denetim-640.webp",
+        "bytes": 18292
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/bagimsiz-denetim-1280.webp",
+        "bytes": 43946
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/bagimsiz-denetim-1672.webp",
+        "bytes": 59914
+      }
+    ]
+  },
+  "assets/services/bireysel-danismanlik-hizmetleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 251946,
+    "sha256": "f39f78fdcf5d71eafc744ab2158a5826e9b54d709acce67afe39614f5cff0c30",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/bireysel-danismanlik-hizmetleri-640.webp",
+        "bytes": 14614
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/bireysel-danismanlik-hizmetleri-1280.webp",
+        "bytes": 38020
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/bireysel-danismanlik-hizmetleri-1672.webp",
+        "bytes": 56754
+      }
+    ]
+  },
+  "assets/services/borclanma-islemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 299994,
+    "sha256": "fc48e59ec40dad087f3e63dd40e117d7a802aa5b69e1f36f3e9a9b5105a2b575",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/borclanma-islemleri-640.webp",
+        "bytes": 19750
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/borclanma-islemleri-1280.webp",
+        "bytes": 50264
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/borclanma-islemleri-1672.webp",
+        "bytes": 72088
+      }
+    ]
+  },
+  "assets/services/bordrolama.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 271850,
+    "sha256": "0cc29c97c1ce9a5e631f79eb8307892798afa89baa7e372f104373ef647db276",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/bordrolama-640.webp",
+        "bytes": 18506
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/bordrolama-1280.webp",
+        "bytes": 45680
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/bordrolama-1672.webp",
+        "bytes": 63748
+      }
+    ]
+  },
+  "assets/services/calisma-izni-alma-ve-iptali.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 233583,
+    "sha256": "e3088e24f5d1cab3d34d3ab4a1f5a5b56c2e4dc90649b9888205cb8972b9d003",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/calisma-izni-alma-ve-iptali-640.webp",
+        "bytes": 14222
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/calisma-izni-alma-ve-iptali-1280.webp",
+        "bytes": 34074
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/calisma-izni-alma-ve-iptali-1672.webp",
+        "bytes": 48650
+      }
+    ]
+  },
+  "assets/services/cari-hesap-mutabakatlarinin-yapilmasi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 270007,
+    "sha256": "cfb665173a7c52f9e32059184f5330a87d91f97ea72146f799642d6796b2e2ff",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/cari-hesap-mutabakatlarinin-yapilmasi-640.webp",
+        "bytes": 19750
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/cari-hesap-mutabakatlarinin-yapilmasi-1280.webp",
+        "bytes": 47812
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/cari-hesap-mutabakatlarinin-yapilmasi-1672.webp",
+        "bytes": 66276
+      }
+    ]
+  },
+  "assets/services/cozum-prosedurleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 254171,
+    "sha256": "40b277592c905b008aa0dea6720c9e78168a9075901b5fc214b2f953e2d367eb",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/cozum-prosedurleri-640.webp",
+        "bytes": 16220
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/cozum-prosedurleri-1280.webp",
+        "bytes": 37634
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/cozum-prosedurleri-1672.webp",
+        "bytes": 54056
+      }
+    ]
+  },
+  "assets/services/diger-dolayli-vergiler.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 246092,
+    "sha256": "19358347d07b6f1e47b67b3161beb0d44a0892cf3c3ceac4e0382af75b6ec7d3",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/diger-dolayli-vergiler-640.webp",
+        "bytes": 15502
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/diger-dolayli-vergiler-1280.webp",
+        "bytes": 37350
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/diger-dolayli-vergiler-1672.webp",
+        "bytes": 52964
+      }
+    ]
+  },
+  "assets/services/emeklilik-danismanligi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 276107,
+    "sha256": "7034160a9eeff20e519dfda02b80df51f78d48c87b7e423299dd71d7e4f9e660",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/emeklilik-danismanligi-640.webp",
+        "bytes": 17440
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/emeklilik-danismanligi-1280.webp",
+        "bytes": 44492
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/emeklilik-danismanligi-1672.webp",
+        "bytes": 64678
+      }
+    ]
+  },
+  "assets/services/ev-hizmetlisi-sgk-dosya-acilisi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 277713,
+    "sha256": "97565a67032d0c54d9f973330c2da803e119dcc410cd0238d6901bdb91fb116a",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ev-hizmetlisi-sgk-dosya-acilisi-640.webp",
+        "bytes": 18626
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ev-hizmetlisi-sgk-dosya-acilisi-1280.webp",
+        "bytes": 44312
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ev-hizmetlisi-sgk-dosya-acilisi-1672.webp",
+        "bytes": 63076
+      }
+    ]
+  },
+  "assets/services/finansal-analiz.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 308647,
+    "sha256": "f3022cda1c6b60114ce8bbd2d2ef09f28f7a76522ee4ee8dd4d06188fb7bc23f",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/finansal-analiz-640.webp",
+        "bytes": 20080
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/finansal-analiz-1280.webp",
+        "bytes": 53282
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/finansal-analiz-1672.webp",
+        "bytes": 78082
+      }
+    ]
+  },
+  "assets/services/finansal-tablo-denetimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 257677,
+    "sha256": "31f93e5bb0a9c452e138876e12f51d8ca19d7ec170c6c5e008a3e24d37dcaa2a",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/finansal-tablo-denetimi-640.webp",
+        "bytes": 17404
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/finansal-tablo-denetimi-1280.webp",
+        "bytes": 42562
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/finansal-tablo-denetimi-1672.webp",
+        "bytes": 59864
+      }
+    ]
+  },
+  "assets/services/ic-denetim-ve-ic-kontrol.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 259292,
+    "sha256": "910bdf0dfb888f193a82c07b1efcdf57ed15e488968a67fe0b447c109bcae259",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ic-denetim-ve-ic-kontrol-640.webp",
+        "bytes": 17318
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ic-denetim-ve-ic-kontrol-1280.webp",
+        "bytes": 40156
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ic-denetim-ve-ic-kontrol-1672.webp",
+        "bytes": 57184
+      }
+    ]
+  },
+  "assets/services/ic-denetim.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 279314,
+    "sha256": "4cc65831a5c8b761e61ff848271e610f8ae9fb6013eafa659cb3298102df920d",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ic-denetim-640.webp",
+        "bytes": 19650
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ic-denetim-1280.webp",
+        "bytes": 48520
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ic-denetim-1672.webp",
+        "bytes": 68162
+      }
+    ]
+  },
+  "assets/services/insan-kaynaklari-ve-bordro.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 268114,
+    "sha256": "e17b3590abaec54bce1802a9f52b10f9d16487f28b56edfd9db5d5e9cd0975c0",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/insan-kaynaklari-ve-bordro-640.webp",
+        "bytes": 17818
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/insan-kaynaklari-ve-bordro-1280.webp",
+        "bytes": 44090
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/insan-kaynaklari-ve-bordro-1672.webp",
+        "bytes": 63894
+      }
+    ]
+  },
+  "assets/services/insan-kiymetleri-egitimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 279825,
+    "sha256": "4ff412d443bd5fe5e8b7c5cdefee5d7866228ebed5381981a09e5189bf691891",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/insan-kiymetleri-egitimi-640.webp",
+        "bytes": 20096
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/insan-kiymetleri-egitimi-1280.webp",
+        "bytes": 52508
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/insan-kiymetleri-egitimi-1672.webp",
+        "bytes": 74502
+      }
+    ]
+  },
+  "assets/services/insan-kiymetleri-surec-yonetimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 301819,
+    "sha256": "eb34030bdc5347aa7e132380646aac5c0a25424e603d302f1c4696cc2bea9ead",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/insan-kiymetleri-surec-yonetimi-640.webp",
+        "bytes": 18382
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/insan-kiymetleri-surec-yonetimi-1280.webp",
+        "bytes": 49240
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/insan-kiymetleri-surec-yonetimi-1672.webp",
+        "bytes": 70826
+      }
+    ]
+  },
+  "assets/services/istihdam-tesvik.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 279577,
+    "sha256": "685c3e827cff39c60f550dfcd5295ab83b9d024c115ee1cf64f78d0bee3c5b0f",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/istihdam-tesvik-640.webp",
+        "bytes": 19438
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/istihdam-tesvik-1280.webp",
+        "bytes": 47316
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/istihdam-tesvik-1672.webp",
+        "bytes": 66616
+      }
+    ]
+  },
+  "assets/services/isveren-denetimi-ve-raporlamasi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 270256,
+    "sha256": "ceb474a9ff30e3b386aa8f6332179193cb94bba455eb88a958c74d69b270b005",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/isveren-denetimi-ve-raporlamasi-640.webp",
+        "bytes": 17608
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/isveren-denetimi-ve-raporlamasi-1280.webp",
+        "bytes": 42760
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/isveren-denetimi-ve-raporlamasi-1672.webp",
+        "bytes": 61640
+      }
+    ]
+  },
+  "assets/services/kdv-iade-islemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 268374,
+    "sha256": "190399397104d315b3f3760a2ebba498c8d4f1613700a763ad5e0c964a1528df",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/kdv-iade-islemleri-640.webp",
+        "bytes": 18834
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/kdv-iade-islemleri-1280.webp",
+        "bytes": 45566
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/kdv-iade-islemleri-1672.webp",
+        "bytes": 63186
+      }
+    ]
+  },
+  "assets/services/kurumlar-vergisi-denetim-ve-tasdik.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 298000,
+    "sha256": "45e1c4239c977534fa170b22496b2d7fa491afadfcd19895a4a6732d6622b2c6",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/kurumlar-vergisi-denetim-ve-tasdik-640.webp",
+        "bytes": 19494
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/kurumlar-vergisi-denetim-ve-tasdik-1280.webp",
+        "bytes": 51966
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/kurumlar-vergisi-denetim-ve-tasdik-1672.webp",
+        "bytes": 75962
+      }
+    ]
+  },
+  "assets/services/kurumsal-raporlama.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 245925,
+    "sha256": "8ce551bfb69d127c413370a9a7a4a8c1112185c9a97cc4705c5b25b5a7c4212d",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/kurumsal-raporlama-640.webp",
+        "bytes": 14800
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/kurumsal-raporlama-1280.webp",
+        "bytes": 34288
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/kurumsal-raporlama-1672.webp",
+        "bytes": 49152
+      }
+    ]
+  },
+  "assets/services/mali-danismanlik.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 228578,
+    "sha256": "02f6724efdeb23f488fdf7315fbc747338648bc1f0a69fca2ae0c9b6eaba4c08",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/mali-danismanlik-640.webp",
+        "bytes": 13096
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/mali-danismanlik-1280.webp",
+        "bytes": 31396
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/mali-danismanlik-1672.webp",
+        "bytes": 44884
+      }
+    ]
+  },
+  "assets/services/mali-musavirlik-ve-muhasebe.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 236902,
+    "sha256": "cea12d12a52fe26744da66b3612d37c9ec834bfd5d3f924991bc6d0acce86f75",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/mali-musavirlik-ve-muhasebe-640.webp",
+        "bytes": 15946
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/mali-musavirlik-ve-muhasebe-1280.webp",
+        "bytes": 39064
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/mali-musavirlik-ve-muhasebe-1672.webp",
+        "bytes": 54782
+      }
+    ]
+  },
+  "assets/services/mali-tablolarin-denetimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 321883,
+    "sha256": "ed7f03f499e2787539d584d006bde66cb8cab5c4de679de8efcc449e7b38b456",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/mali-tablolarin-denetimi-640.webp",
+        "bytes": 18372
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/mali-tablolarin-denetimi-1280.webp",
+        "bytes": 53744
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/mali-tablolarin-denetimi-1672.webp",
+        "bytes": 86580
+      }
+    ]
+  },
+  "assets/services/muhasebe-sistemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 257454,
+    "sha256": "61dd0ec43eb6efd2fb2afa9e76378001781ae20a1b3c8a5155dde2bb6193facf",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/muhasebe-sistemleri-640.webp",
+        "bytes": 17774
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/muhasebe-sistemleri-1280.webp",
+        "bytes": 42182
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/muhasebe-sistemleri-1672.webp",
+        "bytes": 58648
+      }
+    ]
+  },
+  "assets/services/muhasebe-ve-vergi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 244654,
+    "sha256": "ac3b3511ec7b1bc8da439814d3e5ea3a19ef097819db2969e27b7417e5a94736",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/muhasebe-ve-vergi-640.webp",
+        "bytes": 16208
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/muhasebe-ve-vergi-1280.webp",
+        "bytes": 38876
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/muhasebe-ve-vergi-1672.webp",
+        "bytes": 53990
+      }
+    ]
+  },
+  "assets/services/otv-hizmetleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 284461,
+    "sha256": "516a025da2c53dc987029038f91a4f6721b0e68476658b259745186a950f5646",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/otv-hizmetleri-640.webp",
+        "bytes": 20764
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/otv-hizmetleri-1280.webp",
+        "bytes": 50372
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/otv-hizmetleri-1672.webp",
+        "bytes": 69184
+      }
+    ]
+  },
+  "assets/services/raporlama.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 233967,
+    "sha256": "b03c2426b2ac3cc7cc2ba132d3f9ef80aaa49d63003046ea0a797fb314a79191",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/raporlama-640.webp",
+        "bytes": 13894
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/raporlama-1280.webp",
+        "bytes": 33550
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/raporlama-1672.webp",
+        "bytes": 47358
+      }
+    ]
+  },
+  "assets/services/sgk-dosya-acilisi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 265741,
+    "sha256": "97aeff58a2f48c11dc3f2eaee593e66361ea790db7c1d4d963aa2c6ced41ae36",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/sgk-dosya-acilisi-640.webp",
+        "bytes": 18554
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/sgk-dosya-acilisi-1280.webp",
+        "bytes": 44900
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/sgk-dosya-acilisi-1672.webp",
+        "bytes": 62914
+      }
+    ]
+  },
+  "assets/services/sgk-dosya-kapanisi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 276294,
+    "sha256": "cfbf2013d7c0635e96207b3cf556036806c45d69b5d5482ca9514b54f7dea425",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/sgk-dosya-kapanisi-640.webp",
+        "bytes": 16216
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/sgk-dosya-kapanisi-1280.webp",
+        "bytes": 43942
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/sgk-dosya-kapanisi-1672.webp",
+        "bytes": 64252
+      }
+    ]
+  },
+  "assets/services/sgk-protokolu.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 257843,
+    "sha256": "4da3418c3416e0c9fb0b5d3e64acaf38552e94a34b189e0e9013b72a0e75a22b",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/sgk-protokolu-640.webp",
+        "bytes": 17530
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/sgk-protokolu-1280.webp",
+        "bytes": 40056
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/sgk-protokolu-1672.webp",
+        "bytes": 56808
+      }
+    ]
+  },
+  "assets/services/sirket-degerlemesi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 285636,
+    "sha256": "43ff3d3a279ace5a3423a56bd863585a4107bc101f12742504eefcac3a9ce404",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/sirket-degerlemesi-640.webp",
+        "bytes": 17766
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/sirket-degerlemesi-1280.webp",
+        "bytes": 45720
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/sirket-degerlemesi-1672.webp",
+        "bytes": 65394
+      }
+    ]
+  },
+  "assets/services/sirket-kurulus-danismanligi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 295435,
+    "sha256": "d699b9c3261c3aa5eb7e73fb133363ddc1a512aad8bc6c0567ed3c7ac75777ba",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/sirket-kurulus-danismanligi-640.webp",
+        "bytes": 20362
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/sirket-kurulus-danismanligi-1280.webp",
+        "bytes": 51650
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/sirket-kurulus-danismanligi-1672.webp",
+        "bytes": 73122
+      }
+    ]
+  },
+  "assets/services/suistimal-inceleme-ve-onleme.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 249245,
+    "sha256": "4304453bff50ee18e1af0ccfcadd6779d8164c89ddadf7fe99b20ea27b3b9e5c",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/suistimal-inceleme-ve-onleme-640.webp",
+        "bytes": 17706
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/suistimal-inceleme-ve-onleme-1280.webp",
+        "bytes": 42418
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/suistimal-inceleme-ve-onleme-1672.webp",
+        "bytes": 57904
+      }
+    ]
+  },
+  "assets/services/tam-tasdik-islemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 258551,
+    "sha256": "6a7c8f6c5e8ac3d24daa772114ff431ba6d903a86417f0ecb628e0f4f60f7a6f",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/tam-tasdik-islemleri-640.webp",
+        "bytes": 16250
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/tam-tasdik-islemleri-1280.webp",
+        "bytes": 42500
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/tam-tasdik-islemleri-1672.webp",
+        "bytes": 61304
+      }
+    ]
+  },
+  "assets/services/ticaret-sicil-islemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 275639,
+    "sha256": "1578f58525b028688bd64f25e960c624583e75f81de3fbc7b03ac08d90a4b0c3",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ticaret-sicil-islemleri-640.webp",
+        "bytes": 19104
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ticaret-sicil-islemleri-1280.webp",
+        "bytes": 47396
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ticaret-sicil-islemleri-1672.webp",
+        "bytes": 68150
+      }
+    ]
+  },
+  "assets/services/transfer-fiyatlandirma.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 325465,
+    "sha256": "fdeff2b4defdc6263f4d7e40ef6d46a902f51fdd3fc8a3aba342fbd320140cbb",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/transfer-fiyatlandirma-640.webp",
+        "bytes": 22948
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/transfer-fiyatlandirma-1280.webp",
+        "bytes": 60930
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/transfer-fiyatlandirma-1672.webp",
+        "bytes": 88294
+      }
+    ]
+  },
+  "assets/services/ufrs-tfrs-raporlama.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 236145,
+    "sha256": "6e1fe5a90078f2073b7e50c855aa2eeed28ab5ebc9cd76cbfeef012f009e125d",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ufrs-tfrs-raporlama-640.webp",
+        "bytes": 13894
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ufrs-tfrs-raporlama-1280.webp",
+        "bytes": 35242
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ufrs-tfrs-raporlama-1672.webp",
+        "bytes": 50850
+      }
+    ]
+  },
+  "assets/services/ufrs.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 265466,
+    "sha256": "b42f6b96d3f0649900328adbe77a6e846077c9c2880c042d561d0d2f02efa506",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/ufrs-640.webp",
+        "bytes": 15402
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/ufrs-1280.webp",
+        "bytes": 38854
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/ufrs-1672.webp",
+        "bytes": 55156
+      }
+    ]
+  },
+  "assets/services/usulsuzluk-ve-hile-denetimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 244755,
+    "sha256": "958e6cf5ce9ce51750144e3bd0bf9aa87c58ea985fa41f6a0b0d167755d627c0",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/usulsuzluk-ve-hile-denetimi-640.webp",
+        "bytes": 15446
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/usulsuzluk-ve-hile-denetimi-1280.webp",
+        "bytes": 37864
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/usulsuzluk-ve-hile-denetimi-1672.webp",
+        "bytes": 53306
+      }
+    ]
+  },
+  "assets/services/veri-analiz-sistemleri.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 278757,
+    "sha256": "54bd4c3d71b34e6815c3b8c9b92cfb17a548435127027167097857e2c6471595",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/veri-analiz-sistemleri-640.webp",
+        "bytes": 18944
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/veri-analiz-sistemleri-1280.webp",
+        "bytes": 48796
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/veri-analiz-sistemleri-1672.webp",
+        "bytes": 69206
+      }
+    ]
+  },
+  "assets/services/yabanci-uyruklu-ikamet-izini.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 250994,
+    "sha256": "932e467d3311500c7dd340cd3f0b446dd59cd3d591944ae89045678103928073",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/yabanci-uyruklu-ikamet-izini-640.webp",
+        "bytes": 14466
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/yabanci-uyruklu-ikamet-izini-1280.webp",
+        "bytes": 36018
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/yabanci-uyruklu-ikamet-izini-1672.webp",
+        "bytes": 51736
+      }
+    ]
+  },
+  "assets/services/yonetim-danismanligi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 304249,
+    "sha256": "82c8a72b29b815dd28e3feda3d7f649e5c8c8036a5dbcec0e58018ed238146ba",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/yonetim-danismanligi-640.webp",
+        "bytes": 19640
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/yonetim-danismanligi-1280.webp",
+        "bytes": 49368
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/yonetim-danismanligi-1672.webp",
+        "bytes": 70138
+      }
+    ]
+  },
+  "assets/services/yurtdisina-isci-gonderimi.jpg": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 277064,
+    "sha256": "24694b79c0cd942cd4563ec1e0f1c1af66a3daee8f02804bc85df7cc62fe1614",
+    "variants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "assets/responsive/services/yurtdisina-isci-gonderimi-640.webp",
+        "bytes": 18132
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "src": "assets/responsive/services/yurtdisina-isci-gonderimi-1280.webp",
+        "bytes": 46918
+      },
+      {
+        "width": 1672,
+        "height": 941,
+        "src": "assets/responsive/services/yurtdisina-isci-gonderimi-1672.webp",
+        "bytes": 68158
+      }
+    ]
+  },
+  "assets/thinkers/buffett.jpg": {
+    "width": 640,
+    "height": 386,
+    "bytes": 59974,
+    "sha256": "0d5a620ad6ef392f07efa9cff893b8dd8d7665d4e5ded3c98494261f93f99eda",
+    "variants": [
+      {
+        "width": 640,
+        "height": 386,
+        "src": "assets/responsive/thinkers/buffett-640.webp",
+        "bytes": 10734
+      }
+    ]
+  },
+  "assets/thinkers/kahneman.jpg": {
+    "width": 688,
+    "height": 818,
+    "bytes": 395009,
+    "sha256": "e068963b8556e8935fd53bc4c9531f42b86d22e89e65b4d6837ac109406eef44",
+    "variants": [
+      {
+        "width": 640,
+        "height": 761,
+        "src": "assets/responsive/thinkers/kahneman-640.webp",
+        "bytes": 30716
+      },
+      {
+        "width": 688,
+        "height": 818,
+        "src": "assets/responsive/thinkers/kahneman-688.webp",
+        "bytes": 34942
+      }
+    ]
+  },
+  "assets/thinkers/thaler.jpg": {
+    "width": 1237,
+    "height": 1653,
+    "bytes": 559500,
+    "sha256": "2af8971b28bf858b261870fd34f78fc56ea785f20ecde5125c5f6b7819e562ad",
+    "variants": [
+      {
+        "width": 640,
+        "height": 855,
+        "src": "assets/responsive/thinkers/thaler-640.webp",
+        "bytes": 73018
+      },
+      {
+        "width": 1237,
+        "height": 1653,
+        "src": "assets/responsive/thinkers/thaler-1237.webp",
+        "bytes": 255404
+      }
+    ]
+  }
+}
