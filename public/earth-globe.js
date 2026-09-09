@@ -17,8 +17,8 @@ export function initBoradenEarth() {
 
   // 1. Scene, Camera, WebGL Renderer
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
-  camera.position.set(0, 0.2, 5.2);
+  const camera = new THREE.PerspectiveCamera(34, width / height, 0.1, 1000);
+  camera.position.set(0, 0, 7.2);
 
   let renderer;
   try {
@@ -31,7 +31,7 @@ export function initBoradenEarth() {
   renderer.setSize(width, height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.15;
+  renderer.toneMappingExposure = 0.95;
   container.appendChild(renderer.domElement);
 
   // 2. Texture Loader
@@ -41,16 +41,17 @@ export function initBoradenEarth() {
   const cloudsTex = textureLoader.load('/assets/earth/earth_clouds.png');
 
   // Globe Radius
-  const RADIUS = 1.85;
+  const RADIUS = 1.52;
 
   // 3. Earth Group (Rotates in 3D)
   const earthGroup = new THREE.Group();
+  earthGroup.position.y = -0.72;
   scene.add(earthGroup);
 
   // Initial Orientation: Center on Mediterranean / Turkey [Lat: 39° N, Lon: 35° E]
   // In spherical coords, longitude 35° E corresponds to rotation:
-  earthGroup.rotation.y = 4.25;
-  earthGroup.rotation.x = 0.32;
+  earthGroup.rotation.y = 4.28;
+  earthGroup.rotation.x = 0.36;
 
   // 4. Earth Surface Mesh
   const sphereGeo = new THREE.SphereGeometry(RADIUS, 64, 64);
@@ -67,7 +68,7 @@ export function initBoradenEarth() {
     map: lightsTex,
     blending: THREE.AdditiveBlending,
     transparent: true,
-    opacity: 0.95
+    opacity: 0.62
   });
   const lightsMesh = new THREE.Mesh(sphereGeo, lightsMat);
   earthGroup.add(lightsMesh);
@@ -77,7 +78,7 @@ export function initBoradenEarth() {
   const cloudsMat = new THREE.MeshStandardMaterial({
     map: cloudsTex,
     transparent: true,
-    opacity: 0.38,
+    opacity: 0.22,
     blending: THREE.AdditiveBlending
   });
   const cloudsMesh = new THREE.Mesh(cloudsGeo, cloudsMat);
@@ -105,6 +106,7 @@ export function initBoradenEarth() {
     transparent: true
   });
   const atmoMesh = new THREE.Mesh(atmoGeo, atmoMat);
+  atmoMesh.position.y = -0.72;
   scene.add(atmoMesh);
 
   // 8. Türkiye / Boraden Genel Merkez Beacon [Lat: 39° N, Lon: 35° E]
@@ -153,16 +155,16 @@ export function initBoradenEarth() {
   ringMesh2.lookAt(turkeyPos.clone().multiplyScalar(2));
   beaconGroup.add(ringMesh2);
 
-  // 9. Lighting Setup
-  const ambientLight = new THREE.AmbientLight(0x182436, 1.4);
+  // 9. Lighting Setup (Cinematic Daylight / Night Terminator)
+  const ambientLight = new THREE.AmbientLight(0x06111e, 0.45);
   scene.add(ambientLight);
 
-  const sunLight = new THREE.DirectionalLight(0xffffff, 2.6);
-  sunLight.position.set(5, 3, 5);
+  const sunLight = new THREE.DirectionalLight(0xffffff, 1.45);
+  sunLight.position.set(6, 2.5, 4.5);
   scene.add(sunLight);
 
   // Subtle blue fill light from the opposite side
-  const fillLight = new THREE.DirectionalLight(0x0284c7, 0.8);
+  const fillLight = new THREE.DirectionalLight(0x0284c7, 0.35);
   fillLight.position.set(-5, -2, -2);
   scene.add(fillLight);
 
@@ -243,6 +245,25 @@ export function initBoradenEarth() {
     scrollY = window.scrollY || window.pageYOffset;
   }, { passive: true });
 
+  // Global interaction trigger from navbar or buttons
+  let targetRotation = null;
+  let beaconBoost = false;
+
+  window.focusContinent = function(target) {
+    if (target === 'hq') {
+      autoRotate = false;
+      beaconBoost = true;
+      targetRotation = { x: 0.36, y: 4.28 };
+    } else {
+      beaconBoost = false;
+      targetRotation = null;
+      clearTimeout(window._earthResumeTimer);
+      window._earthResumeTimer = setTimeout(() => {
+        autoRotate = true;
+      }, 1500);
+    }
+  };
+
   // Animation Loop
   let clock = new THREE.Clock();
 
@@ -254,8 +275,12 @@ export function initBoradenEarth() {
     // Slow atmospheric cloud drift
     cloudsMesh.rotation.y += delta * 0.018;
 
-    // Earth auto-rotation
-    if (autoRotate && !isDragging) {
+    // Target rotation (when triggered by navbar or cards)
+    if (targetRotation && !isDragging) {
+      earthGroup.rotation.x += (targetRotation.x - earthGroup.rotation.x) * 0.08;
+      earthGroup.rotation.y += (targetRotation.y - earthGroup.rotation.y) * 0.08;
+    } else if (autoRotate && !isDragging) {
+      // Earth auto-rotation
       earthGroup.rotation.y += delta * 0.045;
     } else if (!isDragging) {
       // Inertia decay
@@ -274,10 +299,10 @@ export function initBoradenEarth() {
     ringMesh2.scale.set(1 + pulse2 * 2.6, 1 + pulse2 * 2.6, 1);
     ringMat2.opacity = Math.max(0, 1 - pulse2);
 
-    // Camera scroll response (pull back slightly as user scrolls down)
+    // Camera scroll response (pull back smoothly as user scrolls down)
     const scrollFactor = Math.min(1, scrollY / (height || 800));
-    camera.position.z = 5.2 + scrollFactor * 2.5;
-    camera.position.y = 0.2 - scrollFactor * 0.8;
+    camera.position.z = 7.0 + scrollFactor * 2.8;
+    camera.position.y = 0 - scrollFactor * 0.6;
 
     renderer.render(scene, camera);
   }

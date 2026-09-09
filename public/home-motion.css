@@ -335,8 +335,6 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  text-transform:uppercase;
 }
 
-/* 2. NAVBAR REFINEMENT (3-COLUMN CENTER LOGO & PILL CTA) */
-.boraden-navbar{
 /* 2. THREE-COLUMN HEADER NAVBAR ARCHITECTURE */
 .boraden-navbar{
  position:fixed;
@@ -739,13 +737,18 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  color:#0f172a;
  border-radius:36px 36px 0 0;
  box-shadow:0 -30px 90px rgba(0,0,0,0.45);
- margin-top:-36px;
+ margin-top:0;
  border-top:1px solid #e2e8f0;
  padding-top:24px;
 }
 .deloitte-sheet-top-accent{
  width:68px;
  height:4px;
+ border-radius:999px;
+ background:#cbd5e1;
+ margin:0 auto 32px;
+}
+
 /* 6. DELOITTE EXECUTIVE OVERVIEW SECTION */
 .deloitte-executive-overview{
  padding:80px 0 60px;
