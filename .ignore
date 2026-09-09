@@ -1,0 +1,21 @@
+# Build and package manager directories
+node_modules/
+dist/
+coverage/
+.git/
+
+# Assets and large binaries
+*.mp4
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.zip
+*.tar.gz
+
+# Logs and system files
+*.log
+.DS_Store
+repomix-output.xml

@@ -7,3 +7,4 @@ dist/
 .agent/
 __pycache__/
 reference/_design/boraden-concept/assets/
+repomix-output.xml
