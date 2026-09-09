@@ -1,6 +1,6 @@
 // Shared edges use the same control points in either direction, so every tab fits.
 // The three original checkmark colours, deepened where white type needs contrast.
-export const palette=['#00547c','#c74328','#177e32','#086993','#c5482c','#197d36'];
+export const palette=['#356e91','#cb6651','#41885f','#3c7a9c','#c46c57','#488c65'];
 export const shapes=[
   {id:'vergi',points:[[0,0],[1,0],[2,0],[2,1],[1,1],[0,1]],center:[1,.5],label:['Vergi & Mali','Müşavirlik'],offset:[-19,-27],rotation:-4},
   {id:'denetim',points:[[2,0],[3,0],[3,1],[2,1]],center:[2.5,.5],label:['Denetim &','Raporlama'],offset:[27,-18],rotation:5},

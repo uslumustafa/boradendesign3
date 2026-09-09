@@ -22,33 +22,176 @@ const published=p=>p.status==='published'&&(!p.date||p.date<='2026-09-08');
 const date=s=>s?new Intl.DateTimeFormat('tr-TR',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(s+'T00:00:00Z')):'';
 const btn=(text,href,cls='button')=>`<a class="${cls}" href="${esc(safeURL(href))}">${esc(text)}${arrow}</a>`;
 const sourceList=sources=>sources?.length?`<aside class="sources"><h3>Kaynağından okuyun.</h3>${sources.filter(Boolean).map(s=>`<a href="${esc(safeURL(s[1]))}" target="_blank" rel="noopener noreferrer">${esc(s[0])}${arrow}</a>`).join('')}</aside>`:'';
-function header(D){return `<a class="skip" href="#main">İçeriğe geç</a><header class="header"><div class="header-inner">${logo}<nav class="desktop-nav" aria-label="Ana navigasyon"><details class="nav-services"><summary>Hizmetlerimiz ${chevron}</summary><div class="nav-dropdown"><p>İşinizin her parçası için.</p>${D.groups.map((g,i)=>`<a href="${groupURL(g)}"><span class="mini-piece" style="--tone:${palette[i]}">${String(i+1).padStart(2,'0')}</span>${esc(g.name)}${arrow}</a>`).join('')}<a class="nav-all" href="/hizmetler/">Tüm hizmetleri keşfedin ${arrow}</a></div></details><a href="/sektorler/">Sektörler</a><a href="/hakkimizda/">Boraden</a><a href="/blog/">Yayınlar</a></nav><div class="header-actions"><button class="search-toggle" aria-label="Sitede ara" aria-controls="search-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button>${btn('Birlikte konuşalım','/iletisim/','button button-small button-outline')}<details class="mobile-nav"><summary aria-label="Menüyü aç"><span></span><span></span></summary><nav aria-label="Mobil navigasyon"><a href="/hizmetler/">Hizmetlerimiz</a><a href="/sektorler/">Sektörler</a><a href="/hakkimizda/">Boraden</a><a href="/blog/">Yayınlar</a><a href="/sirkuler/">Sirküler</a><a href="/iletisim/">İletişim</a></nav></details></div></div></header>`;}
+function introScreen(){
+ return `<div id="boraden-intro" class="boraden-intro" role="dialog" aria-modal="true" aria-label="Boraden Açılış Sahnesi">
+  <div class="intro-backdrop"></div>
+  <div class="intro-content">
+   <div class="intro-mark-box">${mark}</div>
+   <div class="intro-lockup">
+    <h1 class="intro-brand">BORADEN</h1>
+    <h3 class="intro-sub">BAĞIMSIZ DENETİM &amp; DANIŞMANLIK</h3>
+   </div>
+  </div>
+  <div class="intro-footer-hud">
+   <div class="intro-bar"><span class="intro-bar-fill"></span></div>
+   <span class="intro-status-text">BAĞLANTI KURULUYOR &bull; TÜRKİYE VE DÜNYA AĞI</span>
+  </div>
+ </div>`;
+}
+
+function header(D){
+ return `<a class="skip" href="#main">İçeriğe geç</a>
+<header class="header boraden-navbar" id="boraden-header">
+ <div class="header-inner">
+  <nav class="desktop-nav" id="desktop-nav-left" aria-label="Kurumsal ve Hizmet Menüsü">
+   <details class="nav-services">
+    <summary>Hizmetlerimiz ${chevron}</summary>
+    <div class="nav-dropdown">
+     <p class="dropdown-title">İşinizin her parçası için bütünleşik uzmanlık.</p>
+     <div class="dropdown-links">
+      ${D.groups.map((g,i)=>`<a href="${groupURL(g)}" onmouseenter="window.focusContinent&&window.focusContinent('${g.id}')"><span class="mini-piece" style="--tone:${palette[i]}">${String(i+1).padStart(2,'0')}</span>${esc(g.name)}${arrow}</a>`).join('')}
+     </div>
+     <a class="nav-all" href="/hizmetler/">Tüm 47 hizmeti keşfedin ${arrow}</a>
+    </div>
+   </details>
+   <a href="/sektorler/" class="nav-link">Sektörler</a>
+   <a href="/hakkimizda/" class="nav-link">Boraden</a>
+  </nav>
+
+  <div class="nav-center-brand-wrap">
+   <a class="brand brand-center" href="/" aria-label="Boraden ana sayfa" onmouseenter="window.focusContinent&&window.focusContinent('hq')" onmouseleave="window.focusContinent&&window.focusContinent('all')">
+    <span class="brand-mark-svg">${mark}</span>
+    <span class="brand-text">BORADEN</span>
+   </a>
+  </div>
+
+  <nav class="desktop-nav-right" aria-label="Yayınlar ve İletişim">
+   <a href="/blog/" class="nav-link">Yayınlar</a>
+   <button class="search-toggle nav-search-btn" aria-label="Sitede ara" aria-controls="search-dialog">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg>
+    <span>Arama</span>
+   </button>
+   <div class="header-actions">
+    <a href="/iletisim/" class="nav-cta-pill">
+     <span class="cta-pulse-dot"></span>
+     <span>Birlikte Başlayalım</span>
+     ${arrow}
+    </a>
+    <details class="mobile-nav">
+     <summary aria-label="Menüyü aç"><span></span><span></span></summary>
+     <nav aria-label="Mobil navigasyon">
+      <a href="/hizmetler/">Hizmetlerimiz</a>
+      <a href="/sektorler/">Sektörler</a>
+      <a href="/hakkimizda/">Boraden</a>
+      <a href="/blog/">Yayınlar</a>
+      <a href="/sirkuler/">Sirküler</a>
+      <a href="/iletisim/">İletişim</a>
+     </nav>
+    </details>
+   </div>
+  </nav>
+ </div>
+</header>`;
+}
 function footer(){return `<footer class="footer wrap"><div class="footer-top">${logo}<p>Farklı uzmanlıklar.<br>Aynı büyük resim.</p><div><a href="tel:+902124832611">+90 (212) 483 26 11</a><a href="mailto:info@boraden.com.tr">info@boraden.com.tr</a><span>İstanbul, Türkiye</span></div></div><div class="footer-bottom"><span>© 2026 Boraden</span><nav aria-label="Alt bağlantılar"><a href="/kariyer/">Kariyer</a><a href="/ekibimiz/">Ekibimiz</a><a href="/perspektifler/">Perspektifler</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="#main">Yukarı ↑</a></nav></div></footer>`;}
 function search(D){return `<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"><div class="search-top"><span class="eyebrow">BORADEN / KEŞFEDİN</span><button class="close-search" aria-label="Aramayı kapat">✕</button></div><label for="global-search" id="search-title">Size nasıl yardımcı olabiliriz?</label><input type="search" id="global-search" placeholder="Hizmet, sektör veya konu arayın…" autocomplete="off"><p class="search-count" aria-live="polite"></p><div class="search-results">${[...D.services.map(s=>({title:s.title,url:serviceURL(s),kind:'Hizmet',search:s.lead})),...D.sectors.map(s=>({title:s.title,url:'/sektorler/'+s.id+'/',kind:'Sektör',search:s.text}))].map(s=>`<a href="${s.url}" data-search="${esc(s.title+' '+s.search)}"><span>${esc(s.title)}<small>${s.kind}</small></span>${arrow}</a>`).join('')}</div></dialog>`;}
 function journalCard(p,kind){return `<article class="journal-card"><a href="/${kindPaths[kind]}/${p.id}/"><div class="journal-image">${p.cover?`<img src="/${esc(p.cover.replace(/^\//,''))}" alt="" loading="lazy" width="640" height="420">`:'<span class="editorial-symbol">↗</span>'}<span class="image-arrow">${arrow}</span></div><div class="card-meta"><span>${esc(p.category||kindNames[kind])}</span><time datetime="${esc(p.date)}">${date(p.date)}</time></div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p></a></article>`;}
-function home(D){const featured=D.publications.blog.filter(published).slice(0,3);return `<div class="opening-scene"><section class="brand-opening wrap" aria-labelledby="opening-title">
- <div class="opening-topline"><p class="eyebrow">1993’TEN BUGÜNE, BİRLİKTE.</p><p class="eyebrow">ALTI UZMANLIK. TEK BÜTÜN.</p></div>
- <div class="opening-art">${puzzle({mode:'opening',id:'opening',interactive:true})}${puzzle({mode:'complete',id:'opening-mobile',interactive:true})}</div>
- <div class="opening-identity"><div class="opening-mark-badge" aria-hidden="true">${mark}</div><div class="opening-title-group"><h1 id="opening-title">BORADEN</h1><div class="opening-sub-lockup"><span class="opening-badge-dot" aria-hidden="true"></span><p class="opening-company">Bağımsız Denetim ve Danışmanlık A.Ş.</p></div></div></div>
- <div class="opening-bottom"><p>Her parça <em>uzmanlık.</em><br>Birlikte, daha büyük bir resim.</p><div class="opening-actions">${btn('Uzmanlığımızı keşfedin','#uzmanlik')}${btn('Boraden’ı tanıyın','/hakkimizda/','text-link')}</div><a class="opening-scroll" href="#turkiye-is-dunyasi"><span>DAHA YAKINDAN BAKIN</span><span aria-hidden="true">↓</span></a></div>
-</section></div>
-${brandFilm()}
-<div class="expertise-sheet">
- <div class="stats-ribbon wrap">
-  <div class="stat-cell"><span class="stat-value">33<em>+</em></span><span class="stat-meta">Yıllık Güvenilir Tecrübe<small>1993’ten bugüne bağımsız duruş</small></span></div>
-  <div class="stat-cell"><span class="stat-value">06</span><span class="stat-meta">Temel Uzmanlık Alanı<small>Tüm süreçleriniz için tek bütün</small></span></div>
-  <div class="stat-cell"><span class="stat-value">47</span><span class="stat-meta">Bütünleşik Çözüm & Hizmet<small>Mevzuat, denetim, bordro, değerleme</small></span></div>
-  <div class="stat-cell"><span class="stat-value">07<em>+</em></span><span class="stat-meta">Resmî Kurum Akreditasyonu<small>KGK, SPK, BDDK, TÜRMOB uyumlu</small></span></div>
- </div>
-<section class="expertise-overview wrap" id="uzmanlik" data-expertise aria-labelledby="expertise-title">
- <div class="expertise-heading"><p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ</p><h2 id="expertise-title">Size nasıl<br><em>yardımcı olabiliriz?</em></h2><p>Vergi ve denetimden şirketinizin geleceğine, insan kaynaklarından iş süreçlerinize.<br>İhtiyacınıza uygun uzmanlığı seçin.</p></div>
- <div class="need-shortcuts" role="toolbar" aria-label="Hızlı ihtiyaç yönlendiricisi"><span class="need-title">Hızlı Odak:</span><div class="need-chips"><button type="button" class="need-chip is-active" data-need-index="-1">Tüm Uzmanlıklar</button><button type="button" class="need-chip" data-need-index="0">01 Vergi & Mevzuat</button><button type="button" class="need-chip" data-need-index="1">02 Bağımsız Denetim</button><button type="button" class="need-chip" data-need-index="2">03 Şirket Değerleme & M&A</button><button type="button" class="need-chip" data-need-index="3">04 Bordro & İK</button><button type="button" class="need-chip" data-need-index="4">05 Sistem & Raporlama</button><button type="button" class="need-chip" data-need-index="5">06 Akademi</button></div><div class="need-status-toast" id="need-status" aria-live="polite"><span class="need-status-dot"></span><span class="need-status-text">Tüm uzmanlık alanları aktif.</span></div></div>
- <div class="expertise-puzzle">${puzzle({mode:'wide',id:'expertise'})}${puzzle({mode:'complete',id:'expertise-mobile'})}<p>Bir parçanın üzerine gelin. Uzmanlığı yakından keşfedin.</p></div>
- <div class="expertise-grid">${D.groups.map((g,i)=>{const srvs=D.services.filter(s=>s.group===g.id);return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div><h3>${esc(g.name)}</h3><p class="expertise-card-desc">${esc(g.description)}</p><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;}).join('')}</div>
-</section>
-</div>${serviceRibbon(D)}${homePerspectives(D)}
-<section class="journal wrap"><div class="section-heading"><div><p class="eyebrow">BİLGİDEN PERSPEKTİFE</p><h2>Bir adım geriden bakın.<br><em>Bir adım ileriyi görün.</em></h2></div>${btn('Tüm yayınlar','/blog/','text-link')}</div><div class="journal-grid">${featured.map(p=>journalCard(p,'blog')).join('')}</div><div class="quick-links"><a href="/sirkuler/"><span>01</span>Sirküler & mevzuat${arrow}</a><a href="/hesaplama/"><span>02</span>Hesaplama araçları${arrow}</a><a href="/haberler/"><span>03</span>Güncel gündem${arrow}</a></div></section>
-${homeSectors(D)}${homeImpact()}${institutionsBand()}<section class="completion" id="birlikte-baslayalim"><div class="wrap completion-inner"><div class="completion-heading"><p class="eyebrow">PARÇADAN BÜTÜNE.</p><h2>Büyük resmi <em>birlikte tamamlayalım.</em></h2></div><div class="completion-art">${puzzle({mode:'wide',id:'completion-wide'})}${puzzle({mode:'complete',id:'completion-mobile'})}</div><div class="completion-copy"><div><p class="eyebrow">ÖNCE SİZİ DİNLEYELİM.</p><h3>İşinizin hangi parçasından başlayalım?</h3><p>İhtiyacınızı, hedefinizi ve aklınızdaki soruları konuşalım.<br>Size uygun hizmet alanına birlikte bakalım.</p></div><div class="completion-actions">${btn('İhtiyacınızı konuşalım','/iletisim/')}${btn('Tüm hizmetleri keşfedin','/hizmetler/','text-link')}</div></div></div></section>${sectorFilm()}`;}
+function home(D){
+ const featured=D.publications.blog.filter(published).slice(0,3);
+ return `
+ <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden Küresel Çözüm Ağı ve 3D Dünya">
+  <div class="stars-backdrop"></div>
+  <div id="earth-canvas-container" class="earth-canvas-container"></div>
+  
+  <div class="space-hero-content wrap">
+   <div class="space-hero-lead">
+    <div class="space-tag-pill"><span class="tag-pulse"></span>TÜRKİYE'DEN DÜNYAYA GÜVENİLİR BÜTÜNLÜK</div>
+    <h2 class="space-hero-title">Yedi Kıtada Uzmanlık.<br><em>Tek Bir Merkezde Güven.</em></h2>
+    <p class="space-hero-desc">1993’ten bugüne; Türkiye merkezli bağımsız denetim, vergi, kurumsal danışmanlık ve insan kaynakları çözümlerimizle küresel standartta iş ortaklığı sunuyoruz.</p>
+   </div>
+
+   <div class="space-continents-nav" role="toolbar" aria-label="Kıta ve Uzmanlık Alanı Seçimi">
+    <span class="continents-nav-title">Kıtaları ve Hizmetleri Keşfedin:</span>
+    <div class="continents-chips">
+     <button type="button" class="c-chip is-active" onmouseenter="window.focusContinent&&window.focusContinent('all')" onclick="window.focusContinent&&window.focusContinent('all')">Tüm Dünya</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('vergi')" onclick="window.focusContinent&&window.focusContinent('vergi')"><span class="c-dot" style="background:#356e91"></span>01 Avrupa / Vergi</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('denetim')" onclick="window.focusContinent&&window.focusContinent('denetim')"><span class="c-dot" style="background:#cb6651"></span>02 K. Amerika / Denetim</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('danismanlik')" onclick="window.focusContinent&&window.focusContinent('danismanlik')"><span class="c-dot" style="background:#41885f"></span>03 Körfez / Danışmanlık</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('insan')" onclick="window.focusContinent&&window.focusContinent('insan')"><span class="c-dot" style="background:#3c7a9c"></span>04 Afrika / Bordro</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('sistem')" onclick="window.focusContinent&&window.focusContinent('sistem')"><span class="c-dot" style="background:#c46c57"></span>05 Asya / Sistemler</button>
+     <button type="button" class="c-chip" onmouseenter="window.focusContinent&&window.focusContinent('akademi')" onclick="window.focusContinent&&window.focusContinent('akademi')"><span class="c-dot" style="background:#488c65"></span>06 G. Amerika / Akademi</button>
+    </div>
+   </div>
+
+   <div id="earth-hud-card" class="earth-hud-card" aria-live="polite">
+    <div class="hud-accent-bar"></div>
+    <div class="hud-top">
+     <span class="hud-kicker">KÜRESEL ODAK</span>
+     <h4 id="hud-continent-title">BORADEN MERKEZ (TÜRKİYE)</h4>
+    </div>
+    <p id="hud-service-name" class="hud-service-title">7 Kıtaya Yayılan Çözüm Mimarisi</p>
+    <div class="hud-bottom">
+     <span id="hud-service-tag" class="hud-badge">Vergi, Denetim, Danışmanlık & Bordro</span>
+     <a href="/hizmetler/" class="hud-cta">Uzmanlığı Keşfedin &rarr;</a>
+    </div>
+   </div>
+
+   <a class="space-scroll-down" href="#deloitte-content-sheet" aria-label="Deloitte düzeyinde çözümlere kaydırın">
+    <span>AŞAĞI KAYDIRIN &bull; DELOITTE DÜZEYİ KURUMSAL ÇÖZÜMLER</span>
+    <span class="scroll-down-arrow">&darr;</span>
+   </a>
+  </div>
+ </section>
+
+ <div id="space-tone-curtain" class="space-tone-curtain" aria-hidden="true"></div>
+
+ <div class="deloitte-sheet" id="deloitte-content-sheet">
+  <div class="deloitte-sheet-top-accent"></div>
+
+  <div class="opening-scene"><section class="brand-opening wrap" aria-labelledby="opening-title">
+   <div class="opening-topline"><p class="eyebrow">1993’TEN BUGÜNE, BİRLİKTE.</p><p class="eyebrow">ALTI UZMANLIK. TEK BÜTÜN.</p></div>
+   <div class="opening-art">${puzzle({mode:'opening',id:'opening',interactive:true})}${puzzle({mode:'complete',id:'opening-mobile',interactive:true})}</div>
+   <div class="opening-identity"><div class="opening-mark-badge" aria-hidden="true">${mark}</div><div class="opening-title-group"><h1 id="opening-title">BORADEN</h1><div class="opening-sub-lockup"><span class="opening-badge-dot" aria-hidden="true"></span><p class="opening-company">Bağımsız Denetim ve Danışmanlık A.Ş.</p></div></div></div>
+   <div class="opening-bottom"><p>Her parça <em>uzmanlık.</em><br>Birlikte, daha büyük bir resim.</p><div class="opening-actions">${btn('Uzmanlığımızı keşfedin','#uzmanlik')}${btn('Boraden’ı tanıyın','/hakkimizda/','text-link')}</div><a class="opening-scroll" href="#turkiye-is-dunyasi"><span>DAHA YAKINDAN BAKIN</span><span aria-hidden="true">↓</span></a></div>
+  </section></div>
+
+  ${brandFilm()}
+
+  <div class="expertise-sheet">
+   <div class="stats-ribbon wrap">
+    <div class="stat-cell"><span class="stat-value">33<em>+</em></span><span class="stat-meta">Yıllık Güvenilir Tecrübe<small>1993’ten bugüne bağımsız duruş</small></span></div>
+    <div class="stat-cell"><span class="stat-value">06</span><span class="stat-meta">Temel Uzmanlık Alanı<small>Tüm süreçleriniz için tek bütün</small></span></div>
+    <div class="stat-cell"><span class="stat-value">47</span><span class="stat-meta">Bütünleşik Çözüm & Hizmet<small>Mevzuat, denetim, bordro, değerleme</small></span></div>
+    <div class="stat-cell"><span class="stat-value">07<em>+</em></span><span class="stat-meta">Resmî Kurum Akreditasyonu<small>KGK, SPK, BDDK, TÜRMOB uyumlu</small></span></div>
+   </div>
+
+   <section class="expertise-overview wrap" id="uzmanlik" data-expertise aria-labelledby="expertise-title">
+    <div class="expertise-heading"><p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ</p><h2 id="expertise-title">Size nasıl<br><em>yardımcı olabiliriz?</em></h2><p>Vergi ve denetimden şirketinizin geleceğine, insan kaynaklarından iş süreçlerinize.<br>İhtiyacınıza uygun uzmanlığı seçin.</p></div>
+    <div class="need-shortcuts" role="toolbar" aria-label="Hızlı ihtiyaç yönlendiricisi"><span class="need-title">Hızlı Odak:</span><div class="need-chips"><button type="button" class="need-chip is-active" data-need-index="-1">Tüm Uzmanlıklar</button><button type="button" class="need-chip" data-need-index="0">01 Vergi & Mevzuat</button><button type="button" class="need-chip" data-need-index="1">02 Bağımsız Denetim</button><button type="button" class="need-chip" data-need-index="2">03 Şirket Değerleme & M&A</button><button type="button" class="need-chip" data-need-index="3">04 Bordro & İK</button><button type="button" class="need-chip" data-need-index="4">05 Sistem & Raporlama</button><button type="button" class="need-chip" data-need-index="5">06 Akademi</button></div><div class="need-status-toast" id="need-status" aria-live="polite"><span class="need-status-dot"></span><span class="need-status-text">Tüm uzmanlık alanları aktif.</span></div></div>
+    <div class="expertise-puzzle">${puzzle({mode:'wide',id:'expertise'})}${puzzle({mode:'complete',id:'expertise-mobile'})}<p>Bir parçanın üzerine gelin. Uzmanlığı yakından keşfedin.</p></div>
+    <div class="expertise-grid">${D.groups.map((g,i)=>{const srvs=D.services.filter(s=>s.group===g.id);return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div><h3>${esc(g.name)}</h3><p class="expertise-card-desc">${esc(g.description)}</p><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;}).join('')}</div>
+   </section>
+  </div>
+
+  ${serviceRibbon(D)}
+  ${homePerspectives(D)}
+  <section class="journal wrap"><div class="section-heading"><div><p class="eyebrow">BİLGİDEN PERSPEKTİFE</p><h2>Bir adım geriden bakın.<br><em>Bir adım ileriyi görün.</em></h2></div>${btn('Tüm yayınlar','/blog/','text-link')}</div><div class="journal-grid">${featured.map(p=>journalCard(p,'blog')).join('')}</div><div class="quick-links"><a href="/sirkuler/"><span>01</span>Sirküler & mevzuat${arrow}</a><a href="/hesaplama/"><span>02</span>Hesaplama araçları${arrow}</a><a href="/haberler/"><span>03</span>Güncel gündem${arrow}</a></div></section>
+  ${homeSectors(D)}
+  ${homeImpact()}
+  ${institutionsBand()}
+  <section class="completion" id="birlikte-baslayalim">
+   <div class="wrap completion-inner">
+    <div class="completion-heading"><p class="eyebrow">PARÇADAN BÜTÜNE.</p><h2>Büyük resmi <em>birlikte tamamlayalım.</em></h2></div>
+    <div class="completion-art">${puzzle({mode:'wide',id:'completion-wide'})}${puzzle({mode:'complete',id:'completion-mobile'})}</div>
+    <div class="completion-copy">
+     <div><p class="eyebrow">ÖNCE SİZİ DİNLEYELİM.</p><h3>İşinizin hangi parçasından başlayalım?</h3><p>İhtiyacınızı, hedefinizi ve aklınızdaki soruları konuşalım.<br>Size uygun hizmet alanına birlikte bakalım.</p></div>
+     <div class="completion-actions">${btn('İhtiyacınızı konuşalım','/iletisim/')}${btn('Tüm hizmetleri keşfedin','/hizmetler/','text-link')}</div>
+    </div>
+   </div>
+  </section>
+  ${sectorFilm()}
+ </div>`;
+}
 
 function homeImpact(){
  return `<section class="home-impact wrap" id="kurumsal-etki" aria-labelledby="impact-title">
@@ -206,5 +349,5 @@ export function render(url,D,L){const p=url.split('/').filter(Boolean);let body,
  else if(p[0]==='perspektifler'){const per=D.perspectives.find(x=>x.id===p[1]);body=per?perspectivePage(D,per):perspectives(D);title=(per?.title||'Dünyadan Perspektifler')+' | Boraden';}
  else {const kind=Object.keys(kindPaths).find(k=>kindPaths[k]===p[0]);if(kind){const post=D.publications[kind].find(x=>x.id===p[1]&&published(x));body=post?articlePage(post,kind):publicationPage(D,kind);title=(post?.title||kindNames[kind])+' | Boraden';}else if(['kariyer','ekibimiz','misyon-vizyon','yayin-ilkeleri'].includes(p[0])){body=simplePage(p[0]);title=p[0].replaceAll('-',' ')+' | Boraden';}}
  const status=body?200:404;if(!body){body=intro('Bu parça burada değil.','Aradığınız sayfayı hizmetlerimizden veya aramadan bulabilirsiniz.')+`<div class="wrap error-link">${btn('Ana sayfaya dönün','/')}</div>`;title='Sayfa bulunamadı | Boraden';}
- return {status,title,html:`<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="Boraden: denetim, vergi, danışmanlık, insan kaynakları ve veri alanlarında birbirini tamamlayan uzmanlıklar."><meta name="theme-color" content="#f8f8f3"><title>${esc(title)}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/font-2.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/home-media.css"><link rel="stylesheet" href="/brand-theme.css">${!p.length?'<link rel="stylesheet" href="/home-motion.css">':''}${p[0]==='hizmetler'&&p.length>1?'<link rel="stylesheet" href="/service-motion.css"><link rel="stylesheet" href="/service-contact.css"><script src="/service-motion.js" type="module"></script>':''}${!p.length?'<script src="/section-video.js" defer></script>':''}<script src="/app.js" type="module"></script>${p[0]==='hesaplama'&&p[1]?'<script src="/calculator-core.js" defer></script><script src="/calculator-ui.js" defer></script>':''}</head><body class="${p.length?'interior':'home'}">${header(D)}<main id="main">${body}</main>${footer()}${search(D)}</body></html>`};
+ return {status,title,html:`<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="Boraden: denetim, vergi, danışmanlık, insan kaynakları ve veri alanlarında birbirini tamamlayan uzmanlıklar."><meta name="theme-color" content="#f8f8f3"><title>${esc(title)}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/font-2.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/home-media.css"><link rel="stylesheet" href="/brand-theme.css">${!p.length?'<link rel="stylesheet" href="/home-motion.css">':''}${p[0]==='hizmetler'&&p.length>1?'<link rel="stylesheet" href="/service-motion.css"><link rel="stylesheet" href="/service-contact.css"><script src="/service-motion.js" type="module"></script>':''}${!p.length?'<script src="/section-video.js" defer></script><script src="/earth-globe.js" type="module"></script>':''}<script src="/app.js" type="module"></script>${p[0]==='hesaplama'&&p[1]?'<script src="/calculator-core.js" defer></script><script src="/calculator-ui.js" defer></script>':''}</head><body class="${p.length?'interior':'home'}">${!p.length?introScreen():''}${header(D)}<main id="main">${body}</main>${footer()}${search(D)}</body></html>`};
 }

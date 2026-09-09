@@ -225,3 +225,41 @@ if(needChips.length){
 
 }
 
+
+if (typeof document !== 'undefined') {
+// Intro Screen Controller
+const boradenIntro = document.getElementById('boraden-intro');
+if (boradenIntro) {
+ const hasSeen = sessionStorage.getItem('boraden_intro_v3_seen');
+ if (hasSeen && !location.hash.includes('replay-intro')) {
+  boradenIntro.remove();
+ } else {
+  sessionStorage.setItem('boraden_intro_v3_seen', '1');
+  setTimeout(() => {
+   boradenIntro.classList.add('is-dismissing');
+   setTimeout(() => boradenIntro.remove(), 750);
+  }, 2300);
+ }
+}
+
+// 3D Earth Globe Initializer
+if (document.getElementById('earth-canvas-container')) {
+ import('./earth-globe.js').then(m => {
+  if (m && m.initBoradenEarth) {
+   m.initBoradenEarth();
+  }
+ }).catch(err => console.error('Earth globe init error:', err));
+}
+
+// Center Logo Interactive Light Beam Trigger
+const navCenterLogo = document.querySelector('.brand-center');
+if (navCenterLogo) {
+ navCenterLogo.addEventListener('mouseenter', () => {
+  if (window.focusContinent) window.focusContinent('hq');
+ });
+ navCenterLogo.addEventListener('mouseleave', () => {
+  if (window.focusContinent) window.focusContinent('all');
+ });
+}
+
+}

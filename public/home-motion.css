@@ -227,3 +227,525 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .impact-origin{color:#00547c;font-weight:600}
 @media(max-width:960px){.impact-grid{grid-template-columns:1fr;gap:18px}}
 
+
+/* ==========================================================================
+   BORADEN DESIGN 3 — CINEMATIC INTRO, 3D EARTH & DELOITTE WHITE SHEET SYSTEM
+   ========================================================================== */
+
+/* 1. CINEMATIC FULLSCREEN INTRO SCREEN */
+.boraden-intro{
+ position:fixed;
+ inset:0;
+ z-index:99999;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ background:radial-gradient(circle at center, #071526 0%, #02060e 100%);
+ color:#ffffff;
+ opacity:1;
+ visibility:visible;
+ transition:opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1), visibility .75s;
+ pointer-events:auto;
+}
+.boraden-intro.is-dismissing{
+ opacity:0;
+ visibility:hidden;
+ transform:scale(1.05);
+ pointer-events:none;
+}
+.intro-content{
+ text-align:center;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+}
+.intro-mark-box{
+ width:88px;
+ height:60px;
+ margin-bottom:28px;
+ filter:drop-shadow(0 0 28px rgba(53,110,145,0.6));
+ animation:introMarkPulse 3s ease-in-out infinite alternate;
+}
+.intro-mark-box svg{
+ width:100%;
+ height:100%;
+}
+@keyframes introMarkPulse{
+ 0%{transform:scale(0.98);filter:drop-shadow(0 0 16px rgba(53,110,145,0.4))}
+ 100%{transform:scale(1.03);filter:drop-shadow(0 0 36px rgba(65,136,95,0.7))}
+}
+.intro-lockup{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+}
+.intro-brand{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(44px,5.8vw,80px);
+ font-weight:800;
+ letter-spacing:.18em;
+ line-height:1;
+ margin:0;
+ color:#ffffff;
+ text-shadow:0 6px 35px rgba(0,0,0,0.6);
+}
+.intro-sub{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(12px,1.3vw,17px);
+ font-weight:600;
+ letter-spacing:.26em;
+ color:#9cbcd4;
+ text-transform:uppercase;
+ margin-top:14px;
+ margin-bottom:0;
+ opacity:.9;
+}
+.intro-footer-hud{
+ position:absolute;
+ bottom:40px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ gap:14px;
+}
+.intro-bar{
+ width:220px;
+ height:2px;
+ background:rgba(255,255,255,0.12);
+ border-radius:2px;
+ overflow:hidden;
+}
+.intro-bar-fill{
+ display:block;
+ height:100%;
+ width:0%;
+ background:linear-gradient(90deg,#356e91,#41885f,#e2b153);
+ animation:introFill 2.2s cubic-bezier(.2,0,.2,1) forwards;
+}
+@keyframes introFill{
+ 0%{width:0%}
+ 100%{width:100%}
+}
+.intro-status-text{
+ font-size:10px;
+ font-weight:650;
+ letter-spacing:.16em;
+ color:#6486a0;
+ text-transform:uppercase;
+}
+
+/* 2. NAVBAR REFINEMENT (3-COLUMN CENTER LOGO & PILL CTA) */
+.boraden-navbar{
+ background:rgba(2, 6, 14, 0.72)!important;
+ backdrop-filter:blur(24px) saturate(180%)!important;
+ -webkit-backdrop-filter:blur(24px) saturate(180%)!important;
+ border-bottom:1px solid rgba(255,255,255,0.08)!important;
+ color:#e2e8f0;
+}
+.boraden-navbar .header-inner{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ max-width:1640px;
+ margin:auto;
+ padding:0 var(--gutter);
+ height:84px;
+}
+.desktop-nav-left{
+ flex:1;
+ display:flex;
+ align-items:center;
+ gap:clamp(16px,2vw,32px);
+ justify-content:flex-start;
+ font-size:13.5px;
+ font-weight:600;
+}
+.desktop-nav-left a{
+ color:#cbd5e1;
+ transition:color .2s;
+}
+.desktop-nav-left a:hover{
+ color:#ffffff;
+}
+.nav-center-brand-wrap{
+ flex:0 0 auto;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.nav-center-brand-wrap .brand-center{
+ display:inline-flex;
+ align-items:center;
+ gap:12px;
+ font-family:Manrope,sans-serif;
+ font-size:24px;
+ font-weight:800;
+ letter-spacing:.1em;
+ color:#ffffff;
+ text-decoration:none;
+ padding:6px 14px;
+ border-radius:8px;
+ transition:all .25s ease;
+}
+.nav-center-brand-wrap .brand-center:hover{
+ background:rgba(255,255,255,0.06);
+ transform:scale(1.02);
+}
+.brand-mark-svg svg{
+ width:42px;
+ height:28px;
+ display:block;
+}
+.desktop-nav-right{
+ flex:1;
+ display:flex;
+ align-items:center;
+ gap:clamp(14px,1.6vw,24px);
+ justify-content:flex-end;
+}
+.desktop-nav-right .nav-link{
+ color:#cbd5e1;
+ font-size:13.5px;
+ font-weight:600;
+ transition:color .2s;
+}
+.desktop-nav-right .nav-link:hover{
+ color:#ffffff;
+}
+.nav-search-btn{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ background:rgba(255,255,255,0.06);
+ border:1px solid rgba(255,255,255,0.12);
+ padding:8px 14px;
+ border-radius:20px;
+ color:#cbd5e1;
+ font-size:12px;
+ font-weight:600;
+ cursor:pointer;
+ transition:all .2s;
+}
+.nav-search-btn:hover{
+ background:rgba(255,255,255,0.12);
+ color:#ffffff;
+ border-color:rgba(255,255,255,0.25);
+}
+.nav-search-btn svg{
+ width:14px;
+ height:14px;
+}
+.nav-cta-pill{
+ display:inline-flex;
+ align-items:center;
+ gap:10px;
+ background:linear-gradient(135deg,rgba(53,110,145,0.22) 0%,rgba(65,136,95,0.28) 100%);
+ border:1px solid rgba(255,255,255,0.18);
+ padding:9px 18px;
+ border-radius:9999px;
+ color:#ffffff;
+ font-size:13px;
+ font-weight:700;
+ letter-spacing:.02em;
+ text-decoration:none;
+ box-shadow:0 4px 18px rgba(0,0,0,0.2);
+ transition:all .28s cubic-bezier(.16,1,.3,1);
+}
+.nav-cta-pill:hover{
+ background:linear-gradient(135deg,#356e91 0%,#41885f 100%);
+ border-color:#ffffff;
+ transform:translateY(-2px);
+ box-shadow:0 8px 24px rgba(53,110,145,0.35);
+}
+.nav-cta-pill svg{
+ width:13px;
+ height:13px;
+ transition:transform .2s;
+}
+.nav-cta-pill:hover svg{
+ transform:translateX(3px);
+}
+.cta-pulse-dot{
+ width:7px;
+ height:7px;
+ border-radius:50%;
+ background:#4ade80;
+ box-shadow:0 0 10px #4ade80;
+ animation:pulseDot 2s infinite alternate;
+}
+@keyframes pulseDot{
+ 0%{opacity:0.4;transform:scale(0.8)}
+ 100%{opacity:1;transform:scale(1.2)}
+}
+
+/* 3. 3D EARTH COSMIC HERO SECTION */
+.space-earth-hero{
+ position:relative;
+ min-height:100vh;
+ background:radial-gradient(circle at 50% 38%, #071526 0%, #02060e 65%, #010308 100%);
+ color:#ffffff;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ overflow:hidden;
+ z-index:2;
+}
+.earth-canvas-container{
+ position:absolute;
+ inset:0;
+ z-index:1;
+ pointer-events:auto;
+}
+.space-hero-content{
+ position:relative;
+ z-index:2;
+ height:100%;
+ min-height:calc(100vh - 84px);
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ padding:40px 0 28px;
+ pointer-events:none;
+}
+.space-hero-lead{
+ max-width:680px;
+ pointer-events:auto;
+}
+.space-tag-pill{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ padding:6px 14px;
+ border-radius:9999px;
+ background:rgba(255,255,255,0.06);
+ border:1px solid rgba(255,255,255,0.12);
+ font-size:11px;
+ font-weight:750;
+ letter-spacing:.12em;
+ color:#93b8d4;
+ text-transform:uppercase;
+ backdrop-filter:blur(8px);
+ margin-bottom:18px;
+}
+.tag-pulse{
+ width:6px;
+ height:6px;
+ border-radius:50%;
+ background:#e2b153;
+ box-shadow:0 0 8px #e2b153;
+}
+.space-hero-title{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(38px,4.6vw,72px);
+ font-weight:700;
+ letter-spacing:-.035em;
+ line-height:1.12;
+ color:#ffffff;
+ margin-bottom:18px;
+}
+.space-hero-title em{
+ font-family:Instrument,Georgia,serif;
+ font-style:italic;
+ color:#e2b153;
+ font-weight:400;
+ margin-left:6px;
+}
+.space-hero-desc{
+ font-size:clamp(14px,1.2vw,17px);
+ line-height:1.8;
+ color:#94a8bc;
+ max-width:540px;
+}
+
+/* CONTINENTS SELECTOR BAR & CHIPS */
+.space-continents-nav{
+ pointer-events:auto;
+ margin-top:auto;
+ padding:18px 0;
+}
+.continents-nav-title{
+ font-size:11px;
+ font-weight:700;
+ letter-spacing:.12em;
+ text-transform:uppercase;
+ color:#7897b0;
+ margin-bottom:10px;
+ display:block;
+}
+.continents-chips{
+ display:flex;
+ flex-wrap:wrap;
+ gap:8px;
+}
+.c-chip{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ padding:9px 16px;
+ border-radius:30px;
+ background:rgba(10,24,40,0.65);
+ border:1px solid rgba(255,255,255,0.14);
+ color:#cbd5e1;
+ font-size:12px;
+ font-weight:600;
+ cursor:pointer;
+ backdrop-filter:blur(12px);
+ transition:all .25s ease;
+}
+.c-chip:hover,.c-chip.is-active{
+ background:rgba(255,255,255,0.18);
+ border-color:#ffffff;
+ color:#ffffff;
+ transform:translateY(-2px);
+ box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+.c-dot{
+ width:7px;
+ height:7px;
+ border-radius:50%;
+}
+
+/* FLOATING EARTH HUD CARD */
+.earth-hud-card{
+ position:absolute;
+ right:0;
+ bottom:80px;
+ width:360px;
+ max-width:90vw;
+ background:rgba(5, 15, 28, 0.78);
+ border:1px solid rgba(100, 180, 240, 0.3);
+ border-radius:12px;
+ padding:22px 24px;
+ backdrop-filter:blur(24px) saturate(180%);
+ -webkit-backdrop-filter:blur(24px) saturate(180%);
+ box-shadow:0 24px 60px rgba(0,0,0,0.6);
+ opacity:0;
+ transform:translateY(14px);
+ transition:all .32s cubic-bezier(.16,1,.3,1);
+ pointer-events:none;
+}
+.earth-hud-card.is-active{
+ opacity:1;
+ transform:translateY(0);
+ pointer-events:auto;
+}
+.hud-accent-bar{
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ height:3px;
+ background:linear-gradient(90deg,#356e91,#e2b153,#41885f);
+ border-radius:12px 12px 0 0;
+}
+.hud-kicker{
+ font-size:9.5px;
+ font-weight:750;
+ letter-spacing:.14em;
+ text-transform:uppercase;
+ color:#e2b153;
+}
+#hud-continent-title{
+ font-family:Manrope,sans-serif;
+ font-size:17px;
+ font-weight:700;
+ letter-spacing:-.01em;
+ color:#ffffff;
+ margin:6px 0 10px;
+}
+.hud-service-title{
+ font-size:13px;
+ color:#9cb9d0;
+ line-height:1.6;
+ margin-bottom:14px;
+}
+.hud-bottom{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding-top:12px;
+ border-top:1px solid rgba(255,255,255,0.08);
+}
+.hud-badge{
+ font-size:10px;
+ font-weight:650;
+ background:rgba(255,255,255,0.08);
+ color:#cbd5e1;
+ padding:3px 8px;
+ border-radius:4px;
+}
+.hud-cta{
+ font-size:11.5px;
+ font-weight:700;
+ color:#e2b153;
+ text-decoration:none;
+ transition:color .2s;
+}
+.hud-cta:hover{
+ color:#ffffff;
+}
+
+/* SCROLL DOWN INDICATOR */
+.space-scroll-down{
+ pointer-events:auto;
+ display:inline-flex;
+ align-items:center;
+ gap:10px;
+ font-size:11px;
+ font-weight:700;
+ letter-spacing:.12em;
+ color:#88a8c2;
+ text-decoration:none;
+ margin-top:20px;
+ align-self:center;
+ transition:color .2s;
+}
+.space-scroll-down:hover{
+ color:#ffffff;
+}
+.scroll-down-arrow{
+ font-size:14px;
+ animation:scrollBounce 1.8s infinite ease-in-out;
+}
+@keyframes scrollBounce{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(6px)}
+}
+
+/* 4. SPACE-TO-DELOITTE TONE TRANSITION CURTAIN */
+.space-tone-curtain{
+ position:fixed;
+ inset:0;
+ z-index:3;
+ pointer-events:none;
+ background:linear-gradient(180deg, rgba(2,6,14,0) 0%, rgba(15,23,42,0.6) 30%, rgba(226,232,240,0.85) 75%, #ffffff 100%);
+ opacity:0;
+ transition:opacity .1s linear;
+}
+
+/* 5. DELOITTE-GRADE CLEAN CHIC WHITE SHEET */
+.deloitte-sheet{
+ position:relative;
+ z-index:10;
+ background:#ffffff;
+ color:#0f172a;
+ border-radius:36px 36px 0 0;
+ box-shadow:0 -30px 90px rgba(0,0,0,0.45);
+ margin-top:-36px;
+ border-top:1px solid #e2e8f0;
+ padding-top:24px;
+}
+.deloitte-sheet-top-accent{
+ width:68px;
+ height:4px;
+ background:#cbd5e1;
+ border-radius:9999px;
+ margin:12px auto 28px;
+}
+
+@media(max-width:900px){
+ .desktop-nav-left,.desktop-nav-right{display:none}
+ .nav-center-brand-wrap{margin-right:auto}
+ .earth-hud-card{position:static;width:100%;margin-top:20px}
+}
