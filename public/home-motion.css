@@ -126,7 +126,9 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .expertise-puzzle .puzzle-piece.is-selected .piece-outline{stroke:#00547c;stroke-width:2.5}
 .expertise-puzzle .puzzle-piece.is-selected .piece-label{font-weight:700}
 .expertise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px}
-.expertise-card{position:relative;display:flex;flex-direction:column;min-width:0;min-height:240px;padding:24px 22px;border:1px solid rgba(0,0,0,0.08);border-top:3px solid var(--card-tone);border-radius:10px;background:#ffffff;color:var(--ink);box-shadow:0 4px 20px rgba(0,0,0,0.03);transition:all .3s cubic-bezier(.16,.85,.3,1);scroll-margin-top:110px}
+.expertise-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-width:0;min-height:240px;padding:24px 22px;border:1px solid rgba(0,0,0,0.08);border-top:3px solid var(--card-tone);border-radius:10px;background:#ffffff;color:var(--ink);box-shadow:0 4px 20px rgba(0,0,0,0.03);transition:all .3s cubic-bezier(.16,.85,.3,1);scroll-margin-top:110px}
+.expertise-card>*{position:relative;z-index:1}
+.expertise-card .continent-watermark{position:absolute;z-index:0}
 .expertise-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .expertise-card-number{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--card-tone)}
 .expertise-card-count{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:#f1f5f3;color:#49615c}
@@ -396,6 +398,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  justify-content:center;
 }
 .nav-center-brand-wrap .brand-center{
+ position:relative;
  display:inline-flex;
  align-items:center;
  gap:14px;
@@ -404,12 +407,85 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  border-radius:10px;
  transition:all .25s ease;
 }
-.nav-center-brand-wrap .brand-center:hover{
+.nav-center-brand-wrap .brand-center:hover,
+.nav-center-brand-wrap .brand-center.is-sunbeam-active{
  background:rgba(255,255,255,0.06);
  transform:scale(1.02);
 }
 .is-scrolled .nav-center-brand-wrap .brand-center:hover, body:not(.home) .nav-center-brand-wrap .brand-center:hover{
  background:rgba(15, 23, 42, 0.04);
+}
+
+/* Radiant God-Ray Sunbeam Corona behind Boraden Logo */
+.brand-sunbeam-corona{
+ position:absolute;
+ inset:-30px -40px;
+ pointer-events:none;
+ opacity:0;
+ transform:scale(0.65);
+ transition:opacity .35s cubic-bezier(.16,1,.3,1), transform .45s cubic-bezier(.16,1,.3,1);
+ z-index:-1;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.brand-center:hover .brand-sunbeam-corona,
+.brand-center.is-sunbeam-active .brand-sunbeam-corona{
+ opacity:1;
+ transform:scale(1.15);
+}
+.sunbeam-ray-disk{
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ background:conic-gradient(
+  from 0deg,
+  rgba(255,215,0,0) 0deg,
+  rgba(255,230,120,0.55) 15deg,
+  rgba(255,215,0,0) 30deg,
+  rgba(56,189,248,0.5) 45deg,
+  rgba(255,215,0,0) 60deg,
+  rgba(255,240,150,0.6) 75deg,
+  rgba(255,215,0,0) 90deg,
+  rgba(34,197,94,0.45) 105deg,
+  rgba(255,215,0,0) 120deg,
+  rgba(255,230,120,0.55) 135deg,
+  rgba(255,215,0,0) 150deg,
+  rgba(56,189,248,0.5) 165deg,
+  rgba(255,215,0,0) 180deg,
+  rgba(255,240,150,0.6) 195deg,
+  rgba(255,215,0,0) 210deg,
+  rgba(255,215,0,0) 240deg,
+  rgba(255,230,120,0.55) 255deg,
+  rgba(255,215,0,0) 270deg,
+  rgba(56,189,248,0.5) 285deg,
+  rgba(255,215,0,0) 300deg,
+  rgba(255,240,150,0.6) 315deg,
+  rgba(255,215,0,0) 330deg,
+  rgba(34,197,94,0.45) 345deg,
+  rgba(255,215,0,0) 360deg
+ );
+ filter:blur(6px);
+ animation:sunbeamSpin 14s linear infinite;
+ mask-image:radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%);
+ -webkit-mask-image:radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%);
+}
+.brand-sunbeam-corona::after{
+ content:'';
+ position:absolute;
+ inset:12%;
+ border-radius:50%;
+ background:radial-gradient(circle, rgba(255,230,120,0.7) 0%, rgba(56,189,248,0.35) 40%, transparent 72%);
+ filter:blur(12px);
+ animation:coronaPulse 2.4s ease-in-out infinite alternate;
+}
+@keyframes sunbeamSpin{
+ 0%{transform:rotate(0deg)}
+ 100%{transform:rotate(360deg)}
+}
+@keyframes coronaPulse{
+ 0%{transform:scale(0.88);opacity:0.6}
+ 100%{transform:scale(1.18);opacity:1}
 }
 /* Boraden 3-Check Brand Mark SVG */
 .brand-mark-svg{
@@ -679,11 +755,234 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  text-shadow:0 2px 12px rgba(0,0,0,0.65);
 }
 
+/* 6 Continents = 6 Services Interactive Pill Navigation */
+.space-metaphor-nav{
+ display:flex;
+ flex-wrap:wrap;
+ align-items:center;
+ justify-content:center;
+ gap:8px;
+ margin-top:16px;
+ margin-bottom:14px;
+ max-width:980px;
+ pointer-events:auto;
+ z-index:10;
+}
+.metaphor-pill{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ padding:7px 15px;
+ border-radius:9999px;
+ background:rgba(8, 20, 38, 0.68);
+ border:1px solid rgba(255, 255, 255, 0.14);
+ color:#cbd5e1;
+ font-family:Manrope,sans-serif;
+ font-size:11.5px;
+ font-weight:700;
+ letter-spacing:.02em;
+ cursor:pointer;
+ backdrop-filter:blur(14px);
+ -webkit-backdrop-filter:blur(14px);
+ box-shadow:0 4px 14px rgba(0, 0, 0, 0.35);
+ transition:all .26s cubic-bezier(.16, 1, .3, 1);
+}
+.metaphor-pill:hover{
+ background:rgba(255, 255, 255, 0.14);
+ border-color:rgba(255, 255, 255, 0.35);
+ color:#ffffff;
+ transform:translateY(-2px);
+ box-shadow:0 8px 24px rgba(0, 84, 124, 0.4);
+}
+.metaphor-pill.is-active{
+ background:rgba(2, 132, 199, 0.32);
+ border-color:#38bdf8;
+ color:#ffffff;
+ box-shadow:0 0 20px rgba(56, 189, 248, 0.5), inset 0 0 10px rgba(56, 189, 248, 0.25);
+ transform:translateY(-2px) scale(1.04);
+}
+.pill-dot{
+ width:7px;
+ height:7px;
+ border-radius:50%;
+ box-shadow:0 0 8px currentColor;
+ flex-shrink:0;
+}
+
+/* Floating Metaphor Live Hub Card - Positioned at bottom-left like a spatial flight card */
+.metaphor-live-card{
+ position:absolute;
+ bottom:28px;
+ left:clamp(20px, 3.8vw, 64px);
+ width:calc(100% - 40px);
+ max-width:440px;
+ margin:0;
+ padding:18px 22px;
+ border-radius:14px;
+ background:rgba(6, 17, 33, 0.84);
+ border:1px solid rgba(56, 189, 248, 0.28);
+ box-shadow:0 16px 48px rgba(0, 0, 0, 0.55), 0 0 35px rgba(2, 132, 199, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+ backdrop-filter:blur(20px);
+ -webkit-backdrop-filter:blur(20px);
+ pointer-events:auto;
+ text-align:left;
+ animation:liveCardFadeIn .32s ease-out;
+ transition:all .3s ease;
+ z-index:10;
+}
+@keyframes liveCardFadeIn{
+ from{opacity:0;transform:translateY(8px)}
+ to{opacity:1;transform:translateY(0)}
+}
+.live-card-meta{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:10px;
+ margin-bottom:8px;
+}
+.live-badge{
+ font-family:Manrope,sans-serif;
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:.12em;
+ text-transform:uppercase;
+ color:#38bdf8;
+ background:rgba(56, 189, 248, 0.14);
+ border:1px solid rgba(56, 189, 248, 0.3);
+ padding:3px 9px;
+ border-radius:9999px;
+}
+.live-service-tag{
+ font-size:10.5px;
+ font-weight:650;
+ color:#94a3b8;
+ letter-spacing:.03em;
+}
+.live-title{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(15px, 1.3vw, 18px);
+ font-weight:750;
+ letter-spacing:-.02em;
+ color:#ffffff;
+ margin-bottom:6px;
+ line-height:1.25;
+}
+.live-desc{
+ font-size:12px;
+ line-height:1.55;
+ color:#cbd5e1;
+ margin-bottom:12px;
+ display:-webkit-box;
+ -webkit-line-clamp:3;
+ -webkit-box-orient:vertical;
+ overflow:hidden;
+}
+.live-actions{
+ display:flex;
+ align-items:center;
+ justify-content:flex-end;
+}
+.live-link{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ padding:6px 14px;
+ border-radius:9999px;
+ background:#ffffff;
+ color:#06172d;
+ font-size:11.5px;
+ font-weight:750;
+ text-decoration:none;
+ box-shadow:0 4px 16px rgba(255, 255, 255, 0.22);
+ transition:all .24s ease;
+}
+.live-link:hover{
+ background:#38bdf8;
+ color:#040d1a;
+ transform:translateY(-1px);
+ box-shadow:0 6px 20px rgba(56, 189, 248, 0.45);
+}
+.live-link svg{
+ width:13px;
+ height:13px;
+ transition:transform .2s ease;
+}
+.live-link:hover svg{
+ transform:translateX(3px);
+}
+
+/* Continent Architectural Watermark for Services */
+.continent-watermark{
+ position:absolute;
+ top:10px;
+ right:12px;
+ width:110px;
+ height:110px;
+ pointer-events:none;
+ opacity:0.12;
+ color:var(--card-tone, #00547c);
+ display:flex;
+ flex-direction:column;
+ align-items:flex-end;
+ justify-content:flex-start;
+ transition:all .45s cubic-bezier(.16, 1, .3, 1);
+ z-index:0;
+}
+.expertise-card:hover .continent-watermark,
+.expertise-card.is-selected .continent-watermark{
+ opacity:0.36;
+ transform:scale(1.12) translateY(-4px);
+}
+.continent-svg-shape{
+ width:90px;
+ height:90px;
+ display:block;
+}
+.continent-watermark-label{
+ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+ font-size:7.5px;
+ font-weight:700;
+ letter-spacing:.14em;
+ text-transform:uppercase;
+ color:var(--card-tone);
+ margin-top:-6px;
+ opacity:.85;
+}
+
+/* Continent Meta Badge on Cards */
+.continent-meta-pill{
+ display:inline-flex;
+ align-items:center;
+ gap:7px;
+ font-size:10px;
+ font-weight:700;
+ letter-spacing:.05em;
+ color:var(--pill-color, #00547c);
+ background:color-mix(in srgb, var(--pill-color, #00547c) 10%, #ffffff);
+ border:1px solid color-mix(in srgb, var(--pill-color, #00547c) 25%, transparent);
+ padding:3px 9px;
+ border-radius:9999px;
+ margin-bottom:10px;
+ align-self:flex-start;
+ box-shadow:0 2px 6px rgba(0, 0, 0, 0.02);
+}
+.pill-radar-dot{
+ width:6px;
+ height:6px;
+ border-radius:50%;
+ background:var(--pill-color, #00547c);
+ box-shadow:0 0 6px var(--pill-color, #00547c);
+ animation:pulseDot 2s infinite alternate;
+}
+
 /* Bottom Scroll Hint */
 .space-hero-bottom-hint{
- position:relative;
- z-index:2;
- margin-bottom:34px;
+ position:absolute;
+ bottom:28px;
+ right:clamp(20px, 3.8vw, 64px);
+ z-index:10;
+ margin-bottom:0;
  pointer-events:auto;
 }
 .space-scroll-hint{

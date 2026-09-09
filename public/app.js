@@ -252,15 +252,172 @@ if (document.getElementById('earth-canvas-container')) {
  }).catch(err => console.error('Earth globe init error:', err));
 }
 
-// Center Logo Interactive Light Beam Trigger
+// 6 Continents = 6 Services Metaphor Controller
+const CONTINENTS_DATA = {
+ turkiye: {
+  id: 'turkiye',
+  badge: 'TÜRKİYE &bull; MERKEZ HUB',
+  tag: 'Boraden Bağımsız Denetim ve Danışmanlık A.Ş.',
+  title: "Türkiye'nin Güven Üssü: Boraden",
+  desc: '1993’ten bugüne KGK, SPK ve BDDK yetkileriyle 6 kıta metaforundaki tüm hizmetlerimizin merkez üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.',
+  linkText: 'Tüm Uzmanlıkları İnceleyin',
+  linkUrl: '#uzmanlik',
+  targetCard: -1
+ },
+ avrupa: {
+  id: 'avrupa',
+  badge: 'AVRUPA &bull; 02 BAĞIMSIZ DENETİM',
+  tag: 'UFRS &bull; TFRS Standartları',
+  title: '02 Bağımsız Denetim ve Raporlama',
+  desc: 'Avrupa kıtası metaforumuz: Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili bağımsız denetim güvencesi. Güvenilir, şeffaf ve küresel yatırımcı raporlaması.',
+  linkText: '02 Bağımsız Denetim Sayfasına Git',
+  linkUrl: '/hizmetler/bagimsiz-denetim/',
+  targetCard: 1
+ },
+ 'kuzey-amerika': {
+  id: 'kuzey-amerika',
+  badge: 'KUZEY AMERİKA &bull; 01 VERGİ',
+  tag: 'Tam Tasdik &bull; Transfer Fiyatlandırması',
+  title: '01 Vergi & Mali Müşavirlik',
+  desc: 'Kuzey Amerika kıtası metaforumuz: Çok uluslu vergi mimarisi, transfer fiyatlandırması, tam tasdik denetimi ve uluslararası vergi planlaması çözümleri.',
+  linkText: '01 Vergi Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/vergi-mali-musavirlik/',
+  targetCard: 0
+ },
+ 'guney-amerika': {
+  id: 'guney-amerika',
+  badge: 'GÜNEY AMERİKA &bull; 03 DANIŞMANLIK',
+  tag: 'M&A &bull; Şirket Değerleme',
+  title: '03 Kurumsal Danışmanlık & Değerleme',
+  desc: 'Güney Amerika kıtası metaforumuz: Şirket birleşme ve devralmaları (M&A), finansal durum tespiti (Due Diligence), şirket değerleme ve stratejik yönetim.',
+  linkText: '03 Danışmanlık Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/kurumsal-danismanlik/',
+  targetCard: 2
+ },
+ afrika: {
+  id: 'afrika',
+  badge: 'AFRİKA &bull; 04 İK & BORDRO',
+  tag: '3.500+ Personel &bull; SGK Teşvik',
+  title: '04 İnsan Kaynakları & Bordro Yönetimi',
+  desc: 'Afrika kıtası metaforumuz: 3.500+ çalışan operasyonunda bordro dış kaynak kullanımı, SGK teşvik optimizasyonu ve iş hukuku uyumluluk denetimleri.',
+  linkText: '04 Bordro Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/insan-kaynaklari/',
+  targetCard: 3
+ },
+ asya: {
+  id: 'asya',
+  badge: 'ASYA &bull; 05 SİSTEM & İŞ ZEKÂSI',
+  tag: 'ERP Entegrasyonu &bull; BI Raporlama',
+  title: '05 Sistemler & Finansal İş Zekâsı',
+  desc: 'Asya kıtası metaforumuz: ERP entegrasyonu, finansal veri ambarı modelleme, süreç dijitalizasyonu ve üst yönetici analitik iş zekâsı panelleri (BI).',
+  linkText: '05 Sistemler Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/sistemler-is-zekasi/',
+  targetCard: 4
+ },
+ okyanusya: {
+  id: 'okyanusya',
+  badge: 'OKYANUSYA &bull; 06 AKADEMİ',
+  tag: 'Kurumsal Finans &bull; Seminerler',
+  title: '06 Boraden Akademi',
+  desc: 'Okyanusya kıtası metaforumuz: Şirket yönetim kurulları, CFO’lar ve finans liderleri için güncel mevzuat, TFRS/UFRS standartları ve mali seminerler.',
+  linkText: "06 Boraden Akademi'yi İnceleyin",
+  linkUrl: '/hizmetler/akademi/',
+  targetCard: 5
+ }
+};
+
+function selectContinentMetaphor(key) {
+ const data = CONTINENTS_DATA[key] || CONTINENTS_DATA.turkiye;
+ const pills = document.querySelectorAll('#space-metaphor-nav .metaphor-pill');
+ pills.forEach(p => {
+  p.classList.toggle('is-active', p.dataset.continentFocus === key);
+ });
+
+ if (window.focusContinent) {
+  window.focusContinent(key === 'turkiye' ? 'hq' : key);
+ }
+
+ if (window.triggerSunbeam) {
+  window.triggerSunbeam(key === 'turkiye');
+ }
+
+ const liveBadge = document.getElementById('live-badge');
+ const liveTag = document.getElementById('live-tag');
+ const liveTitle = document.getElementById('live-title');
+ const liveDesc = document.getElementById('live-desc');
+ const liveLink = document.getElementById('live-link');
+ const liveCard = document.getElementById('metaphor-live-card');
+
+ if (liveBadge) liveBadge.innerHTML = data.badge;
+ if (liveTag) liveTag.textContent = data.tag;
+ if (liveTitle) liveTitle.textContent = data.title;
+ if (liveDesc) liveDesc.textContent = data.desc;
+ if (liveLink) {
+  liveLink.setAttribute('href', data.linkUrl);
+  const span = liveLink.querySelector('span');
+  if (span) span.textContent = data.linkText;
+ }
+ if (liveCard) {
+  liveCard.style.animation = 'none';
+  liveCard.offsetHeight;
+  liveCard.style.animation = 'liveCardFadeIn .32s ease-out';
+ }
+
+ const cards = document.querySelectorAll('[data-expertise-card]');
+ cards.forEach((c, idx) => {
+  c.classList.toggle('is-selected', idx === data.targetCard);
+ });
+}
+
+const metaphorNav = document.getElementById('space-metaphor-nav');
+if (metaphorNav) {
+ metaphorNav.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-continent-focus]');
+  if (btn) {
+   const target = btn.dataset.continentFocus;
+   selectContinentMetaphor(target);
+  }
+ });
+}
+
+// Center Logo Interactive God-Ray Sunbeam & Unfold Earth Trigger
 const navCenterLogo = document.querySelector('.brand-center');
 if (navCenterLogo) {
  navCenterLogo.addEventListener('mouseenter', () => {
+  navCenterLogo.classList.add('is-sunbeam-active');
+  if (window.triggerSunbeam) window.triggerSunbeam(true);
   if (window.focusContinent) window.focusContinent('hq');
  });
+
  navCenterLogo.addEventListener('mouseleave', () => {
+  navCenterLogo.classList.remove('is-sunbeam-active');
+  if (window.triggerSunbeam) window.triggerSunbeam(false);
   if (window.focusContinent) window.focusContinent('all');
+ });
+
+ navCenterLogo.addEventListener('click', (e) => {
+  if (location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '') {
+   e.preventDefault();
+   navCenterLogo.classList.add('is-sunbeam-active');
+   if (window.triggerSunbeam) window.triggerSunbeam(true);
+   selectContinentMetaphor('turkiye');
+
+   const earthHero = document.getElementById('uzay-dunya-sahnesi');
+   const servicesSheet = document.getElementById('uzmanlik') || document.getElementById('deloitte-content-sheet');
+   
+   if (window.scrollY > 200) {
+    if (earthHero) earthHero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+   } else {
+    if (servicesSheet) servicesSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+   }
+
+   setTimeout(() => {
+    navCenterLogo.classList.remove('is-sunbeam-active');
+    if (window.triggerSunbeam) window.triggerSunbeam(false);
+   }, 3500);
+  }
  });
 }
 
 }
+

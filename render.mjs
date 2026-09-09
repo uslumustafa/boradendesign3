@@ -1,4 +1,5 @@
 import {puzzle,palette,shapes,servicePiece} from './puzzle.mjs';
+import {CONTINENT_MAP,continentWatermark,continentMetaBadge} from './continents.mjs';
 import fs from 'node:fs';
 import {serviceContact} from './service-contact.mjs';
 import vm from 'node:vm';
@@ -59,7 +60,8 @@ function header(D){
   </nav>
 
   <div class="nav-center-brand-wrap">
-   <a class="brand brand-center" href="/" aria-label="Boraden ana sayfa" onmouseenter="window.focusContinent&&window.focusContinent('hq')">
+   <a class="brand brand-center" href="/" id="nav-brand-center" aria-label="Boraden ana sayfa">
+    <span class="brand-sunbeam-corona" aria-hidden="true"><span class="sunbeam-ray-disk"></span></span>
     <span class="brand-mark-svg">${mark}</span>
     <span class="brand-text-block">
      <span class="brand-text">BORADEN</span>
@@ -112,7 +114,50 @@ function home(D){
    </div>
    <h1 class="space-minimal-title">Türkiye'nin Güven Üssü.</h1>
    <p class="space-minimal-sub">Bağımsız Denetim ve Danışmanlık A.Ş.</p>
-  </div>
+
+   <div class="space-metaphor-nav" id="space-metaphor-nav" role="toolbar" aria-label="6 Kıta ve 6 Hizmet Metaforu">
+    <button type="button" class="metaphor-pill is-active" data-continent-focus="turkiye">
+     <span class="pill-dot" style="background:#22c55e"></span>
+     <span class="pill-text">Türkiye (Boraden)</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="avrupa">
+     <span class="pill-dot" style="background:#cb6651"></span>
+     <span class="pill-text">Avrupa &bull; 02 Denetim</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="kuzey-amerika">
+     <span class="pill-dot" style="background:#356e91"></span>
+     <span class="pill-text">K. Amerika &bull; 01 Vergi</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="guney-amerika">
+     <span class="pill-dot" style="background:#41885f"></span>
+     <span class="pill-text">G. Amerika &bull; 03 Danışmanlık</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="afrika">
+     <span class="pill-dot" style="background:#3c7a9c"></span>
+     <span class="pill-text">Afrika &bull; 04 İK &amp; Bordro</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="asya">
+     <span class="pill-dot" style="background:#c46c57"></span>
+     <span class="pill-text">Asya &bull; 05 Sistemler</span>
+    </button>
+    <button type="button" class="metaphor-pill" data-continent-focus="okyanusya">
+     <span class="pill-dot" style="background:#488c65"></span>
+     <span class="pill-text">Okyanusya &bull; 06 Akademi</span>
+    </button>
+   </div>
+   </div>
+
+   <div class="metaphor-live-card" id="metaphor-live-card">
+    <div class="live-card-meta">
+     <span class="live-badge" id="live-badge">TÜRKİYE &bull; MERKEZ HUB</span>
+     <span class="live-service-tag" id="live-tag">Boraden Genel Merkez</span>
+    </div>
+    <h3 class="live-title" id="live-title">Bağımsız Denetim ve Danışmanlık A.Ş.</h3>
+    <p class="live-desc" id="live-desc">1993’ten bugüne KGK, SPK ve BDDK yetkileriyle Türkiye'nin güven üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.</p>
+    <div class="live-actions">
+     <a href="/hizmetler/" class="live-link" id="live-link"><span>Hizmetleri İnceleyin</span>${arrow}</a>
+    </div>
+   </div>
 
   <div class="space-hero-bottom-hint">
    <a class="space-scroll-hint" href="#deloitte-content-sheet" aria-label="Aşağı kaydırın">
@@ -181,7 +226,7 @@ function home(D){
     <div class="expertise-heading"><p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ</p><h2 id="expertise-title">Size nasıl<br><em>yardımcı olabiliriz?</em></h2><p>Vergi ve denetimden şirketinizin geleceğine, insan kaynaklarından iş süreçlerinize.<br>İhtiyacınıza uygun uzmanlığı seçin.</p></div>
     <div class="need-shortcuts" role="toolbar" aria-label="Hızlı ihtiyaç yönlendiricisi"><span class="need-title">Hızlı Odak:</span><div class="need-chips"><button type="button" class="need-chip is-active" data-need-index="-1">Tüm Uzmanlıklar</button><button type="button" class="need-chip" data-need-index="0">01 Vergi & Mevzuat</button><button type="button" class="need-chip" data-need-index="1">02 Bağımsız Denetim</button><button type="button" class="need-chip" data-need-index="2">03 Şirket Değerleme & M&A</button><button type="button" class="need-chip" data-need-index="3">04 Bordro & İK</button><button type="button" class="need-chip" data-need-index="4">05 Sistem & Raporlama</button><button type="button" class="need-chip" data-need-index="5">06 Akademi</button></div><div class="need-status-toast" id="need-status" aria-live="polite"><span class="need-status-dot"></span><span class="need-status-text">Tüm uzmanlık alanları aktif.</span></div></div>
     <div class="expertise-puzzle">${puzzle({mode:'wide',id:'expertise'})}${puzzle({mode:'complete',id:'expertise-mobile'})}<p>Bir parçanın üzerine gelin. Uzmanlığı yakından keşfedin.</p></div>
-    <div class="expertise-grid">${D.groups.map((g,i)=>{const srvs=D.services.filter(s=>s.group===g.id);return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div><h3>${esc(g.name)}</h3><p class="expertise-card-desc">${esc(g.description)}</p><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;}).join('')}</div>
+    <div class="expertise-grid">${D.groups.map((g,i)=>{const srvs=D.services.filter(s=>s.group===g.id);return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div>${continentWatermark(g.id)}<h3>${esc(g.name)}</h3>${continentMetaBadge(g.id)}<p class="expertise-card-desc">${esc(g.description)}</p><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;}).join('')}</div>
    </section>
   </div>
 
