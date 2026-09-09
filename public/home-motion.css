@@ -682,21 +682,23 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  100%{opacity:1;transform:scale(1.2)}
 }
 
-/* 3. 3D EARTH COSMIC HERO SECTION (CENTER STAGE) */
+/* 3. 3D EARTH COSMIC HERO SECTION (STICKY STAGE, RECEDING ON SCROLL) */
 .space-earth-hero{
- position:relative;
+ position:sticky;
+ top:0;
  width:100%;
  height:100vh;
  min-height:680px;
  background:#02060e;
- background:radial-gradient(circle at 50% 50%, #06172d 0%, #02060e 70%, #010307 100%);
+ background:radial-gradient(circle at 50% 45%, #06172d 0%, #02060e 70%, #010307 100%);
  color:#ffffff;
  display:flex;
  flex-direction:column;
  align-items:center;
  justify-content:space-between;
  overflow:hidden;
- z-index:2;
+ z-index:1;
+ will-change:transform;
 }
 .earth-canvas-container{
  position:absolute;
@@ -716,330 +718,123 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  height:100%!important;
 }
 
-/* Minimalist, Clean, Non-Obstructive Top Overlay */
+/* Executive Minimalist Brand Lockup (Logo + Subtitle Aligned Bottom-Right) */
 .space-hero-minimal-overlay{
  position:relative;
- z-index:2;
- margin-top:110px;
+ z-index:10;
+ margin-top:clamp(96px, 14vh, 140px);
  text-align:center;
- pointer-events:none;
+ pointer-events:auto;
  padding:0 20px;
  display:flex;
  flex-direction:column;
  align-items:center;
+ will-change:transform, opacity;
 }
-.space-minimal-kicker{
+.hero-brand-executive-lockup{
  display:inline-flex;
- align-items:center;
- gap:8px;
- padding:6px 16px;
- border-radius:9999px;
- background:rgba(255,255,255,0.06);
- border:1px solid rgba(255,255,255,0.12);
- font-size:11px;
- font-weight:750;
- letter-spacing:.14em;
- color:#38bdf8;
- text-transform:uppercase;
- backdrop-filter:blur(10px);
- -webkit-backdrop-filter:blur(10px);
- margin-bottom:12px;
-}
-.space-minimal-title{
- font-family:Manrope,sans-serif;
- font-size:clamp(32px, 4.4vw, 56px);
- font-weight:800;
- letter-spacing:-.03em;
- line-height:1.1;
- color:#ffffff;
- text-shadow:0 4px 24px rgba(0,0,0,0.65);
- margin-bottom:6px;
-}
-.space-minimal-sub{
- font-family:Manrope,sans-serif;
- font-size:clamp(12px, 1.2vw, 15px);
- font-weight:700;
- letter-spacing:.14em;
- text-transform:uppercase;
- color:#94a3b8;
- text-shadow:0 2px 12px rgba(0,0,0,0.65);
-}
-
-/* 6 Continents = 6 Services Interactive Pill Navigation */
-.space-metaphor-nav{
- display:flex;
- flex-wrap:wrap;
- align-items:center;
- justify-content:center;
- gap:8px;
- margin-top:16px;
- margin-bottom:14px;
- max-width:980px;
- pointer-events:auto;
- z-index:10;
-}
-.metaphor-pill{
- display:inline-flex;
- align-items:center;
- gap:8px;
- padding:7px 15px;
- border-radius:9999px;
- background:rgba(8, 20, 38, 0.68);
- border:1px solid rgba(255, 255, 255, 0.14);
- color:#cbd5e1;
- font-family:Manrope,sans-serif;
- font-size:11.5px;
- font-weight:700;
- letter-spacing:.02em;
+ flex-direction:column;
+ align-items:flex-end;
  cursor:pointer;
- backdrop-filter:blur(14px);
- -webkit-backdrop-filter:blur(14px);
- box-shadow:0 4px 14px rgba(0, 0, 0, 0.35);
- transition:all .26s cubic-bezier(.16, 1, .3, 1);
-}
-.metaphor-pill:hover{
- background:rgba(255, 255, 255, 0.14);
- border-color:rgba(255, 255, 255, 0.35);
- color:#ffffff;
- transform:translateY(-2px);
- box-shadow:0 8px 24px rgba(0, 84, 124, 0.4);
-}
-.metaphor-pill.is-active{
- background:rgba(2, 132, 199, 0.32);
- border-color:#38bdf8;
- color:#ffffff;
- box-shadow:0 0 20px rgba(56, 189, 248, 0.5), inset 0 0 10px rgba(56, 189, 248, 0.25);
- transform:translateY(-2px) scale(1.04);
-}
-.pill-dot{
- width:7px;
- height:7px;
- border-radius:50%;
- box-shadow:0 0 8px currentColor;
- flex-shrink:0;
-}
-
-/* Floating Metaphor Live Hub Card - Positioned at bottom-left like a spatial flight card */
-.metaphor-live-card{
- position:absolute;
- bottom:24px;
- left:clamp(20px, 3vw, 48px);
- width:calc(100% - 40px);
- max-width:340px;
- margin:0;
- padding:18px 22px;
- border-radius:14px;
- background:rgba(6, 17, 33, 0.88);
- border:1px solid rgba(56, 189, 248, 0.32);
- box-shadow:0 16px 48px rgba(0, 0, 0, 0.65), 0 0 35px rgba(2, 132, 199, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
- backdrop-filter:blur(20px);
- -webkit-backdrop-filter:blur(20px);
- pointer-events:none;
- text-align:left;
- opacity:0;
- transform:translateY(14px);
- transition:opacity .35s cubic-bezier(.16,1,.3,1), transform .35s cubic-bezier(.16,1,.3,1);
- z-index:10;
-}
-.metaphor-live-card.is-open{
- opacity:1;
- pointer-events:auto;
- transform:translateY(0);
-}
-@media(max-width:1280px){
- .metaphor-live-card{display:none!important}
-}
-.live-card-meta{
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:10px;
- margin-bottom:8px;
-}
-.live-badge{
- font-family:Manrope,sans-serif;
- font-size:10px;
- font-weight:800;
- letter-spacing:.12em;
- text-transform:uppercase;
- color:#38bdf8;
- background:rgba(56, 189, 248, 0.14);
- border:1px solid rgba(56, 189, 248, 0.3);
- padding:3px 9px;
- border-radius:9999px;
-}
-.live-service-tag{
- font-size:10.5px;
- font-weight:650;
- color:#94a3b8;
- letter-spacing:.03em;
-}
-.live-title{
- font-family:Manrope,sans-serif;
- font-size:clamp(15px, 1.3vw, 18px);
- font-weight:750;
- letter-spacing:-.02em;
- color:#ffffff;
- margin-bottom:6px;
- line-height:1.25;
-}
-.live-desc{
- font-size:12px;
- line-height:1.55;
- color:#cbd5e1;
- margin-bottom:12px;
- display:-webkit-box;
- -webkit-line-clamp:3;
- -webkit-box-orient:vertical;
- overflow:hidden;
-}
-.live-actions{
- display:flex;
- align-items:center;
- justify-content:flex-end;
-}
-.live-link{
- display:inline-flex;
- align-items:center;
- gap:8px;
- padding:6px 14px;
- border-radius:9999px;
- background:#ffffff;
- color:#06172d;
- font-size:11.5px;
- font-weight:750;
- text-decoration:none;
- box-shadow:0 4px 16px rgba(255, 255, 255, 0.22);
- transition:all .24s ease;
-}
-.live-link:hover{
- background:#38bdf8;
- color:#040d1a;
- transform:translateY(-1px);
- box-shadow:0 6px 20px rgba(56, 189, 248, 0.45);
-}
-.live-link svg{
- width:13px;
- height:13px;
- transition:transform .2s ease;
-}
-.live-link:hover svg{
- transform:translateX(3px);
-}
-
-/* BRAND GROUNDING LOCKUP (DIRECTLY UNDER THE 3D EARTH GLOBE) */
-.earth-grounding-bar{
- position:absolute;
- bottom:24px;
- left:50%;
- transform:translateX(-50%);
- z-index:15;
- pointer-events:auto;
- display:flex;
- justify-content:center;
- align-items:center;
- width:auto;
- max-width:94vw;
-}
-.brand-grounding-lockup{
- display:inline-flex;
- align-items:center;
- gap:clamp(12px, 1.6vw, 20px);
- padding:10px clamp(16px, 2vw, 28px);
- border-radius:14px;
- background:rgba(8, 16, 28, 0.88);
- border:1px solid rgba(255, 255, 255, 0.16);
- backdrop-filter:blur(20px);
- -webkit-backdrop-filter:blur(20px);
- background-image:radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
- background-size:16px 16px;
- box-shadow:0 16px 40px rgba(0, 0, 0, 0.65), 0 0 32px rgba(2, 132, 199, 0.2);
- cursor:pointer;
- transition:all .3s cubic-bezier(.16, 1, .3, 1);
  user-select:none;
+ transition:transform .3s cubic-bezier(.16, 1, .3, 1);
 }
-.brand-grounding-lockup:hover{
- background:rgba(12, 24, 42, 0.94);
- border-color:rgba(56, 189, 248, 0.45);
- box-shadow:0 20px 50px rgba(0, 0, 0, 0.75), 0 0 45px rgba(56, 189, 248, 0.35);
+.hero-brand-executive-lockup:hover{
  transform:translateY(-2px);
 }
-.brand-grounding-badge{
+.hero-brand-top{
+ display:inline-flex;
+ align-items:center;
+ gap:clamp(14px, 2vw, 24px);
+}
+.hero-logo-badge{
  display:inline-flex;
  align-items:center;
  justify-content:center;
- padding:8px 12px;
- background:rgba(30, 41, 59, 0.75);
- border:1px solid rgba(255, 255, 255, 0.2);
- border-radius:10px;
- box-shadow:0 4px 14px rgba(0, 0, 0, 0.35);
+ padding:10px 16px;
+ background:rgba(15, 23, 42, 0.75);
+ border:1px solid rgba(255, 255, 255, 0.22);
+ border-radius:14px;
+ backdrop-filter:blur(16px);
+ -webkit-backdrop-filter:blur(16px);
+ box-shadow:0 10px 30px rgba(0, 0, 0, 0.5);
  flex-shrink:0;
+ transition:all .3s ease;
 }
-.brand-grounding-badge svg{
- width:40px;
- height:27px;
+.hero-brand-executive-lockup:hover .hero-logo-badge{
+ background:rgba(20, 32, 54, 0.9);
+ border-color:rgba(56, 189, 248, 0.5);
+ box-shadow:0 12px 36px rgba(56, 189, 248, 0.3);
+}
+.hero-logo-badge svg{
+ width:clamp(46px, 4.8vw, 66px);
+ height:clamp(30px, 3.2vw, 44px);
  display:block;
 }
-.brand-grounding-badge .mark-blue{
+.hero-logo-badge .mark-blue{
  stroke:#1d8cf8!important;
  stroke-width:4.8;
 }
-.brand-grounding-badge .mark-red{
+.hero-logo-badge .mark-red{
  stroke:#f97316!important;
  stroke-width:4.8;
 }
-.brand-grounding-badge .mark-green{
+.hero-logo-badge .mark-green{
  stroke:#22c55e!important;
  stroke-width:4.8;
 }
-.brand-grounding-name{
+.hero-logo-text{
  font-family:Manrope,sans-serif;
+ font-size:clamp(46px, 6.5vw, 84px);
  font-weight:850;
- font-size:clamp(26px, 2.7vw, 38px);
- letter-spacing:-.025em;
- color:#ffffff;
+ letter-spacing:-.035em;
  line-height:1;
+ color:#ffffff;
  margin:0;
- text-shadow:0 2px 18px rgba(255, 255, 255, 0.2);
+ text-shadow:0 4px 30px rgba(0,0,0,0.8), 0 0 50px rgba(56, 189, 248, 0.22);
 }
-.brand-grounding-divider{
- width:1px;
- height:36px;
- background:rgba(255, 255, 255, 0.26);
- flex-shrink:0;
-}
-.brand-grounding-sub{
- display:flex;
+.hero-brand-bottom-right{
+ display:inline-flex;
  align-items:center;
- gap:12px;
+ gap:8px;
+ align-self:flex-end;
+ margin-top:6px;
+ padding:5px 12px;
+ border-radius:8px;
+ background:rgba(8, 20, 38, 0.65);
+ border:1px solid rgba(255, 255, 255, 0.14);
+ backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);
+ box-shadow:0 4px 16px rgba(0,0,0,0.4);
 }
-.brand-grounding-dot{
- width:8px;
- height:8px;
+.hero-brand-dot{
+ width:7px;
+ height:7px;
  border-radius:50%;
  background:#22c55e;
- box-shadow:0 0 10px #22c55e, 0 0 20px rgba(34, 197, 94, 0.8);
+ box-shadow:0 0 10px #22c55e, 0 0 18px rgba(34, 197, 94, 0.8);
  flex-shrink:0;
- animation:dotPulse 2.4s infinite ease-in-out;
+ animation:pulseDot 2.2s infinite ease-in-out;
 }
-.brand-grounding-company{
+.hero-company-text{
  font-family:Manrope,sans-serif;
- font-size:clamp(11.5px, 1.1vw, 13.5px);
+ font-size:clamp(11px, 1.15vw, 14px);
  font-weight:750;
- letter-spacing:.08em;
- line-height:1.35;
- color:#ffffff;
+ letter-spacing:.12em;
+ line-height:1;
+ color:#e2e8f0;
  text-transform:uppercase;
- white-space:nowrap;
  margin:0;
+ text-shadow:0 2px 10px rgba(0,0,0,0.6);
+ white-space:nowrap;
 }
 @media(max-width:768px){
- .brand-grounding-lockup{gap:10px;padding:8px 14px}
- .brand-grounding-badge{padding:6px 9px}
- .brand-grounding-badge svg{width:28px;height:19px}
- .brand-grounding-name{font-size:22px}
- .brand-grounding-divider{height:28px}
- .brand-grounding-company{font-size:10px}
+ .hero-brand-top{gap:12px}
+ .hero-logo-badge{padding:8px 12px}
+ .hero-logo-badge svg{width:36px;height:24px}
+ .hero-logo-text{font-size:38px}
+ .hero-brand-bottom-right{padding:4px 8px;margin-top:4px}
+ .hero-company-text{font-size:10px;letter-spacing:.08em}
 }
 
 /* Continent Architectural Watermark for Services */
@@ -1164,11 +959,12 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  z-index:10;
  background:#ffffff;
  color:#0f172a;
- border-radius:36px 36px 0 0;
- box-shadow:0 -30px 90px rgba(0,0,0,0.45);
+ border-radius:44px 44px 0 0;
+ box-shadow:0 -35px 100px rgba(0,0,0,0.65), 0 -10px 30px rgba(0,0,0,0.35);
  margin-top:0;
- border-top:1px solid #e2e8f0;
- padding-top:24px;
+ border-top:1px solid rgba(255,255,255,0.4);
+ padding-top:28px;
+ will-change:transform;
 }
 .deloitte-sheet-top-accent{
  width:68px;

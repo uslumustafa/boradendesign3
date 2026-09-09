@@ -486,10 +486,23 @@ export function initBoradenEarth() {
       pin.pinRingMat.opacity = Math.max(0, (1 - ringPulse) * 0.65);
     });
 
-    // Camera scroll response (pull back smoothly as user scrolls down)
-    const scrollFactor = Math.min(1, scrollY / (height || 800));
-    camera.position.z = 7.0 + scrollFactor * 2.8;
-    camera.position.y = 0 - scrollFactor * 0.6;
+    // Camera & Earth scroll response: Earth pulls back smoothly into deep space as user scrolls
+    const scrollRange = window.innerHeight || height || 800;
+    const scrollFactor = Math.min(1, Math.max(0, scrollY / scrollRange));
+    camera.position.z = 7.0 + scrollFactor * 9.5;
+    camera.position.y = 0 - scrollFactor * 1.8;
+    if (earthGroup) {
+      const globeZoom = Math.max(0.42, 1.0 - scrollFactor * 0.58);
+      earthGroup.scale.setScalar(globeZoom);
+    }
+
+    // Smoothly fade and lift the top brand lockup during the initial scroll
+    const brandStage = document.getElementById('space-hero-brand-stage');
+    if (brandStage) {
+      const fadeFactor = Math.min(1, Math.max(0, scrollY / 300));
+      brandStage.style.opacity = String(Math.max(0, 1 - fadeFactor * 1.15));
+      brandStage.style.transform = `translateY(-${fadeFactor * 45}px)`;
+    }
 
     renderer.render(scene, camera);
   }

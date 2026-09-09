@@ -107,69 +107,20 @@ function home(D){
  <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden 3D Dünya ve Bağımsız Denetim">
   <div id="earth-canvas-container" class="earth-canvas-container"></div>
   
-  <div class="space-hero-minimal-overlay">
-   <div class="space-minimal-kicker">
-    <span class="tag-pulse"></span>
-    <span>1993'TEN BUGÜNE &bull; ANKARA &bull; İSTANBUL</span>
-   </div>
-   <h1 class="space-minimal-title">Türkiye'nin Güven Üssü.</h1>
-   <p class="space-minimal-sub">Bağımsız Denetim ve Danışmanlık A.Ş.</p>
-
-   <div class="space-metaphor-nav" id="space-metaphor-nav" role="toolbar" aria-label="6 Kıta ve 6 Hizmet Metaforu">
-    <button type="button" class="metaphor-pill is-active" data-continent-focus="turkiye">
-     <span class="pill-dot" style="background:#22c55e"></span>
-     <span class="pill-text">Türkiye (Boraden)</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="avrupa">
-     <span class="pill-dot" style="background:#cb6651"></span>
-     <span class="pill-text">Avrupa &bull; 02 Denetim</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="kuzey-amerika">
-     <span class="pill-dot" style="background:#356e91"></span>
-     <span class="pill-text">K. Amerika &bull; 01 Vergi</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="guney-amerika">
-     <span class="pill-dot" style="background:#41885f"></span>
-     <span class="pill-text">G. Amerika &bull; 03 Danışmanlık</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="afrika">
-     <span class="pill-dot" style="background:#3c7a9c"></span>
-     <span class="pill-text">Afrika &bull; 04 İK &amp; Bordro</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="asya">
-     <span class="pill-dot" style="background:#c46c57"></span>
-     <span class="pill-text">Asya &bull; 05 Sistemler</span>
-    </button>
-    <button type="button" class="metaphor-pill" data-continent-focus="okyanusya">
-     <span class="pill-dot" style="background:#488c65"></span>
-     <span class="pill-text">Okyanusya &bull; 06 Akademi</span>
-    </button>
-   </div>
-   </div>
-
-   <div class="metaphor-live-card" id="metaphor-live-card">
-    <div class="live-card-meta">
-     <span class="live-badge" id="live-badge">TÜRKİYE &bull; MERKEZ HUB</span>
-     <span class="live-service-tag" id="live-tag">Boraden Genel Merkez</span>
-    </div>
-    <h3 class="live-title" id="live-title">Bağımsız Denetim ve Danışmanlık A.Ş.</h3>
-    <p class="live-desc" id="live-desc">1993’ten bugüne KGK, SPK ve BDDK yetkileriyle Türkiye'nin güven üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.</p>
-    <div class="live-actions">
-     <a href="/hizmetler/" class="live-link" id="live-link"><span>Hizmetleri İnceleyin</span>${arrow}</a>
-    </div>
-   </div>
-
-   <div class="earth-grounding-bar" id="earth-grounding-bar">
-    <div class="brand-grounding-lockup">
-     <div class="brand-grounding-badge" aria-hidden="true">${mark}</div>
-     <span class="brand-grounding-name">BORADEN</span>
-     <div class="brand-grounding-divider" aria-hidden="true"></div>
-     <div class="brand-grounding-sub">
-      <span class="brand-grounding-dot" aria-hidden="true"></span>
-      <span class="brand-grounding-company">BAĞIMSIZ DENETİM VE<br>DANIŞMANLIK A.Ş.</span>
+  <div class="space-hero-minimal-overlay" id="space-hero-brand-stage">
+    <div class="hero-brand-executive-lockup" id="space-hero-brand-lockup">
+     <div class="hero-brand-top">
+      <div class="hero-logo-badge" aria-hidden="true">${mark}</div>
+      <h1 class="hero-logo-text">BORADEN</h1>
+     </div>
+     <div class="hero-brand-bottom-right">
+      <span class="hero-brand-dot" aria-hidden="true"></span>
+      <p class="hero-company-text">Bağımsız Denetim ve Danışmanlık A.Ş.</p>
      </div>
     </div>
    </div>
+
+
 
    <div class="space-hero-bottom-hint">
    <a class="space-scroll-hint" href="#deloitte-content-sheet" aria-label="Aşağı kaydırın">

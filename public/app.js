@@ -440,21 +440,21 @@ if (navCenterLogo) {
  });
 }
 
-// Earth Grounding Lockup Interactive Trigger (under 3D Earth)
-const earthGroundingBar = document.getElementById('earth-grounding-bar');
-if (earthGroundingBar) {
- earthGroundingBar.addEventListener('mouseenter', () => {
+// Executive Hero Brand Lockup Interactive Trigger
+const heroBrandLockup = document.getElementById('space-hero-brand-lockup') || document.getElementById('earth-grounding-bar');
+if (heroBrandLockup) {
+ heroBrandLockup.addEventListener('mouseenter', () => {
   if (window.triggerSunbeam) window.triggerSunbeam(true);
   if (window.focusContinent) window.focusContinent('hq');
  });
 
- earthGroundingBar.addEventListener('mouseleave', () => {
+ heroBrandLockup.addEventListener('mouseleave', () => {
   if (window.triggerSunbeam) window.triggerSunbeam(false);
+  if (window.focusContinent) window.focusContinent('all');
  });
 
- earthGroundingBar.addEventListener('click', (e) => {
+ heroBrandLockup.addEventListener('click', (e) => {
   e.preventDefault();
-  selectContinentMetaphor('turkiye');
   if (window.triggerSunbeam) window.triggerSunbeam(true);
   const servicesSheet = document.getElementById('deloitte-content-sheet') || document.getElementById('uzmanlik');
   if (servicesSheet) servicesSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
