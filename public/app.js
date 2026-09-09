@@ -18,9 +18,25 @@ $('.close-search')?.addEventListener('click',()=>dialog.close());
 dialog?.addEventListener('close',()=>returnFocus?.focus());
 dialog?.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
 function updateSearch(){const term=norm($('#global-search').value);let count=0;$$('.search-results>a').forEach(row=>{const match=norm(row.dataset.search).includes(term);row.hidden=!match;if(match)count++;});$('.search-count').textContent=count?`${count} sonuç`:'Bu aramayla eşleşen sonuç yok. Farklı bir sözcük deneyin.';}
-$('#global-search')?.addEventListener('input',updateSearch);
 document.addEventListener('click',event=>$$('.header details[open]').forEach(d=>{if(!d.contains(event.target))d.open=false;}));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')$$('.header details[open]').forEach(d=>d.open=false);});
+function applyScrollParam() {
+ const scrollParam = typeof location !== 'undefined' ? new URLSearchParams(location.search).get('scroll') : null;
+ if (!scrollParam) return;
+ const intro = document.getElementById('boraden-intro');
+ if (intro) intro.remove();
+ if (isNaN(Number(scrollParam))) {
+  const el = document.querySelector(scrollParam);
+  if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+ } else {
+  window.scrollTo(0, Number(scrollParam));
+ }
+}
+if (document.readyState === 'loading') {
+ document.addEventListener('DOMContentLoaded', applyScrollParam);
+} else {
+ applyScrollParam();
+}
 const serviceInput=$('#service-search');
 serviceInput?.addEventListener('input',()=>{const term=norm(serviceInput.value);let count=0;$$('[data-filter-group]').forEach(group=>{let groupCount=0;group.querySelectorAll('[data-filter-text]').forEach(row=>{row.hidden=!norm(row.dataset.filterText).includes(term);if(!row.hidden){groupCount++;count++;}});group.hidden=!groupCount;});$('#service-count').textContent=count?`${count} hizmet`:'Sonuç bulunamadı. Başka bir terim deneyin.';});
 $('#archive-search')?.addEventListener('input',event=>{const term=norm(event.target.value);let count=0;$$('.archive-list [data-filter-text]').forEach(row=>{row.hidden=!norm(row.dataset.filterText).includes(term);if(!row.hidden)count++;});$('.archive-count').textContent=`${count} belge`;});
@@ -358,9 +374,14 @@ function selectContinentMetaphor(key) {
   if (span) span.textContent = data.linkText;
  }
  if (liveCard) {
-  liveCard.style.animation = 'none';
-  liveCard.offsetHeight;
-  liveCard.style.animation = 'liveCardFadeIn .32s ease-out';
+  if (key === 'turkiye') {
+   liveCard.classList.remove('is-open');
+  } else {
+   liveCard.classList.add('is-open');
+   liveCard.style.animation = 'none';
+   liveCard.offsetHeight;
+   liveCard.style.animation = 'liveCardFadeIn .32s ease-out';
+  }
  }
 
  const cards = document.querySelectorAll('[data-expertise-card]');
@@ -416,6 +437,30 @@ if (navCenterLogo) {
     if (window.triggerSunbeam) window.triggerSunbeam(false);
    }, 3500);
   }
+ });
+}
+
+// Earth Grounding Lockup Interactive Trigger (under 3D Earth)
+const earthGroundingBar = document.getElementById('earth-grounding-bar');
+if (earthGroundingBar) {
+ earthGroundingBar.addEventListener('mouseenter', () => {
+  if (window.triggerSunbeam) window.triggerSunbeam(true);
+  if (window.focusContinent) window.focusContinent('hq');
+ });
+
+ earthGroundingBar.addEventListener('mouseleave', () => {
+  if (window.triggerSunbeam) window.triggerSunbeam(false);
+ });
+
+ earthGroundingBar.addEventListener('click', (e) => {
+  e.preventDefault();
+  selectContinentMetaphor('turkiye');
+  if (window.triggerSunbeam) window.triggerSunbeam(true);
+  const servicesSheet = document.getElementById('deloitte-content-sheet') || document.getElementById('uzmanlik');
+  if (servicesSheet) servicesSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => {
+   if (window.triggerSunbeam) window.triggerSunbeam(false);
+  }, 3000);
  });
 }
 

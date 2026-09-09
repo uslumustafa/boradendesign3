@@ -159,7 +159,19 @@ function home(D){
     </div>
    </div>
 
-  <div class="space-hero-bottom-hint">
+   <div class="earth-grounding-bar" id="earth-grounding-bar">
+    <div class="brand-grounding-lockup">
+     <div class="brand-grounding-badge" aria-hidden="true">${mark}</div>
+     <span class="brand-grounding-name">BORADEN</span>
+     <div class="brand-grounding-divider" aria-hidden="true"></div>
+     <div class="brand-grounding-sub">
+      <span class="brand-grounding-dot" aria-hidden="true"></span>
+      <span class="brand-grounding-company">BAĞIMSIZ DENETİM VE<br>DANIŞMANLIK A.Ş.</span>
+     </div>
+    </div>
+   </div>
+
+   <div class="space-hero-bottom-hint">
    <a class="space-scroll-hint" href="#deloitte-content-sheet" aria-label="Aşağı kaydırın">
     <span>KEŞFETMEK İÇİN AŞAĞI KAYDIRIN</span>
     <span class="scroll-arrow">&darr;</span>
@@ -355,7 +367,22 @@ function brandFilm(){
  <h2 id="brand-film-title" class="sr-only">Türkiye iş dünyasına bir bakış</h2>
  <img class="sector-film-poster" src="/assets/boraden-turkiye-business.jpg" alt="" width="1280" height="720" loading="lazy">
  <video id="brand-film-video" class="sector-film-video" data-section-video data-video-mode="auto" data-src="/assets/boraden-turkiye-business.mp4" poster="/assets/boraden-turkiye-business.jpg" muted playsinline loop preload="none" aria-label="Türkiye'de şehir, üretim, lojistik ve iş ortaklığını gösteren temsili film"></video><div class="brand-film-shade"></div>
- <div class="brand-film-caption wrap"><p class="eyebrow">BİRLİKTE, BÜTÜNE.</p><p class="brand-film-message">${captions.map(([at,text],i)=>`<span data-caption-at="${at}"${i?' hidden':''}>${esc(text)}</span>`).join('')}</p>${btn('Uzmanlıklarımızı keşfedin','#uzmanlik','text-link')}</div>
+ <div class="brand-film-caption wrap">
+  <div class="deloitte-film-meta-header">
+   <span class="deloitte-kicker"><span class="kicker-green-dot"></span>DELOITTE STANDARTLARINDA GÜVENCE &bull; BORADEN FİLMİ</span>
+  </div>
+  <p class="eyebrow">BİRLİKTE, BÜTÜNE.</p>
+  <p class="brand-film-message">${captions.map(([at,text],i)=>`<span data-caption-at="${at}"${i?' hidden':''}>${esc(text)}</span>`).join('')}</p>
+  <div class="deloitte-film-service-ribbon">
+   <a href="/hizmetler/vergi-mali-musavirlik/" class="film-service-pill"><span class="film-pill-dot" style="background:#356e91"></span><span>01 Vergi &amp; Mevzuat</span></a>
+   <a href="/hizmetler/bagimsiz-denetim/" class="film-service-pill"><span class="film-pill-dot" style="background:#cb6651"></span><span>02 Bağımsız Denetim</span></a>
+   <a href="/hizmetler/kurumsal-danismanlik/" class="film-service-pill"><span class="film-pill-dot" style="background:#41885f"></span><span>03 Değerleme &amp; M&amp;A</span></a>
+   <a href="/hizmetler/insan-kaynaklari/" class="film-service-pill"><span class="film-pill-dot" style="background:#3c7a9c"></span><span>04 Bordro &amp; İK</span></a>
+   <a href="/hizmetler/sistemler-is-zekasi/" class="film-service-pill"><span class="film-pill-dot" style="background:#c46c57"></span><span>05 Sistem &amp; BI</span></a>
+   <a href="/hizmetler/akademi/" class="film-service-pill"><span class="film-pill-dot" style="background:#488c65"></span><span>06 Akademi</span></a>
+  </div>
+  ${btn('Uzmanlıklarımızı keşfedin','#uzmanlik','text-link')}
+ </div>
  <div class="sector-feature-bottom wrap"><p>Yapay zekâ ile üretilmiş temsili iş hayatı sahneleri</p><button type="button" data-video-toggle aria-controls="brand-film-video" aria-label="Videoyu durdur" aria-pressed="false" hidden>Videoyu durdur Ⅱ</button><span class="sector-film-instruction">FARKLI UZMANLIKLAR. AYNI BÜYÜK RESİM.</span></div><i class="sector-film-progress" aria-hidden="true"></i>
  </div></section>`;
 }
