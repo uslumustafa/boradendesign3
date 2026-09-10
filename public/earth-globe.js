@@ -6,68 +6,111 @@
 
 import * as THREE from '/assets/vendor/three.module.js';
 
-export const CONTINENTS = [
+export const SERVICES_NETWORK = [
   {
-    id: 'avrupa',
-    name: 'Avrupa',
-    service: '02 Bağımsız Denetim & Raporlama',
-    group: 'denetim',
-    lat: 48.0,
-    lon: 14.0,
-    color: 0xcb6651,
-    desc: 'Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili denetim güvencesi.'
-  },
-  {
-    id: 'kuzey-amerika',
-    name: 'Kuzey Amerika',
-    service: '01 Vergi & Mali Müşavirlik',
+    id: 'vergi',
+    aliasId: 'kuzey-amerika',
+    code: '01',
+    serviceCode: '01 VERGİ &amp; MALİ MÜŞAVİRLİK',
+    name: '01 Vergi & Mali Müşavirlik',
     group: 'vergi',
     lat: 38.0,
     lon: -97.0,
     color: 0x356e91,
-    desc: 'Küresel vergi mimarisi, transfer fiyatlandırması ve tam tasdik danışmanlığı.'
+    colorHex: '#356e91',
+    heading: 'Vergi, Tasdik ve Mevzuat Yönetimi',
+    desc: 'Tam tasdik, KDV iadesi, transfer fiyatlandırması ve kurumsal vergi mimarisi güvencesi.',
+    tags: ['Tam Tasdik', 'KDV İadesi', 'Transfer Fiyatlandırması']
   },
   {
-    id: 'guney-amerika',
-    name: 'Güney Amerika',
-    service: '03 Kurumsal Danışmanlık & Değerleme',
+    id: 'denetim',
+    aliasId: 'avrupa',
+    code: '02',
+    serviceCode: '02 BAĞIMSIZ DENETİM &amp; RAPORLAMA',
+    name: '02 Bağımsız Denetim & Raporlama',
+    group: 'denetim',
+    lat: 48.0,
+    lon: 14.0,
+    color: 0xcb6651,
+    colorHex: '#cb6651',
+    heading: 'Finansal Tablo Denetimi ve Raporlama',
+    desc: 'Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili bağımsız denetim güvencesi.',
+    tags: ['KGK &amp; SPK Yetkili', 'UFRS / TFRS / BOBİ FRS', 'İç Kontrol Güvencesi']
+  },
+  {
+    id: 'danismanlik',
+    aliasId: 'guney-amerika',
+    code: '03',
+    serviceCode: '03 KURUMSAL DANIŞMANLIK &amp; DEĞERLEME',
+    name: '03 Kurumsal Danışmanlık & Değerleme',
     group: 'danismanlik',
     lat: -14.0,
     lon: -58.0,
     color: 0x41885f,
-    desc: 'Şirket birleşme & devralmaları (M&A), değerleme ve finansal modelleme.'
+    colorHex: '#41885f',
+    heading: 'Şirket Değerleme &amp; M&A Birleşmeler',
+    desc: 'Şirket birleşme & devralmaları, İNA değerleme modellemeleri ve finansal due diligence.',
+    tags: ['Şirket Değerleme', 'M&A Birleşme & Devralma', 'Due Diligence']
   },
   {
-    id: 'afrika',
-    name: 'Afrika',
-    service: '04 İnsan Kaynakları & Bordro',
+    id: 'insan',
+    aliasId: 'afrika',
+    code: '04',
+    serviceCode: '04 İNSAN KAYNAKLARI &amp; BORDRO',
+    name: '04 İnsan Kaynakları & Bordro',
     group: 'insan',
     lat: 2.0,
     lon: 24.0,
     color: 0x3c7a9c,
-    desc: 'Bordrolama dış kaynak, SGK teşvik optimizasyonu ve iş hukuku yönetimi.'
+    colorHex: '#3c7a9c',
+    heading: 'Bordrolama &amp; SGK Teşvik Yönetimi',
+    desc: 'Bordrolama dış kaynak (BPO), 3.500+ personel operasyonu, SGK teşvik optimizasyonu ve iş hukuku.',
+    tags: ['BPO Bordrolama', 'SGK İstihdam Teşviki', 'İş Hukuku Uyumu']
   },
   {
-    id: 'asya',
-    name: 'Asya',
-    service: '05 Sistemler & İş Zekâsı',
+    id: 'sistem',
+    aliasId: 'asya',
+    code: '05',
+    serviceCode: '05 SİSTEMLER &amp; İŞ ZEKÂSI',
+    name: '05 Sistemler & İş Zekâsı',
     group: 'sistem',
     lat: 34.0,
     lon: 100.0,
     color: 0xc46c57,
-    desc: 'ERP sistem entegrasyonu, finansal veri ambarı ve analitik iş zekâsı.'
+    colorHex: '#c46c57',
+    heading: 'ERP Entegrasyonu &amp; Finansal Analitik',
+    desc: 'ERP muhasebe entegrasyonu, veri ambarı modelleme, süreç otomasyonu ve yönetici BI.',
+    tags: ['ERP Entegrasyonu', 'Yönetici BI Raporlama', 'Süreç Otomasyonu']
   },
   {
-    id: 'okyanusya',
-    name: 'Okyanusya',
-    service: '06 Boraden Akademi',
+    id: 'akademi',
+    aliasId: 'okyanusya',
+    code: '06',
+    serviceCode: '06 BORADEN AKADEMİ',
+    name: '06 Boraden Akademi',
     group: 'akademi',
     lat: -25.0,
     lon: 134.0,
     color: 0x488c65,
-    desc: 'Üst düzey yönetici finans, vergi mevzuatı ve denetim standartları eğitimleri.'
+    colorHex: '#488c65',
+    heading: 'Yönetici Finans ve Mevzuat Eğitimi',
+    desc: 'Şirket yönetim kurulları ve CFO’lar için güncel mevzuat, TFRS ve denetim standartları eğitimleri.',
+    tags: ['Mali İşler Eğitimi', 'Güncel Vergi Mevzuatı', 'UFRS Tablo Analizi']
   }
 ];
+
+export const HQ_NODE = {
+  id: 'hq',
+  code: '00',
+  serviceCode: 'GENEL MERKEZ HUB &bull; TÜRKİYE',
+  name: 'Boraden Genel Merkez Hub',
+  colorHex: '#38bdf8',
+  heading: 'Boraden Bağımsız Denetim ve Danışmanlık A.Ş.',
+  desc: '33 yıllık bağımsız kurumsal güven, SPK, KGK ve BDDK yetkili denetim ve stratejik danışmanlık üssü.',
+  tags: ['Tam Bağımsız', 'SPK &bull; KGK &bull; BDDK', '1993’ten Bugüne']
+};
+
+export const CONTINENTS = SERVICES_NETWORK;
 
 export function initBoradenEarth() {
   if (typeof document === 'undefined') return;
@@ -207,7 +250,7 @@ export function initBoradenEarth() {
   ringMesh2.lookAt(turkeyPos.clone().multiplyScalar(2));
   hqGroup.add(ringMesh2);
 
-  // 9. 6 Continents Network & Great-Circle Light Arcs
+  // 9. 6 Continents Network & Great-Circle Subtle Light Arcs
   const networkArcs = [];
   const continentPins = [];
 
@@ -219,17 +262,17 @@ export function initBoradenEarth() {
     pinGroup.position.copy(contPos);
     earthGroup.add(pinGroup);
 
-    const pinCoreGeo = new THREE.SphereGeometry(0.028, 16, 16);
+    const pinCoreGeo = new THREE.SphereGeometry(0.024, 16, 16);
     const pinCoreMat = new THREE.MeshBasicMaterial({ color: cont.color });
     const pinCoreMesh = new THREE.Mesh(pinCoreGeo, pinCoreMat);
     pinGroup.add(pinCoreMesh);
 
-    const pinRingGeo = new THREE.RingGeometry(0.035, 0.065, 24);
+    const pinRingGeo = new THREE.RingGeometry(0.03, 0.055, 24);
     const pinRingMat = new THREE.MeshBasicMaterial({
       color: cont.color,
       side: THREE.DoubleSide,
       transparent: true,
-      opacity: 0.7
+      opacity: 0.55
     });
     const pinRingMesh = new THREE.Mesh(pinRingGeo, pinRingMat);
     pinRingMesh.lookAt(contPos.clone().multiplyScalar(2));
@@ -237,13 +280,13 @@ export function initBoradenEarth() {
 
     continentPins.push({ pinGroup, pinRingMesh, pinRingMat, cont });
 
-    // Great-Circle Curved Light Arc between Turkey and Continent
+    // Great-Circle Curved Subtle Light Arc between Turkey and Continent
     const arcPoints = [];
     const steps = 42;
     for (let s = 0; s <= steps; s++) {
       const t = s / steps;
       const p = new THREE.Vector3().lerpVectors(turkeyPos, contPos, t).normalize();
-      const altitude = RADIUS + Math.sin(t * Math.PI) * 0.35;
+      const altitude = RADIUS + Math.sin(t * Math.PI) * 0.32;
       p.multiplyScalar(altitude);
       arcPoints.push(p);
     }
@@ -252,18 +295,18 @@ export function initBoradenEarth() {
     const arcMat = new THREE.LineBasicMaterial({
       color: cont.color,
       transparent: true,
-      opacity: 0.45,
+      opacity: 0.28,
       blending: THREE.AdditiveBlending
     });
     const arcLine = new THREE.Line(arcGeo, arcMat);
     earthGroup.add(arcLine);
 
-    // Traveling Photon / Light Pulse along Arc
-    const pulseGeo = new THREE.SphereGeometry(0.024, 12, 12);
+    // Delicate Traveling Photon Dot along Arc (Hafif Soluk Işın)
+    const pulseGeo = new THREE.SphereGeometry(0.012, 10, 10);
     const pulseMat = new THREE.MeshBasicMaterial({
-      color: 0xffffff,
+      color: cont.color,
       transparent: true,
-      opacity: 0.95
+      opacity: 0.75
     });
     const pulseMesh = new THREE.Mesh(pulseGeo, pulseMat);
     pulseMesh.position.copy(arcPoints[0]);
@@ -272,34 +315,11 @@ export function initBoradenEarth() {
     networkArcs.push({ arcPoints, pulseMesh, arcMat, index });
   });
 
-  // 10. Solar God-Ray / Sunbeam Flare System (Güneş Işını)
-  // Radiant light shafts radiating from the sun/horizon when hovering Boraden logo
-  const sunbeamGroup = new THREE.Group();
-  sunbeamGroup.position.set(4.8, 2.2, 3.8);
-  scene.add(sunbeamGroup);
-
-  const sunbeamPlanes = [];
-  const rayCount = 10;
-  for (let r = 0; r < rayCount; r++) {
-    const rayGeo = new THREE.PlaneGeometry(0.35, 14);
-    const rayMat = new THREE.MeshBasicMaterial({
-      color: 0xfff4d6,
-      transparent: true,
-      opacity: 0.0,
-      blending: THREE.AdditiveBlending,
-      side: THREE.DoubleSide
-    });
-    const rayMesh = new THREE.Mesh(rayGeo, rayMat);
-    rayMesh.rotation.z = (r / rayCount) * Math.PI;
-    sunbeamGroup.add(rayMesh);
-    sunbeamPlanes.push(rayMat);
-  }
-
-  // 11. Lighting Setup (Cinematic Daylight / Night Terminator)
-  const ambientLight = new THREE.AmbientLight(0x06111e, 0.45);
+  // 10. Lighting Setup (Cinematic Daylight / Night Terminator - No Overexposure)
+  const ambientLight = new THREE.AmbientLight(0x081b2e, 0.5);
   scene.add(ambientLight);
 
-  const sunLight = new THREE.DirectionalLight(0xffffff, 1.45);
+  const sunLight = new THREE.DirectionalLight(0xffffff, 1.25);
   sunLight.position.set(6, 2.5, 4.5);
   scene.add(sunLight);
 
@@ -380,29 +400,106 @@ export function initBoradenEarth() {
     renderer.setSize(width, height);
   }, { passive: true });
 
-  // Scroll Pull-back Effect
+  // Scroll Tracking & Service Focus Controller
   let scrollY = 0;
-  window.addEventListener('scroll', () => {
-    scrollY = window.scrollY || window.pageYOffset;
-  }, { passive: true });
+  let lastScrollIdx = -1;
 
-  // 14. Global Interactive Controls & Continent Targeting
-  let targetRotation = null;
-  let beaconBoost = false;
-  let targetSunbeam = 0.0;
-  let currentSunbeam = 0.0;
-
-  // Rotation angles to focus directly on specific continents
-  const continentAngles = {
+  const serviceAngles = {
     'hq': { x: 0.36, y: 4.28 },
     'turkiye': { x: 0.36, y: 4.28 },
-    'avrupa': { x: 0.44, y: 4.52 },
+    'vergi': { x: 0.35, y: 6.45 },
+    'denetim': { x: 0.44, y: 4.52 },
+    'danismanlik': { x: -0.12, y: 5.75 },
+    'insan': { x: 0.04, y: 4.35 },
+    'sistem': { x: 0.32, y: 3.12 },
+    'akademi': { x: -0.25, y: 2.58 },
+    // Aliases
     'kuzey-amerika': { x: 0.35, y: 6.45 },
+    'avrupa': { x: 0.44, y: 4.52 },
     'guney-amerika': { x: -0.12, y: 5.75 },
     'afrika': { x: 0.04, y: 4.35 },
     'asya': { x: 0.32, y: 3.12 },
     'okyanusya': { x: -0.25, y: 2.58 }
   };
+
+  const scrollSequence = [
+    HQ_NODE,
+    SERVICES_NETWORK[0], // 01 Vergi
+    SERVICES_NETWORK[1], // 02 Denetim
+    SERVICES_NETWORK[2], // 03 Danışmanlık
+    SERVICES_NETWORK[3], // 04 İK & Bordro
+    SERVICES_NETWORK[4], // 05 Sistemler
+    SERVICES_NETWORK[5]  // 06 Akademi
+  ];
+
+  function updateScrollServiceHud(item) {
+    if (!item) return;
+    const hud = document.getElementById('earth-scroll-service-hud');
+    if (!hud) return;
+    if (hud.dataset.activeId === item.id) return;
+    hud.dataset.activeId = item.id;
+    hud.classList.add('is-active');
+
+    const dot = document.getElementById('hud-radar-node');
+    const num = document.getElementById('hud-service-num');
+    const tag = document.getElementById('hud-service-tag');
+    const heading = document.getElementById('hud-service-heading');
+    const summary = document.getElementById('hud-service-summary');
+    const features = document.getElementById('hud-features-row');
+
+    if (dot) {
+      dot.style.setProperty('--node-color', item.colorHex || '#38bdf8');
+      dot.style.background = item.colorHex || '#38bdf8';
+      dot.style.boxShadow = `0 0 16px ${item.colorHex || '#38bdf8'}`;
+    }
+    if (num) num.textContent = item.code;
+    if (tag) tag.innerHTML = item.serviceCode;
+    if (heading) heading.textContent = item.heading;
+    if (summary) summary.textContent = item.desc;
+    if (features && item.tags) {
+      features.innerHTML = item.tags.map(t => `<span class="hud-feat-badge">${t}</span>`).join('');
+    }
+
+    document.querySelectorAll('.solar-sector-chip').forEach(chip => {
+      const focus = chip.dataset.sectorFocus;
+      chip.classList.toggle('is-focused', focus === item.id);
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    scrollY = window.scrollY || window.pageYOffset;
+    
+    // As user scrolls through the earth scene (0 to 700px),
+    // automatically orient the globe toward each service node!
+    if (scrollY < 720 && !isDragging) {
+      let idx = 0;
+      if (scrollY < 70) idx = 0;
+      else if (scrollY < 170) idx = 1;
+      else if (scrollY < 270) idx = 2;
+      else if (scrollY < 370) idx = 3;
+      else if (scrollY < 470) idx = 4;
+      else if (scrollY < 570) idx = 5;
+      else idx = 6;
+
+      if (idx !== lastScrollIdx) {
+        lastScrollIdx = idx;
+        const targetItem = scrollSequence[idx];
+        if (targetItem && serviceAngles[targetItem.id]) {
+          targetRotation = serviceAngles[targetItem.id];
+          autoRotate = false;
+          beaconBoost = (targetItem.id === 'hq');
+          updateScrollServiceHud(targetItem);
+        }
+      }
+    }
+  }, { passive: true });
+
+  // Initial HUD load
+  updateScrollServiceHud(HQ_NODE);
+
+  // 14. Global Interactive Controls & Service Targeting
+  let targetRotation = null;
+  let beaconBoost = false;
 
   window.focusContinent = function(target) {
     if (!target || target === 'all') {
@@ -411,21 +508,35 @@ export function initBoradenEarth() {
       clearTimeout(window._earthResumeTimer);
       window._earthResumeTimer = setTimeout(() => {
         autoRotate = true;
-      }, 2000);
+      }, 2500);
       return;
     }
 
     autoRotate = false;
     beaconBoost = (target === 'hq' || target === 'turkiye');
-    if (continentAngles[target]) {
-      targetRotation = continentAngles[target];
+    if (serviceAngles[target]) {
+      targetRotation = serviceAngles[target];
+      const match = scrollSequence.find(s => s.id === target || s.aliasId === target);
+      if (match) updateScrollServiceHud(match);
     }
   };
 
-  // Sunbeam Solar Flare Trigger (when hovering Boraden logo)
-  window.triggerSunbeam = function(active) {
-    targetSunbeam = active ? 1.0 : 0.0;
-  };
+  window.focusService = window.focusContinent;
+
+  // Safe dummy for compatibility
+  window.triggerSunbeam = function() {};
+
+  // Wire solar-sector-chips on click/hover
+  document.querySelectorAll('.solar-sector-chip').forEach(chip => {
+    chip.addEventListener('mouseenter', () => {
+      const focus = chip.dataset.sectorFocus;
+      if (focus && window.focusContinent) window.focusContinent(focus);
+    });
+    chip.addEventListener('click', () => {
+      const focus = chip.dataset.sectorFocus;
+      if (focus && window.focusContinent) window.focusContinent(focus);
+    });
+  });
 
   // 15. Animation Loop
   let clock = new THREE.Clock();
@@ -437,14 +548,6 @@ export function initBoradenEarth() {
 
     // Slow atmospheric cloud drift
     cloudsMesh.rotation.y += delta * 0.018;
-
-    // Smooth sunbeam flare interpolation
-    currentSunbeam += (targetSunbeam - currentSunbeam) * 0.08;
-    sunbeamPlanes.forEach(mat => {
-      mat.opacity = currentSunbeam * 0.38;
-    });
-    sunbeamGroup.rotation.z += delta * 0.06;
-    sunLight.intensity = 1.45 + currentSunbeam * 1.15;
 
     // Target rotation (when triggered by navbar or interactive HUD chips)
     if (targetRotation && !isDragging) {
@@ -459,31 +562,31 @@ export function initBoradenEarth() {
       earthGroup.rotation.y += rotateVelocity.y;
     }
 
-    // Pulse Turkey Ring Beacon
-    const pulseSpeed = beaconBoost ? 2.5 : 1.5;
+    // Pulse Turkey Ring Beacon (Calm radar pulse)
+    const pulseSpeed = beaconBoost ? 1.8 : 1.2;
     const pulse1 = (time * pulseSpeed) % 1;
-    ringMesh1.scale.set(1 + pulse1 * 2.2, 1 + pulse1 * 2.2, 1);
-    ringMat1.opacity = Math.max(0, 1 - pulse1);
+    ringMesh1.scale.set(1 + pulse1 * 1.8, 1 + pulse1 * 1.8, 1);
+    ringMat1.opacity = Math.max(0, (1 - pulse1) * 0.7);
 
     const pulse2 = (time * pulseSpeed + 0.5) % 1;
-    ringMesh2.scale.set(1 + pulse2 * 2.6, 1 + pulse2 * 2.6, 1);
-    ringMat2.opacity = Math.max(0, 1 - pulse2);
+    ringMesh2.scale.set(1 + pulse2 * 2.0, 1 + pulse2 * 2.0, 1);
+    ringMat2.opacity = Math.max(0, (1 - pulse2) * 0.5);
 
-    // Pulse Continent Pins & Animate Photon Light Pulses along Great-Circle Arcs
+    // Pulse Continent Pins & Animate Subtle Photon Light Pulses along Great-Circle Arcs
     networkArcs.forEach(item => {
       const { arcPoints, pulseMesh, index } = item;
-      const progress = ((time * 0.35 + index * 0.16) % 1);
+      const progress = ((time * 0.22 + index * 0.16) % 1);
       const ptIndex = Math.min(arcPoints.length - 1, Math.floor(progress * arcPoints.length));
       pulseMesh.position.copy(arcPoints[ptIndex]);
-      // Fade near endpoints
       const fade = Math.sin(progress * Math.PI);
-      pulseMesh.scale.setScalar(0.7 + fade * 0.6);
+      pulseMesh.scale.setScalar(0.8 + fade * 0.4);
+      pulseMesh.material.opacity = fade * 0.75;
     });
 
     continentPins.forEach((pin, i) => {
       const ringPulse = (time * 1.2 + i * 0.3) % 1;
-      pin.pinRingMesh.scale.set(1 + ringPulse * 1.8, 1 + ringPulse * 1.8, 1);
-      pin.pinRingMat.opacity = Math.max(0, (1 - ringPulse) * 0.65);
+      pin.pinRingMesh.scale.set(1 + ringPulse * 1.5, 1 + ringPulse * 1.5, 1);
+      pin.pinRingMat.opacity = Math.max(0, (1 - ringPulse) * 0.45);
     });
 
     // Camera & Earth scroll response: Earth pulls back smoothly into deep space as user scrolls

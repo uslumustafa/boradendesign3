@@ -55,17 +55,16 @@ function header(D){
      <a class="nav-all" href="/hizmetler/">Tüm 47 hizmeti keşfedin ${arrow}</a>
     </div>
    </details>
-   <a href="/sektorler/" class="nav-link">Sektörler</a>
-   <a href="/hakkimizda/" class="nav-link">Boraden</a>
-  </nav>
+    <a href="/sektorler/" class="nav-link">Sektörler</a>
+    <a href="/hakkimizda/" class="nav-link">Boraden</a>
+   </nav>
 
-  <div class="nav-center-brand-wrap">
-   <a class="brand brand-center" href="/" id="nav-brand-center" aria-label="Boraden ana sayfa">
-    <span class="brand-sunbeam-corona" aria-hidden="true"><span class="sunbeam-ray-disk"></span></span>
+   <div class="nav-center-brand-wrap">
+    <a class="brand brand-center" href="/hakkimizda/" id="nav-brand-center" aria-label="Boraden Hakkımızda">
     <span class="brand-mark-svg">${mark}</span>
     <span class="brand-text-block">
      <span class="brand-text">BORADEN</span>
-     <span class="brand-subtext">BAĞIMSIZ DENETİM &amp; DANIŞMANLIK</span>
+     <span class="brand-subtext"><span class="subtext-accent-dot" aria-hidden="true"></span>Bağımsız Denetim ve Danışmanlık A.Ş.</span>
     </span>
    </a>
   </div>
@@ -98,7 +97,7 @@ function header(D){
  </div>
 </header>`;
 }
-function footer(){return `<footer class="footer wrap"><div class="footer-top">${logo}<p>Farklı uzmanlıklar.<br>Aynı büyük resim.</p><div><a href="tel:+902124832611">+90 (212) 483 26 11</a><a href="mailto:info@boraden.com.tr">info@boraden.com.tr</a><span>İstanbul, Türkiye</span></div></div><div class="footer-bottom"><span>© 2026 Boraden</span><nav aria-label="Alt bağlantılar"><a href="/kariyer/">Kariyer</a><a href="/ekibimiz/">Ekibimiz</a><a href="/perspektifler/">Perspektifler</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="#main">Yukarı ↑</a></nav></div></footer>`;}
+function footer(){return `<footer class="footer wrap"><div class="footer-top">${logo}<p>Farklı uzmanlıklar.<br>Aynı büyük resim.</p><div><a href="tel:+902124832611">+90 (212) 483 26 11</a><a href="mailto:info@boraden.com.tr">info@boraden.com.tr</a><span>İstanbul, Türkiye</span></div></div><div class="footer-bottom"><span>© 2026 Boraden</span><nav aria-label="Alt bağlantılar"><a href="/kariyer/">Kariyer</a><a href="/ekibimiz/">Ekibimiz</a><a href="/perspektifler/">Perspektifler</a><a href="/yayin-ilkeleri/">Yayin ilkeleri</a><a href="#main">Yukarı ↑</a></nav></div></footer>`;}
 function search(D){return `<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"><div class="search-top"><span class="eyebrow">BORADEN / KEŞFEDİN</span><button class="close-search" aria-label="Aramayı kapat">✕</button></div><label for="global-search" id="search-title">Size nasıl yardımcı olabiliriz?</label><input type="search" id="global-search" placeholder="Hizmet, sektör veya konu arayın…" autocomplete="off"><p class="search-count" aria-live="polite"></p><div class="search-results">${[...D.services.map(s=>({title:s.title,url:serviceURL(s),kind:'Hizmet',search:s.lead})),...D.sectors.map(s=>({title:s.title,url:'/sektorler/'+s.id+'/',kind:'Sektör',search:s.text}))].map(s=>`<a href="${s.url}" data-search="${esc(s.title+' '+s.search)}"><span>${esc(s.title)}<small>${s.kind}</small></span>${arrow}</a>`).join('')}</div></dialog>`;}
 function journalCard(p,kind){return `<article class="journal-card"><a href="/${kindPaths[kind]}/${p.id}/"><div class="journal-image">${p.cover?`<img src="/${esc(p.cover.replace(/^\//,''))}" alt="" loading="lazy" width="640" height="420">`:'<span class="editorial-symbol">↗</span>'}<span class="image-arrow">${arrow}</span></div><div class="card-meta"><span>${esc(p.category||kindNames[kind])}</span><time datetime="${esc(p.date)}">${date(p.date)}</time></div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p></a></article>`;}
 function home(D){
@@ -106,23 +105,24 @@ function home(D){
  return `
  <section class="space-earth-hero" id="uzay-dunya-sahnesi" aria-label="Boraden 3D Dünya ve Bağımsız Denetim">
   <div id="earth-canvas-container" class="earth-canvas-container"></div>
-  
-  <div class="space-hero-minimal-overlay" id="space-hero-brand-stage">
-    <div class="hero-brand-executive-lockup" id="space-hero-brand-lockup">
-     <div class="hero-brand-top">
-      <div class="hero-logo-badge" aria-hidden="true">${mark}</div>
-      <h1 class="hero-logo-text">BORADEN</h1>
-     </div>
-     <div class="hero-brand-bottom-right">
-      <span class="hero-brand-dot" aria-hidden="true"></span>
-      <p class="hero-company-text">Bağımsız Denetim ve Danışmanlık A.Ş.</p>
-     </div>
-    </div>
+
+  <div class="earth-scroll-service-hud" id="earth-scroll-service-hud" role="status" aria-live="polite">
+   <div class="hud-top-meta">
+    <span class="hud-radar-node" id="hud-radar-node" style="--node-color:#38bdf8;"></span>
+    <span class="hud-service-num" id="hud-service-num">00</span>
+    <span class="hud-service-tag" id="hud-service-tag">GENEL MERKEZ HUB &bull; TÜRKİYE</span>
+    <span class="hud-scroll-hint">SCROLL İLE DÖNER</span>
    </div>
+   <h3 class="hud-service-heading" id="hud-service-heading">Boraden Bağımsız Denetim ve Danışmanlık A.Ş.</h3>
+   <p class="hud-service-summary" id="hud-service-summary">33 yıllık bağımsız kurumsal güven, SPK, KGK ve BDDK yetkili denetim ve danışmanlık üssü.</p>
+   <div class="hud-features-row" id="hud-features-row">
+    <span class="hud-feat-badge">Tam Bağımsız</span>
+    <span class="hud-feat-badge">SPK &bull; KGK &bull; BDDK</span>
+    <span class="hud-feat-badge">1993'ten Bugüne</span>
+   </div>
+  </div>
 
-
-
-   <div class="space-hero-bottom-hint">
+  <div class="space-hero-bottom-hint">
    <a class="space-scroll-hint" href="#deloitte-content-sheet" aria-label="Aşağı kaydırın">
     <span>KEŞFETMEK İÇİN AŞAĞI KAYDIRIN</span>
     <span class="scroll-arrow">&darr;</span>
@@ -186,32 +186,55 @@ function home(D){
    </section>
 
    <section class="expertise-overview wrap" id="uzmanlik" data-expertise aria-labelledby="expertise-title">
-    <div class="expertise-heading"><p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ</p><h2 id="expertise-title">Size nasıl<br><em>yardımcı olabiliriz?</em></h2><p>Vergi ve denetimden şirketinizin geleceğine, insan kaynaklarından iş süreçlerinize.<br>İhtiyacınıza uygun uzmanlığı seçin.</p></div>
-    <div class="need-shortcuts" role="toolbar" aria-label="Hızlı ihtiyaç yönlendiricisi"><span class="need-title">Hızlı Odak:</span><div class="need-chips"><button type="button" class="need-chip is-active" data-need-index="-1">Tüm Uzmanlıklar</button><button type="button" class="need-chip" data-need-index="0">01 Vergi & Mevzuat</button><button type="button" class="need-chip" data-need-index="1">02 Bağımsız Denetim</button><button type="button" class="need-chip" data-need-index="2">03 Şirket Değerleme & M&A</button><button type="button" class="need-chip" data-need-index="3">04 Bordro & İK</button><button type="button" class="need-chip" data-need-index="4">05 Sistem & Raporlama</button><button type="button" class="need-chip" data-need-index="5">06 Akademi</button></div><div class="need-status-toast" id="need-status" aria-live="polite"><span class="need-status-dot"></span><span class="need-status-text">Tüm uzmanlık alanları aktif.</span></div></div>
-    <div class="expertise-stage-wrap">
-     <div class="expertise-puzzle">${puzzle({mode:'wide',id:'expertise'})}${puzzle({mode:'complete',id:'expertise-mobile'})}<p>Bir parçanın üzerine gelin. Uzmanlığı yakından keşfedin.</p></div>
-     <div class="expertise-grid">${(()=>{
-      const deliverables={
-       vergi:['Tam Tasdik & Kurumlar Vergisi','KDV İadesi ve Mahsup Yönetimi','Transfer Fiyatlandırması'],
-       denetim:['KGK, SPK, BDDK Finansal Denetim','UFRS / TFRS / BOBİ FRS','İç Kontrol & Risk Güvencesi'],
-       danismanlik:['Şirket Değerleme (İNA / Çarpan)','M&A Birleşme & Devralma','Finansal Due Diligence'],
-       insan:['Bordrolama Dış Kaynak (BPO)','SGK İstihdam & Prim Teşviki','İş Hukuku Uyum Denetimi'],
-       sistem:['ERP & Muhasebe Entegrasyonu','Yönetici BI Raporlama','Finansal Süreç Otomasyonu'],
-       akademi:['Mali İşler & Yönetici Eğitimi','Güncel Vergi Mevzuatı','UFRS Tablo Analizi']
-      };
-      return D.groups.map((g,i)=>{
-       const srvs=D.services.filter(s=>s.group===g.id);
-       const delivs=deliverables[g.id]||[];
-       return `<a class="expertise-card" data-expertise-card="${i}" id="alan-${g.id}" href="${groupURL(g)}" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div>${continentWatermark(g.id)}<h3>${esc(g.name)}</h3>${continentMetaBadge(g.id)}<p class="expertise-card-desc">${esc(g.description)}</p><ul class="card-deliverables-list">${delivs.map(d=>`<li><span class="deliv-bullet">✦</span> ${esc(d)}</li>`).join('')}</ul><div class="expertise-card-tags">${srvs.slice(0,3).map(s=>`<span class="card-mini-tag">${esc(s.title)}</span>`).join('')}</div><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;
-      }).join('');
-     })()}</div>
+    <div class="expertise-heading">
+     <p class="eyebrow">BÜYÜK RESME BAKIŞIMIZ &bull; BÜTÜNLEŞİK ÇÖZÜM MİMARİSİ</p>
+     <h2 id="expertise-title">Farklı uzmanlıklar.<br><em>Aynı büyük resim.</em></h2>
+     <p class="expertise-lead">Vergi, denetim, finansal değerleme, bordro ve sistem mühendisliğinde 33 yıllık kurumsal miras.<br>İhtiyacınıza uygun parçayı seçin, bütünleşik yapıyı yakından keşfedin.</p>
+    </div>
+
+    <div class="expertise-split-stage">
+     <!-- SOLDA: BÜYÜK VE SAYFAYLA UYUMLU YAPBOZ -->
+     <div class="expertise-puzzle-column">
+      <div class="expertise-puzzle 3d-space-puzzle">
+       ${puzzle({mode:'wide',id:'expertise'})}
+       ${puzzle({mode:'complete',id:'expertise-mobile'})}
+      </div>
+      <p class="cosmos-puzzle-cue"><span class="cue-dot"></span> Bütünleşik Çözüm Mimarisi &bull; Bir uzmanlığın üzerine gelin veya kartı tıklayın.</p>
+     </div>
+
+     <!-- SAĞDA: 6 HİZMET KARTI -->
+     <div class="expertise-cards-column">
+      <div class="expertise-grid">${(()=>{
+        return D.groups.map((g,i)=>{
+         const srvs=D.services.filter(s=>s.group===g.id);
+         return `<a class="expertise-card compact-card" data-expertise-card="${i}" id="alan-${g.id}" href="/hizmetler/alan/${g.id}/" style="--card-tone:${palette[i]}"><div class="expertise-card-top"><span class="expertise-card-number">0${i+1}</span><span class="expertise-card-count">${srvs.length} hizmet</span></div>${continentMetaBadge(g.id)}<h3>${esc(g.name)}</h3><p class="expertise-card-desc">${esc(g.description)}</p><span class="expertise-card-link"><span>Uzmanlığı inceleyin</span>${arrow}</span></a>`;
+        }).join('');
+      })()}</div>
+     </div>
+    </div>
+   </section>
+
+   <!-- ORTADA: RİJİT EDİTORYAL BLOG / YAYINLAR -->
+   <section class="journal wrap" id="editoryal-yayinlar">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">BİLGİDEN PERSPEKTİFE &bull; BORADEN YAYINLARI</p>
+      <h2>Rakamların ötesinde bir vizyon.<br><em>Finans, vergi ve mevzuat dinamikleri.</em></h2>
+     </div>
+     ${btn('Tüm yayınlar','/blog/','text-link')}
+    </div>
+    <div class="journal-grid">${featured.map(p=>journalCard(p,'blog')).join('')}</div>
+    <div class="quick-links">
+     <a href="/sirkuler/"><span>01</span>Sirküler & mevzuat${arrow}</a>
+     <a href="/hesaplama/"><span>02</span>Hesaplama araçları${arrow}</a>
+     <a href="/haberler/"><span>03</span>Güncel gündem${arrow}</a>
     </div>
    </section>
   </div>
 
   ${serviceRibbon(D)}
   ${homePerspectives(D)}
-  <section class="journal wrap"><div class="section-heading"><div><p class="eyebrow">BİLGİDEN PERSPEKTİFE</p><h2>Bir adım geriden bakın.<br><em>Bir adım ileriyi görün.</em></h2></div>${btn('Tüm yayınlar','/blog/','text-link')}</div><div class="journal-grid">${featured.map(p=>journalCard(p,'blog')).join('')}</div><div class="quick-links"><a href="/sirkuler/"><span>01</span>Sirküler & mevzuat${arrow}</a><a href="/hesaplama/"><span>02</span>Hesaplama araçları${arrow}</a><a href="/haberler/"><span>03</span>Güncel gündem${arrow}</a></div></section>
+
   ${homeSectors(D)}
   ${homeImpact()}
   ${institutionsBand()}

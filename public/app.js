@@ -63,11 +63,11 @@ if(opening){
 }
 const header=$('.header');
 if(header){
- let state={lastY:window.scrollY,anchor:window.scrollY,direction:0,hidden:false},frame=0,atTopEdge=false,overHeader=false;
+ let state={lastY:window.scrollY,anchor:window.scrollY,direction:0,hidden:false},frame=0;
  function updateHeader(){
   frame=0;
   const y=Math.max(0,Math.min(window.scrollY,document.documentElement.scrollHeight-window.innerHeight));
-  const locked=atTopEdge||overHeader||header.contains(document.activeElement)||!!header.querySelector('details[open]')||!!dialog?.open;
+  const locked=header.contains(document.activeElement)||!!header.querySelector('details[open]')||!!dialog?.open;
   state=headerScrollState(state,y,locked);
   header.classList.toggle('is-hidden',state.hidden);
   header.classList.toggle('is-scrolled',y>80);
@@ -75,10 +75,6 @@ if(header){
  function scheduleHeader(){if(!frame)frame=requestAnimationFrame(updateHeader);}
  window.addEventListener('scroll',scheduleHeader,{passive:true});
  window.addEventListener('resize',scheduleHeader,{passive:true});
- document.addEventListener('pointermove',event=>{if(event.pointerType==='touch')return;const near=event.clientY<=16;if(near!==atTopEdge){atTopEdge=near;scheduleHeader();}},{passive:true});
- document.addEventListener('pointerleave',()=>{atTopEdge=false;overHeader=false;scheduleHeader();});
- header.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'){overHeader=true;scheduleHeader();}});
- header.addEventListener('pointerleave',()=>{overHeader=false;scheduleHeader();});
  document.addEventListener('focusin',scheduleHeader);
  document.addEventListener('focusout',scheduleHeader);
  header.querySelectorAll('details').forEach(menu=>menu.addEventListener('toggle',scheduleHeader));
@@ -268,74 +264,144 @@ if (document.getElementById('earth-canvas-container')) {
  }).catch(err => console.error('Earth globe init error:', err));
 }
 
-// 6 Continents = 6 Services Metaphor Controller
+// 6 Core Corporate Services Controller (Pure Service Architecture, Zero Geographic Nomenclature)
 const CONTINENTS_DATA = {
  turkiye: {
   id: 'turkiye',
-  badge: 'TÜRKİYE &bull; MERKEZ HUB',
+  badge: 'GENEL MERKEZ &bull; MERKEZ HUB',
   tag: 'Boraden Bağımsız Denetim ve Danışmanlık A.Ş.',
   title: "Türkiye'nin Güven Üssü: Boraden",
-  desc: '1993’ten bugüne KGK, SPK ve BDDK yetkileriyle 6 kıta metaforundaki tüm hizmetlerimizin merkez üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.',
+  desc: '1993’ten bugüne KGK, SPK ve BDDK yetkileriyle tüm hizmetlerimizin stratejik merkez üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.',
   linkText: 'Tüm Uzmanlıkları İnceleyin',
   linkUrl: '#uzmanlik',
   targetCard: -1
  },
- avrupa: {
-  id: 'avrupa',
-  badge: 'AVRUPA &bull; 02 BAĞIMSIZ DENETİM',
+ hq: {
+  id: 'hq',
+  badge: 'GENEL MERKEZ &bull; MERKEZ HUB',
+  tag: 'Boraden Bağımsız Denetim ve Danışmanlık A.Ş.',
+  title: "Türkiye'nin Güven Üssü: Boraden",
+  desc: '1993’ten bugüne KGK, SPK ve BDDK yetkileriyle tüm hizmetlerimizin stratejik merkez üssü. Ankara ve İstanbul merkezlerimizden küresel standartlarda 6 stratejik alanda bütünleşik çözüm mimarisi sunuyoruz.',
+  linkText: 'Tüm Uzmanlıkları İnceleyin',
+  linkUrl: '#uzmanlik',
+  targetCard: -1
+ },
+ denetim: {
+  id: 'denetim',
+  badge: '02 BAĞIMSIZ DENETİM &bull; GÜVENCE',
   tag: 'UFRS &bull; TFRS Standartları',
   title: '02 Bağımsız Denetim ve Raporlama',
-  desc: 'Avrupa kıtası metaforumuz: Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili bağımsız denetim güvencesi. Güvenilir, şeffaf ve küresel yatırımcı raporlaması.',
+  desc: 'Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili bağımsız denetim güvencesi. Güvenilir, şeffaf ve küresel yatırımcı raporlaması.',
   linkText: '02 Bağımsız Denetim Sayfasına Git',
   linkUrl: '/hizmetler/bagimsiz-denetim/',
   targetCard: 1
  },
- 'kuzey-amerika': {
-  id: 'kuzey-amerika',
-  badge: 'KUZEY AMERİKA &bull; 01 VERGİ',
+ avrupa: {
+  id: 'denetim',
+  badge: '02 BAĞIMSIZ DENETİM &bull; GÜVENCE',
+  tag: 'UFRS &bull; TFRS Standartları',
+  title: '02 Bağımsız Denetim ve Raporlama',
+  desc: 'Uluslararası UFRS/TFRS standartlarında KGK, SPK ve BDDK yetkili bağımsız denetim güvencesi. Güvenilir, şeffaf ve küresel yatırımcı raporlaması.',
+  linkText: '02 Bağımsız Denetim Sayfasına Git',
+  linkUrl: '/hizmetler/bagimsiz-denetim/',
+  targetCard: 1
+ },
+ vergi: {
+  id: 'vergi',
+  badge: '01 VERGİ &bull; MEVZUAT YÖNETİMİ',
   tag: 'Tam Tasdik &bull; Transfer Fiyatlandırması',
   title: '01 Vergi & Mali Müşavirlik',
-  desc: 'Kuzey Amerika kıtası metaforumuz: Çok uluslu vergi mimarisi, transfer fiyatlandırması, tam tasdik denetimi ve uluslararası vergi planlaması çözümleri.',
+  desc: 'Çok uluslu kurumsal vergi mimarisi, transfer fiyatlandırması, tam tasdik denetimi ve mevzuat uyum çözümleri.',
   linkText: '01 Vergi Hizmetlerini İnceleyin',
   linkUrl: '/hizmetler/vergi-mali-musavirlik/',
   targetCard: 0
  },
- 'guney-amerika': {
-  id: 'guney-amerika',
-  badge: 'GÜNEY AMERİKA &bull; 03 DANIŞMANLIK',
-  tag: 'M&A &bull; Şirket Değerleme',
+ 'kuzey-amerika': {
+  id: 'vergi',
+  badge: '01 VERGİ &bull; MEVZUAT YÖNETİMİ',
+  tag: 'Tam Tasdik &bull; Transfer Fiyatlandırması',
+  title: '01 Vergi & Mali Müşavirlik',
+  desc: 'Çok uluslu kurumsal vergi mimarisi, transfer fiyatlandırması, tam tasdik denetimi ve mevzuat uyum çözümleri.',
+  linkText: '01 Vergi Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/vergi-mali-musavirlik/',
+  targetCard: 0
+ },
+ danismanlik: {
+  id: 'danismanlik',
+  badge: '03 DANIŞMANLIK &bull; ŞİRKET DEĞERLEME',
+  tag: 'M&A &bull; Finansal Modelleme',
   title: '03 Kurumsal Danışmanlık & Değerleme',
-  desc: 'Güney Amerika kıtası metaforumuz: Şirket birleşme ve devralmaları (M&A), finansal durum tespiti (Due Diligence), şirket değerleme ve stratejik yönetim.',
+  desc: 'Şirket birleşme ve devralmaları (M&A), finansal durum tespiti (Due Diligence), şirket değerleme ve stratejik yönetim.',
   linkText: '03 Danışmanlık Hizmetlerini İnceleyin',
   linkUrl: '/hizmetler/kurumsal-danismanlik/',
   targetCard: 2
  },
- afrika: {
-  id: 'afrika',
-  badge: 'AFRİKA &bull; 04 İK & BORDRO',
+ 'guney-amerika': {
+  id: 'danismanlik',
+  badge: '03 DANIŞMANLIK &bull; ŞİRKET DEĞERLEME',
+  tag: 'M&A &bull; Finansal Modelleme',
+  title: '03 Kurumsal Danışmanlık & Değerleme',
+  desc: 'Şirket birleşme ve devralmaları (M&A), finansal durum tespiti (Due Diligence), şirket değerleme ve stratejik yönetim.',
+  linkText: '03 Danışmanlık Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/kurumsal-danismanlik/',
+  targetCard: 2
+ },
+ insan: {
+  id: 'insan',
+  badge: '04 İK & BORDRO &bull; BPO OPERASYON',
   tag: '3.500+ Personel &bull; SGK Teşvik',
   title: '04 İnsan Kaynakları & Bordro Yönetimi',
-  desc: 'Afrika kıtası metaforumuz: 3.500+ çalışan operasyonunda bordro dış kaynak kullanımı, SGK teşvik optimizasyonu ve iş hukuku uyumluluk denetimleri.',
+  desc: '3.500+ çalışan operasyonunda bordro dış kaynak kullanımı, SGK teşvik optimizasyonu ve iş hukuku uyumluluk denetimleri.',
   linkText: '04 Bordro Hizmetlerini İnceleyin',
   linkUrl: '/hizmetler/insan-kaynaklari/',
   targetCard: 3
  },
- asya: {
-  id: 'asya',
-  badge: 'ASYA &bull; 05 SİSTEM & İŞ ZEKÂSI',
+ afrika: {
+  id: 'insan',
+  badge: '04 İK & BORDRO &bull; BPO OPERASYON',
+  tag: '3.500+ Personel &bull; SGK Teşvik',
+  title: '04 İnsan Kaynakları & Bordro Yönetimi',
+  desc: '3.500+ çalışan operasyonunda bordro dış kaynak kullanımı, SGK teşvik optimizasyonu ve iş hukuku uyumluluk denetimleri.',
+  linkText: '04 Bordro Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/insan-kaynaklari/',
+  targetCard: 3
+ },
+ sistem: {
+  id: 'sistem',
+  badge: '05 SİSTEMLER &bull; İŞ ZEKÂSI',
   tag: 'ERP Entegrasyonu &bull; BI Raporlama',
   title: '05 Sistemler & Finansal İş Zekâsı',
-  desc: 'Asya kıtası metaforumuz: ERP entegrasyonu, finansal veri ambarı modelleme, süreç dijitalizasyonu ve üst yönetici analitik iş zekâsı panelleri (BI).',
+  desc: 'ERP entegrasyonu, finansal veri ambarı modelleme, süreç dijitalizasyonu ve üst yönetici analitik iş zekâsı panelleri (BI).',
   linkText: '05 Sistemler Hizmetlerini İnceleyin',
   linkUrl: '/hizmetler/sistemler-is-zekasi/',
   targetCard: 4
  },
- okyanusya: {
-  id: 'okyanusya',
-  badge: 'OKYANUSYA &bull; 06 AKADEMİ',
+ asya: {
+  id: 'sistem',
+  badge: '05 SİSTEMLER &bull; İŞ ZEKÂSI',
+  tag: 'ERP Entegrasyonu &bull; BI Raporlama',
+  title: '05 Sistemler & Finansal İş Zekâsı',
+  desc: 'ERP entegrasyonu, finansal veri ambarı modelleme, süreç dijitalizasyonu ve üst yönetici analitik iş zekâsı panelleri (BI).',
+  linkText: '05 Sistemler Hizmetlerini İnceleyin',
+  linkUrl: '/hizmetler/sistemler-is-zekasi/',
+  targetCard: 4
+ },
+ akademi: {
+  id: 'akademi',
+  badge: '06 BORADEN AKADEMİ &bull; YÖNETİCİ EĞİTİMİ',
   tag: 'Kurumsal Finans &bull; Seminerler',
   title: '06 Boraden Akademi',
-  desc: 'Okyanusya kıtası metaforumuz: Şirket yönetim kurulları, CFO’lar ve finans liderleri için güncel mevzuat, TFRS/UFRS standartları ve mali seminerler.',
+  desc: 'Şirket yönetim kurulları, CFO’lar ve finans liderleri için güncel mevzuat, TFRS/UFRS standartları ve mali seminerler.',
+  linkText: "06 Boraden Akademi'yi İnceleyin",
+  linkUrl: '/hizmetler/akademi/',
+  targetCard: 5
+ },
+ okyanusya: {
+  id: 'akademi',
+  badge: '06 BORADEN AKADEMİ &bull; YÖNETİCİ EĞİTİMİ',
+  tag: 'Kurumsal Finans &bull; Seminerler',
+  title: '06 Boraden Akademi',
+  desc: 'Şirket yönetim kurulları, CFO’lar ve finans liderleri için güncel mevzuat, TFRS/UFRS standartları ve mali seminerler.',
   linkText: "06 Boraden Akademi'yi İnceleyin",
   linkUrl: '/hizmetler/akademi/',
   targetCard: 5
@@ -351,10 +417,6 @@ function selectContinentMetaphor(key) {
 
  if (window.focusContinent) {
   window.focusContinent(key === 'turkiye' ? 'hq' : key);
- }
-
- if (window.triggerSunbeam) {
-  window.triggerSunbeam(key === 'turkiye');
  }
 
  const liveBadge = document.getElementById('live-badge');
@@ -401,67 +463,25 @@ if (metaphorNav) {
  });
 }
 
-// Center Logo Interactive God-Ray Sunbeam & Unfold Earth Trigger
-const navCenterLogo = document.querySelector('.brand-center');
-if (navCenterLogo) {
- navCenterLogo.addEventListener('mouseenter', () => {
-  navCenterLogo.classList.add('is-sunbeam-active');
-  if (window.triggerSunbeam) window.triggerSunbeam(true);
-  if (window.focusContinent) window.focusContinent('hq');
- });
 
- navCenterLogo.addEventListener('mouseleave', () => {
-  navCenterLogo.classList.remove('is-sunbeam-active');
-  if (window.triggerSunbeam) window.triggerSunbeam(false);
-  if (window.focusContinent) window.focusContinent('all');
- });
 
- navCenterLogo.addEventListener('click', (e) => {
-  if (location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '') {
-   e.preventDefault();
-   navCenterLogo.classList.add('is-sunbeam-active');
-   if (window.triggerSunbeam) window.triggerSunbeam(true);
-   selectContinentMetaphor('turkiye');
-
-   const earthHero = document.getElementById('uzay-dunya-sahnesi');
-   const servicesSheet = document.getElementById('uzmanlik') || document.getElementById('deloitte-content-sheet');
-   
-   if (window.scrollY > 200) {
-    if (earthHero) earthHero.scrollIntoView({ behavior: 'smooth', block: 'start' });
-   } else {
-    if (servicesSheet) servicesSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
-   }
-
-   setTimeout(() => {
-    navCenterLogo.classList.remove('is-sunbeam-active');
-    if (window.triggerSunbeam) window.triggerSunbeam(false);
-   }, 3500);
-  }
- });
-}
-
-// Executive Hero Brand Lockup Interactive Trigger
-const heroBrandLockup = document.getElementById('space-hero-brand-lockup') || document.getElementById('earth-grounding-bar');
-if (heroBrandLockup) {
- heroBrandLockup.addEventListener('mouseenter', () => {
-  if (window.triggerSunbeam) window.triggerSunbeam(true);
-  if (window.focusContinent) window.focusContinent('hq');
- });
-
- heroBrandLockup.addEventListener('mouseleave', () => {
-  if (window.triggerSunbeam) window.triggerSunbeam(false);
-  if (window.focusContinent) window.focusContinent('all');
- });
-
- heroBrandLockup.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (window.triggerSunbeam) window.triggerSunbeam(true);
-  const servicesSheet = document.getElementById('deloitte-content-sheet') || document.getElementById('uzmanlik');
-  if (servicesSheet) servicesSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  setTimeout(() => {
-   if (window.triggerSunbeam) window.triggerSunbeam(false);
-  }, 3000);
- });
+// Interactive 3D Cosmic Space Puzzle Mouse Parallax Tilt
+const puzzleCosmos = document.getElementById('space-puzzle-cosmos');
+if (puzzleCosmos) {
+ const puzzleStage = puzzleCosmos.querySelector('.expertise-puzzle');
+ if (puzzleStage) {
+  puzzleCosmos.addEventListener('mousemove', (e) => {
+   const rect = puzzleCosmos.getBoundingClientRect();
+   const x = (e.clientX - rect.left) / rect.width - 0.5;
+   const y = (e.clientY - rect.top) / rect.height - 0.5;
+   const tiltX = -y * 14;
+   const tiltY = x * 18;
+   puzzleStage.style.transform = `rotateX(${15 + tiltX}deg) rotateY(${tiltY}deg) translateZ(8px)`;
+  });
+  puzzleCosmos.addEventListener('mouseleave', () => {
+   puzzleStage.style.transform = 'rotateX(15deg) rotateY(0deg) translateZ(0px)';
+  });
+ }
 }
 
 }

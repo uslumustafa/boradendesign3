@@ -497,43 +497,171 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .sector-matrix-card:hover .sector-matrix-link svg{transform:translate(3px,-2px)}
 @media(max-width:1100px){.sector-matrix-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.sector-matrix-grid{grid-template-columns:1fr}}
-.expertise-stage-wrap{display:grid;grid-template-columns:460px 1fr;gap:36px;align-items:center;margin-top:24px}
-.expertise-puzzle{position:relative;isolation:isolate;width:100%;max-width:460px;margin:0 auto;text-align:center;perspective:1400px}
-.expertise-puzzle>.puzzle-wide{display:none!important}
-.expertise-puzzle>.puzzle-complete{display:block!important;width:100%;max-width:430px;height:auto;margin:0 auto;transform:rotateX(24deg) rotateZ(-2deg);transform-style:preserve-3d;filter:drop-shadow(0 24px 45px rgba(0,0,0,0.14));transition:transform .4s ease}
-.expertise-puzzle>.puzzle-complete:hover{transform:rotateX(20deg) rotateZ(-1deg) translateY(-4px)}
-.expertise-puzzle::before{content:'';position:absolute;z-index:-1;inset:10% 2% 9%;background:radial-gradient(ellipse,rgba(2,132,199,0.08),transparent 70%);pointer-events:none}
-.expertise-puzzle>p{font-size:12px;color:#64748b;margin-top:14px;font-weight:600}
+/* Expansive 3D Cosmic Deep Space Puzzle Arena */
+.space-puzzle-cosmos{
+ position:relative;
+ isolation:isolate;
+ width:100%;
+ border-radius:24px;
+ overflow:hidden;
+ margin:28px 0 32px;
+ padding:56px 28px 44px;
+ background:radial-gradient(ellipse 90% 70% at 50% 35%, rgba(12, 36, 62, 0.95) 0%, rgba(3, 7, 18, 0.98) 70%, #02040a 100%);
+ border:1px solid rgba(56, 189, 248, 0.2);
+ box-shadow:0 35px 80px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+ perspective:1400px;
+}
+.cosmos-stars-layer{
+ position:absolute;
+ inset:0;
+ background-image:radial-gradient(1.5px 1.5px at 30px 40px, #ffffff, rgba(0,0,0,0)), radial-gradient(1px 1px at 140px 170px, #38bdf8, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 260px 70px, #94a3b8, rgba(0,0,0,0)), radial-gradient(1px 1px at 360px 210px, #ffffff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 500px 130px, #38bdf8, rgba(0,0,0,0)), radial-gradient(1px 1px at 660px 270px, #ffffff, rgba(0,0,0,0)), radial-gradient(1.5px 1.5px at 820px 80px, #38bdf8, rgba(0,0,0,0)), radial-gradient(1px 1px at 960px 230px, #ffffff, rgba(0,0,0,0));
+ background-repeat:repeat;
+ background-size:1100px 380px;
+ opacity:0.6;
+ pointer-events:none;
+}
+.cosmos-nebula-glow{
+ position:absolute;
+ inset:0;
+ background:radial-gradient(circle at 50% 35%, rgba(2, 132, 199, 0.16), transparent 60%);
+ pointer-events:none;
+}
+.expertise-puzzle{
+ position:relative;
+ isolation:isolate;
+ width:100%;
+ max-width:1080px;
+ margin:0 auto;
+ text-align:center;
+ perspective:1400px;
+ transform-style:preserve-3d;
+ transform:rotateX(15deg) rotateY(0deg);
+ transition:transform .35s cubic-bezier(.16, 1, .3, 1);
+}
+.expertise-puzzle>.puzzle-wide{
+ display:block!important;
+ width:100%;
+ max-width:1040px;
+ height:auto;
+ margin:0 auto;
+ filter:drop-shadow(0 30px 60px rgba(0,0,0,0.6)) drop-shadow(0 0 25px rgba(56, 189, 248, 0.25));
+ transition:transform .4s ease;
+}
+.expertise-puzzle>.puzzle-complete{
+ display:none!important;
+}
+.cosmos-puzzle-cue{
+ font-size:12px;
+ font-weight:650;
+ color:#94a3b8;
+ letter-spacing:.06em;
+ margin-top:22px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:8px;
+ text-transform:uppercase;
+}
+.cue-dot{
+ width:6px;
+ height:6px;
+ border-radius:50%;
+ background:#38bdf8;
+ box-shadow:0 0 10px #38bdf8;
+ animation:pulseRadar 2s infinite;
+}
 .expertise-puzzle .piece-label{font-size:14px;font-weight:600}
 .expertise-puzzle .piece-face{transition:transform .3s cubic-bezier(.16,.8,.2,1)}
-.expertise-puzzle .puzzle-piece:is(.is-selected,:hover,:focus-visible) .piece-face{transform:translateY(-16px) scale(1.12)}
-.expertise-puzzle .puzzle-piece.is-selected .piece-outline{stroke:#0284c7;stroke-width:2.5}
+.expertise-puzzle .puzzle-piece:is(.is-selected,:hover,:focus-visible) .piece-face{transform:translateY(-14px) scale(1.1);filter:drop-shadow(0 0 18px rgba(56, 189, 248, 0.5))}
+.expertise-puzzle .puzzle-piece.is-selected .piece-outline{stroke:#38bdf8;stroke-width:2.5}
 .expertise-puzzle .puzzle-piece.is-selected .piece-label{font-weight:700}
-.expertise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:0}
-.expertise-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-width:0;min-height:175px;padding:16px 18px;border:1px solid #e2e8f0;border-top:3px solid var(--card-tone);border-radius:10px;background:#ffffff;color:#0f172a;box-shadow:0 4px 14px rgba(0,0,0,0.02);transition:all .25s cubic-bezier(.16,.85,.3,1);scroll-margin-top:110px;text-decoration:none}
+
+/* Compact, Non-Bloated Service Cards */
+.expertise-grid{
+ display:grid;
+ grid-template-columns:repeat(3, minmax(0, 1fr));
+ gap:16px;
+ margin-top:0;
+}
+.expertise-card{
+ position:relative;
+ overflow:hidden;
+ display:flex;
+ flex-direction:column;
+ min-width:0;
+ min-height:148px;
+ padding:15px 18px;
+ border:1px solid #e2e8f0;
+ border-top:3.5px solid var(--card-tone);
+ border-radius:12px;
+ background:#ffffff;
+ color:#0f172a;
+ box-shadow:0 4px 16px rgba(0,0,0,0.03);
+ transition:all .25s cubic-bezier(.16,.85,.3,1);
+ scroll-margin-top:110px;
+ text-decoration:none;
+}
 .expertise-card>*{position:relative;z-index:1}
-.expertise-card .continent-watermark{position:absolute;z-index:0}
-.expertise-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.expertise-card-number{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--card-tone)}
-.expertise-card-count{font-size:10.5px;font-weight:650;padding:2px 8px;border-radius:999px;background:#f1f5f9;color:#475569}
-.expertise-card h3{font-family:Manrope,sans-serif;font-size:15px;font-weight:750;line-height:1.3;letter-spacing:-.02em;color:#0f172a;margin-bottom:6px}
-.expertise-card-desc{font-size:12px;color:#64748b;line-height:1.5;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.expertise-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;margin-bottom:12px}
-.card-mini-tag{font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:4px;background:#f8fafc;color:#334155;border:1px solid #e2e8f0;white-space:nowrap}
-.expertise-card-link{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px solid #f1f5f9;font-size:11.5px;font-weight:700;color:var(--card-tone)}
-.expertise-card-link svg{width:14px;height:14px;transition:transform .2s}
-.expertise-card:is(:focus-visible,.is-selected){background:#ffffff;border-color:var(--card-tone);box-shadow:0 16px 36px rgba(15,23,42,0.1),0 0 0 2px var(--card-tone);transform:translateY(-4px)}
-.expertise-card:hover{background:#ffffff;border-color:var(--card-tone);box-shadow:0 14px 30px rgba(15,23,42,0.08);transform:translateY(-4px)}
+.expertise-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.expertise-card-number{font-size:12.5px;font-weight:800;letter-spacing:.06em;color:var(--card-tone)}
+.expertise-card-count{font-size:10px;font-weight:700;padding:2px 7px;border-radius:999px;background:#f8fafc;color:#475569;border:1px solid #e2e8f0}
+.expertise-card h3{font-family:Manrope,sans-serif;font-size:15px;font-weight:750;line-height:1.25;letter-spacing:-.02em;color:#0f172a;margin-bottom:4px}
+.expertise-card-desc{font-size:11.5px;color:#64748b;line-height:1.45;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.expertise-card-link{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px solid #f1f5f9;font-size:11px;font-weight:750;color:var(--card-tone);margin-top:auto}
+.expertise-card-link svg{width:13px;height:13px;transition:transform .2s}
+.expertise-card:is(:focus-visible,.is-selected){background:#ffffff;border-color:var(--card-tone);box-shadow:0 16px 36px rgba(15,23,42,0.1),0 0 0 2px var(--card-tone);transform:translateY(-3px)}
+.expertise-card:hover{background:#ffffff;border-color:var(--card-tone);box-shadow:0 12px 28px rgba(15,23,42,0.07);transform:translateY(-3px)}
 .expertise-card:hover .expertise-card-link svg{transform:translate(3px,-2px)}
+
+/* Earth Scroll-Driven Service HUD */
+.earth-scroll-service-hud{
+ position:absolute;
+ bottom:36px;
+ left:36px;
+ z-index:25;
+ width:min(450px, calc(100% - 72px));
+ background:rgba(3, 7, 18, 0.85);
+ backdrop-filter:blur(22px);
+ -webkit-backdrop-filter:blur(22px);
+ border:1px solid rgba(255, 255, 255, 0.12);
+ border-radius:14px;
+ padding:16px 20px;
+ color:#ffffff;
+ box-shadow:0 24px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(56, 189, 248, 0.18);
+ transition:all .35s cubic-bezier(.16, 1, .3, 1);
+ pointer-events:auto;
+}
+.hud-top-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.hud-radar-node{width:8px;height:8px;border-radius:50%;background:var(--node-color, #38bdf8);box-shadow:0 0 14px var(--node-color, #38bdf8);flex-shrink:0;animation:pulseRadar 1.8s infinite}
+.hud-service-num{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;font-size:11px;font-weight:800;color:var(--node-color, #38bdf8)}
+.hud-service-tag{font-size:10px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:#cbd5e1}
+.hud-scroll-hint{margin-left:auto;font-size:8.5px;font-weight:700;letter-spacing:.1em;padding:2px 6px;border-radius:4px;background:rgba(255, 255, 255, 0.08);color:#94a3b8}
+.hud-service-heading{font-family:Manrope,sans-serif;font-size:15.5px;font-weight:750;color:#ffffff;margin:0 0 6px 0;line-height:1.25}
+.hud-service-summary{font-size:11.5px;line-height:1.5;color:#94a3b8;margin:0 0 10px 0}
+.hud-features-row{display:flex;flex-wrap:wrap;gap:6px}
+.hud-feat-badge{font-size:9.5px;font-weight:650;padding:2.5px 7px;border-radius:5px;background:rgba(255, 255, 255, 0.06);border:1px solid rgba(255, 255, 255, 0.1);color:#e2e8f0}
+
 .stats-ribbon{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0;border-bottom:1px solid var(--line)}
 .stat-cell{display:flex;align-items:baseline;gap:14px}
 .stat-value{font-family:Manrope,sans-serif;font-size:clamp(34px,3.6vw,48px);font-weight:650;letter-spacing:-.05em;color:#00547c;line-height:1}
 .stat-value em{font-style:normal;color:#e94d2a;font-size:.75em;margin-left:2px}
 .stat-meta{font-size:12px;font-weight:600;color:#1e3d3b;line-height:1.4}
 .stat-meta small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:2px}
-@media(max-width:1200px){.expertise-stage-wrap{grid-template-columns:400px 1fr;gap:24px}.expertise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:960px){.expertise-stage-wrap{grid-template-columns:1fr;gap:28px}.expertise-puzzle{max-width:440px}.expertise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats-ribbon{grid-template-columns:repeat(2,1fr);gap:20px}}
-@media(max-width:600px){.expertise-grid{grid-template-columns:1fr;gap:12px}.stats-ribbon{grid-template-columns:1fr;gap:16px}}
+@media(max-width:960px){
+ .expertise-puzzle>.puzzle-wide{display:none!important}
+ .expertise-puzzle>.puzzle-complete{display:block!important;width:100%;max-width:440px;height:auto;margin:0 auto;filter:drop-shadow(0 24px 45px rgba(0,0,0,0.5))}
+ .expertise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .stats-ribbon{grid-template-columns:repeat(2,1fr);gap:20px}
+}
+@media(max-width:768px){
+ .earth-scroll-service-hud{left:16px;right:16px;bottom:20px;width:auto;padding:12px 15px}
+ .hud-service-heading{font-size:14px}
+ .hud-service-summary{font-size:11px}
+}
+@media(max-width:600px){
+ .expertise-grid{grid-template-columns:1fr;gap:12px}
+ .stats-ribbon{grid-template-columns:1fr;gap:16px}
+}
 @media(prefers-reduced-motion:reduce){.hero-art .puzzle-svg{transform:none!important}.expertise-card,.expertise-card-link>svg,.expertise-puzzle .piece-face{transition:none!important}.expertise-card:is(:hover,:focus-visible,.is-selected),.expertise-card .expertise-card-link>svg,.expertise-puzzle .puzzle-piece:is(.is-selected,:hover,:focus-visible) .piece-face{transform:none}}
 
 /* The final map is a landscape invitation, with a clear route into the firm. */
@@ -729,21 +857,25 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  left:0;
  right:0;
  z-index:100;
- transition:background .3s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease;
- background:rgba(2, 6, 14, 0.78)!important;
+ transition:transform .34s cubic-bezier(.16,1,.3,1), background .3s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease !important;
+ background:rgba(4, 10, 20, 0.85)!important;
  backdrop-filter:blur(24px) saturate(180%)!important;
  -webkit-backdrop-filter:blur(24px) saturate(180%)!important;
  border-bottom:1px solid rgba(255,255,255,0.08)!important;
  color:#e2e8f0;
 }
-/* White Deloitte Scrolled Navbar State */
+.boraden-navbar.is-hidden, .header.is-hidden{
+ transform:translateY(-100%) !important;
+ pointer-events:none !important;
+}
+/* Luxury Dark Glass Scrolled Navbar State */
 .boraden-navbar.is-scrolled, body:not(.home) .boraden-navbar{
- background:rgba(255, 255, 255, 0.96)!important;
+ background:rgba(6, 14, 28, 0.94)!important;
  backdrop-filter:blur(24px) saturate(180%)!important;
  -webkit-backdrop-filter:blur(24px) saturate(180%)!important;
- border-bottom:1px solid rgba(15, 23, 42, 0.08)!important;
- box-shadow:0 4px 20px rgba(0,0,0,0.04)!important;
- color:#0f172a;
+ border-bottom:1px solid rgba(255, 255, 255, 0.1)!important;
+ box-shadow:0 10px 30px rgba(0,0,0,0.5)!important;
+ color:#f1f5f9;
 }
 .boraden-navbar .header-inner{
  display:flex;
@@ -752,35 +884,42 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  max-width:1640px;
  margin:auto;
  padding:0 var(--gutter);
- height:84px;
+ height:92px;
 }
+#desktop-nav-left,
+.boraden-navbar .desktop-nav:not(.desktop-nav-right),
 .desktop-nav-left{
- flex:1;
+ flex:1 1 0%!important;
+ margin-left:0!important;
+ margin-right:auto!important;
  display:flex;
  align-items:center;
- gap:clamp(16px,2vw,32px);
+ gap:clamp(14px,1.8vw,28px);
  justify-content:flex-start;
  font-size:13.5px;
  font-weight:600;
 }
+#desktop-nav-left a,
 .desktop-nav-left a{
  color:#cbd5e1;
  transition:color .2s;
 }
+#desktop-nav-left a:hover,
 .desktop-nav-left a:hover{
- color:#ffffff;
+ color:#38bdf8;
 }
 .is-scrolled .desktop-nav-left a, body:not(.home) .desktop-nav-left a{
- color:#334155;
+ color:#cbd5e1;
 }
 .is-scrolled .desktop-nav-left a:hover, body:not(.home) .desktop-nav-left a:hover{
- color:#0f172a;
+ color:#38bdf8;
 }
 .nav-center-brand-wrap{
  flex:0 0 auto;
  display:flex;
  align-items:center;
  justify-content:center;
+ text-align:center;
 }
 .nav-center-brand-wrap .brand-center{
  position:relative;
@@ -788,99 +927,27 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  align-items:center;
  gap:14px;
  text-decoration:none;
- padding:6px 14px;
- border-radius:10px;
- transition:all .25s ease;
+ padding:8px 18px;
+ border-radius:12px;
+ transition:all .28s cubic-bezier(.16,1,.3,1);
 }
-.nav-center-brand-wrap .brand-center:hover,
-.nav-center-brand-wrap .brand-center.is-sunbeam-active{
- background:rgba(255,255,255,0.06);
- transform:scale(1.02);
+.nav-center-brand-wrap .brand-center:hover{
+ opacity:0.92;
 }
 .is-scrolled .nav-center-brand-wrap .brand-center:hover, body:not(.home) .nav-center-brand-wrap .brand-center:hover{
- background:rgba(15, 23, 42, 0.04);
+ opacity:0.88;
 }
 
-/* Radiant God-Ray Sunbeam Corona behind Boraden Logo */
-.brand-sunbeam-corona{
- position:absolute;
- inset:-30px -40px;
- pointer-events:none;
- opacity:0;
- transform:scale(0.65);
- transition:opacity .35s cubic-bezier(.16,1,.3,1), transform .45s cubic-bezier(.16,1,.3,1);
- z-index:-1;
- display:flex;
- align-items:center;
- justify-content:center;
-}
-.brand-center:hover .brand-sunbeam-corona,
-.brand-center.is-sunbeam-active .brand-sunbeam-corona{
- opacity:1;
- transform:scale(1.15);
-}
-.sunbeam-ray-disk{
- width:100%;
- height:100%;
- border-radius:50%;
- background:conic-gradient(
-  from 0deg,
-  rgba(255,215,0,0) 0deg,
-  rgba(255,230,120,0.55) 15deg,
-  rgba(255,215,0,0) 30deg,
-  rgba(56,189,248,0.5) 45deg,
-  rgba(255,215,0,0) 60deg,
-  rgba(255,240,150,0.6) 75deg,
-  rgba(255,215,0,0) 90deg,
-  rgba(34,197,94,0.45) 105deg,
-  rgba(255,215,0,0) 120deg,
-  rgba(255,230,120,0.55) 135deg,
-  rgba(255,215,0,0) 150deg,
-  rgba(56,189,248,0.5) 165deg,
-  rgba(255,215,0,0) 180deg,
-  rgba(255,240,150,0.6) 195deg,
-  rgba(255,215,0,0) 210deg,
-  rgba(255,215,0,0) 240deg,
-  rgba(255,230,120,0.55) 255deg,
-  rgba(255,215,0,0) 270deg,
-  rgba(56,189,248,0.5) 285deg,
-  rgba(255,215,0,0) 300deg,
-  rgba(255,240,150,0.6) 315deg,
-  rgba(255,215,0,0) 330deg,
-  rgba(34,197,94,0.45) 345deg,
-  rgba(255,215,0,0) 360deg
- );
- filter:blur(6px);
- animation:sunbeamSpin 14s linear infinite;
- mask-image:radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%);
- -webkit-mask-image:radial-gradient(circle, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%);
-}
-.brand-sunbeam-corona::after{
- content:'';
- position:absolute;
- inset:12%;
- border-radius:50%;
- background:radial-gradient(circle, rgba(255,230,120,0.7) 0%, rgba(56,189,248,0.35) 40%, transparent 72%);
- filter:blur(12px);
- animation:coronaPulse 2.4s ease-in-out infinite alternate;
-}
-@keyframes sunbeamSpin{
- 0%{transform:rotate(0deg)}
- 100%{transform:rotate(360deg)}
-}
-@keyframes coronaPulse{
- 0%{transform:scale(0.88);opacity:0.6}
- 100%{transform:scale(1.18);opacity:1}
-}
 /* Boraden 3-Check Brand Mark SVG */
 .brand-mark-svg{
  display:flex;
  align-items:center;
  justify-content:center;
+ flex-shrink:0;
 }
 .brand-mark-svg svg, .boraden-mark-svg{
- width:48px;
- height:32px;
+ width:54px;
+ height:36px;
  display:block;
 }
 .boraden-mark-svg path{
@@ -921,36 +988,57 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  flex-direction:column;
  align-items:flex-start;
  justify-content:center;
- gap:2px;
+ gap:3px;
+ text-align:left;
 }
 .brand-text{
  font-family:Manrope,sans-serif;
- font-size:22px;
- font-weight:800;
- letter-spacing:.12em;
+ font-size:26px;
+ font-weight:850;
+ letter-spacing:.16em;
  color:#ffffff;
  line-height:1;
  transition:color .25s ease;
+ text-shadow:0 2px 12px rgba(0,0,0,0.6);
 }
 .is-scrolled .brand-text, body:not(.home) .brand-text{
- color:#0f172a;
+ color:#0b1727;
+ text-shadow:none;
 }
 .brand-subtext{
  font-family:Manrope,sans-serif;
- font-size:7.5px;
+ font-size:8.5px;
  font-weight:750;
- letter-spacing:.14em;
+ letter-spacing:.22em;
  text-transform:uppercase;
  color:#94a3b8;
- line-height:1;
+ line-height:1.2;
+ white-space:nowrap;
  transition:color .25s ease;
+ display:flex;
+ align-items:center;
+ gap:6px;
+}
+.subtext-accent-dot{
+ width:4.5px;
+ height:4.5px;
+ border-radius:50%;
+ background:#38bdf8;
+ display:inline-block;
+ box-shadow:0 0 6px #38bdf8;
 }
 .is-scrolled .brand-subtext, body:not(.home) .brand-subtext{
- color:#64748b;
+ color:#475569;
+}
+.is-scrolled .subtext-accent-dot, body:not(.home) .subtext-accent-dot{
+ background:#0284c7;
+ box-shadow:none;
 }
 
+.boraden-navbar .desktop-nav-right,
 .desktop-nav-right{
- flex:1;
+ flex:1 1 0%!important;
+ margin-left:auto!important;
  display:flex;
  align-items:center;
  gap:clamp(14px,1.6vw,24px);
@@ -1093,124 +1181,134 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  height:100%!important;
 }
 
-/* Executive Minimalist Brand Lockup (Logo + Subtitle Aligned Bottom-Right) */
-.space-hero-minimal-overlay{
- position:relative;
- z-index:10;
- margin-top:clamp(96px, 14vh, 140px);
+/* Solar Sunbeam Sector HUD (Güneş Işını Bağlantı Paneli) */
+.space-solar-hud{
+ position:absolute;
+ top:clamp(100px, 14vh, 136px);
+ left:50%;
+ transform:translateX(-50%) translateY(-12px) scale(0.96);
+ z-index:20;
+ pointer-events:none;
+ opacity:0;
+ transition:opacity .42s cubic-bezier(.16,1,.3,1), transform .42s cubic-bezier(.16,1,.3,1);
+ width:min(94vw, 980px);
+}
+.space-solar-hud.is-active{
+ opacity:1;
+ transform:translateX(-50%) translateY(0) scale(1);
+}
+.solar-hud-inner{
+ background:rgba(6, 15, 28, 0.88);
+ border:1px solid rgba(56, 189, 248, 0.4);
+ backdrop-filter:blur(24px) saturate(180%);
+ -webkit-backdrop-filter:blur(24px) saturate(180%);
+ border-radius:20px;
+ padding:18px 24px;
+ box-shadow:0 24px 64px rgba(0, 0, 0, 0.75), 0 0 45px rgba(56, 189, 248, 0.22);
  text-align:center;
- pointer-events:auto;
- padding:0 20px;
  display:flex;
  flex-direction:column;
  align-items:center;
- will-change:transform, opacity;
+ gap:8px;
 }
-.hero-brand-executive-lockup{
- display:inline-flex;
- flex-direction:column;
- align-items:flex-end;
- cursor:pointer;
- user-select:none;
- transition:transform .3s cubic-bezier(.16, 1, .3, 1);
-}
-.hero-brand-executive-lockup:hover{
- transform:translateY(-2px);
-}
-.hero-brand-top{
- display:inline-flex;
- align-items:center;
- gap:clamp(14px, 2vw, 24px);
-}
-.hero-logo-badge{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- padding:10px 16px;
- background:rgba(15, 23, 42, 0.75);
- border:1px solid rgba(255, 255, 255, 0.22);
- border-radius:14px;
- backdrop-filter:blur(16px);
- -webkit-backdrop-filter:blur(16px);
- box-shadow:0 10px 30px rgba(0, 0, 0, 0.5);
- flex-shrink:0;
- transition:all .3s ease;
-}
-.hero-brand-executive-lockup:hover .hero-logo-badge{
- background:rgba(20, 32, 54, 0.9);
- border-color:rgba(56, 189, 248, 0.5);
- box-shadow:0 12px 36px rgba(56, 189, 248, 0.3);
-}
-.hero-logo-badge svg{
- width:clamp(46px, 4.8vw, 66px);
- height:clamp(30px, 3.2vw, 44px);
- display:block;
-}
-.hero-logo-badge .mark-blue{
- stroke:#1d8cf8!important;
- stroke-width:4.8;
-}
-.hero-logo-badge .mark-red{
- stroke:#f97316!important;
- stroke-width:4.8;
-}
-.hero-logo-badge .mark-green{
- stroke:#22c55e!important;
- stroke-width:4.8;
-}
-.hero-logo-text{
- font-family:Manrope,sans-serif;
- font-size:clamp(46px, 6.5vw, 84px);
- font-weight:850;
- letter-spacing:-.035em;
- line-height:1;
- color:#ffffff;
- margin:0;
- text-shadow:0 4px 30px rgba(0,0,0,0.8), 0 0 50px rgba(56, 189, 248, 0.22);
-}
-.hero-brand-bottom-right{
+.solar-hud-head{
  display:inline-flex;
  align-items:center;
  gap:8px;
- align-self:flex-end;
- margin-top:6px;
- padding:5px 12px;
- border-radius:8px;
- background:rgba(8, 20, 38, 0.65);
- border:1px solid rgba(255, 255, 255, 0.14);
- backdrop-filter:blur(12px);
- -webkit-backdrop-filter:blur(12px);
- box-shadow:0 4px 16px rgba(0,0,0,0.4);
 }
-.hero-brand-dot{
- width:7px;
- height:7px;
+.solar-hud-radar{
+ width:8px;
+ height:8px;
  border-radius:50%;
- background:#22c55e;
- box-shadow:0 0 10px #22c55e, 0 0 18px rgba(34, 197, 94, 0.8);
- flex-shrink:0;
- animation:pulseDot 2.2s infinite ease-in-out;
+ background:#38bdf8;
+ box-shadow:0 0 10px #38bdf8;
+ animation:solarRadarPing 1.8s infinite;
 }
-.hero-company-text{
+@keyframes solarRadarPing{
+ 0%{ transform:scale(0.9); box-shadow:0 0 0 0 rgba(56, 189, 248, 0.8); }
+ 70%{ transform:scale(1.3); box-shadow:0 0 0 8px rgba(56, 189, 248, 0); }
+ 100%{ transform:scale(0.9); box-shadow:0 0 0 0 rgba(56, 189, 248, 0); }
+}
+.solar-hud-kicker{
  font-family:Manrope,sans-serif;
- font-size:clamp(11px, 1.15vw, 14px);
- font-weight:750;
- letter-spacing:.12em;
- line-height:1;
- color:#e2e8f0;
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:.18em;
  text-transform:uppercase;
+ color:#38bdf8;
+}
+.solar-hud-title{
+ font-family:Manrope,sans-serif;
+ font-size:clamp(15px, 1.8vw, 19px);
+ font-weight:750;
+ color:#ffffff;
  margin:0;
- text-shadow:0 2px 10px rgba(0,0,0,0.6);
+ text-shadow:0 2px 14px rgba(0,0,0,0.8);
+}
+.solar-hud-sectors{
+ display:grid;
+ grid-template-columns:repeat(6, 1fr);
+ gap:8px;
+ width:100%;
+ margin-top:6px;
+}
+.solar-sector-chip{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ padding:8px 4px;
+ background:rgba(255, 255, 255, 0.04);
+ border:1px solid rgba(255, 255, 255, 0.1);
+ border-radius:10px;
+ transition:all .25s ease;
+ position:relative;
+ overflow:hidden;
+}
+.solar-sector-chip::before{
+ content:'';
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ height:2.5px;
+ background:var(--chip-color, #38bdf8);
+ box-shadow:0 0 10px var(--chip-color, #38bdf8);
+}
+.solar-sector-chip strong{
+ font-family:Manrope,sans-serif;
+ font-size:11.5px;
+ font-weight:750;
+ color:#ffffff;
  white-space:nowrap;
 }
-@media(max-width:768px){
- .hero-brand-top{gap:12px}
- .hero-logo-badge{padding:8px 12px}
- .hero-logo-badge svg{width:36px;height:24px}
- .hero-logo-text{font-size:38px}
- .hero-brand-bottom-right{padding:4px 8px;margin-top:4px}
- .hero-company-text{font-size:10px;letter-spacing:.08em}
+.solar-sector-chip small{
+ font-size:9.5px;
+ color:#94a3b8;
+ margin-top:2px;
+ white-space:nowrap;
 }
+.solar-sector-chip.is-focused,
+.solar-sector-chip:hover{
+ background:rgba(255, 255, 255, 0.14);
+ border-color:var(--chip-color, #38bdf8);
+ box-shadow:0 0 16px var(--chip-color, #38bdf8);
+ transform:translateY(-2px);
+ cursor:pointer;
+}
+@media(max-width:850px){
+ .solar-hud-sectors{
+  grid-template-columns:repeat(3, 1fr);
+  gap:6px;
+ }
+}
+@media(max-width:520px){
+ .solar-hud-sectors{
+  grid-template-columns:repeat(2, 1fr);
+ }
+}
+
+
 
 /* Continent Architectural Watermark for Services */
 .continent-watermark{
@@ -1323,21 +1421,21 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  inset:0;
  z-index:3;
  pointer-events:none;
- background:linear-gradient(180deg, rgba(2,6,14,0) 0%, rgba(15,23,42,0.6) 30%, rgba(226,232,240,0.85) 75%, #ffffff 100%);
+ background:linear-gradient(180deg, rgba(2,6,14,0) 0%, rgba(6,13,23,0.4) 40%, rgba(7,17,30,0.95) 100%);
  opacity:0;
  transition:opacity .1s linear;
 }
 
-/* 5. DELOITTE-GRADE CLEAN CHIC WHITE SHEET */
+/* 5. UNIFIED LUXURY ARCHITECTURAL EXECUTIVE SHEET */
 .deloitte-sheet{
  position:relative;
  z-index:10;
- background:#ffffff;
- color:#0f172a;
- border-radius:44px 44px 0 0;
- box-shadow:0 -35px 100px rgba(0,0,0,0.65), 0 -10px 30px rgba(0,0,0,0.35);
+ background:#07111e;
+ color:#f1f5f9;
+ border-radius:40px 40px 0 0;
+ box-shadow:0 -30px 90px rgba(0,0,0,0.85);
  margin-top:0;
- border-top:1px solid rgba(255,255,255,0.4);
+ border-top:1px solid rgba(255,255,255,0.09);
  padding-top:28px;
  will-change:transform;
 }
@@ -1345,14 +1443,14 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  width:68px;
  height:4px;
  border-radius:999px;
- background:#cbd5e1;
+ background:rgba(255,255,255,0.2);
  margin:0 auto 32px;
 }
 
-/* 6. DELOITTE EXECUTIVE OVERVIEW SECTION */
+/* 6. EXECUTIVE OVERVIEW SECTION */
 .deloitte-executive-overview{
  padding:80px 0 60px;
- border-bottom:1px solid rgba(15, 23, 42, 0.08);
+ border-bottom:1px solid rgba(255, 255, 255, 0.08);
 }
 .deloitte-overview-grid{
  display:grid;
@@ -1367,33 +1465,34 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  font-size:11px;
  font-weight:800;
  letter-spacing:.14em;
- color:#0284c7;
+ color:#38bdf8;
  text-transform:uppercase;
  margin-bottom:18px;
 }
 .kicker-green-dot{
  width:7px;
  height:7px;
- border-radius:2px;
- background:#16a34a;
+ border-radius:50%;
+ background:#22c55e;
+ box-shadow:0 0 8px rgba(34, 197, 94, 0.6);
 }
 .deloitte-headline{
  font-size:clamp(32px, 3.4vw, 48px);
  font-weight:800;
  letter-spacing:-.03em;
  line-height:1.15;
- color:#0f172a;
+ color:#ffffff;
 }
 .deloitte-headline em{
  font-family:Instrument,Georgia,serif;
- font-style:italic;
- color:#0284c7;
+ font-style:normal;
+ color:#38bdf8;
  font-weight:400;
 }
 .deloitte-lead{
  font-size:16px;
  line-height:1.8;
- color:#475569;
+ color:#94a3b8;
  margin:22px 0 28px;
 }
 .deloitte-badges-row{
@@ -1404,9 +1503,9 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
 .deloitte-pill-badge{
  font-size:11.5px;
  font-weight:700;
- color:#0f172a;
- background:#f1f5f9;
- border:1px solid #e2e8f0;
+ color:#e2e8f0;
+ background:rgba(255, 255, 255, 0.06);
+ border:1px solid rgba(255, 255, 255, 0.12);
  padding:6px 14px;
  border-radius:9999px;
  letter-spacing:.02em;
@@ -1417,35 +1516,37 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  gap:16px;
 }
 .deloitte-feature-card{
- background:#ffffff;
- border:1px solid rgba(15, 23, 42, 0.08);
+ background:rgba(13, 24, 41, 0.72);
+ border:1px solid rgba(255, 255, 255, 0.08);
  border-radius:14px;
  padding:22px 24px;
- box-shadow:0 4px 16px rgba(0,0,0,0.02);
- transition:all .25s ease;
+ box-shadow:0 8px 24px rgba(0,0,0,0.25);
+ backdrop-filter:blur(14px);
+ -webkit-backdrop-filter:blur(14px);
+ transition:all .25s cubic-bezier(.16,1,.3,1);
 }
 .deloitte-feature-card:hover{
- border-color:#0284c7;
- box-shadow:0 12px 28px rgba(2, 132, 199, 0.08);
- transform:translateY(-2px);
+ border-color:rgba(56, 189, 248, 0.5);
+ box-shadow:0 16px 36px rgba(0, 0, 0, 0.45);
+ transform:translateY(-3px);
 }
 .feature-num{
  font-size:12px;
  font-weight:800;
- color:#0284c7;
+ color:#38bdf8;
  letter-spacing:.1em;
  margin-bottom:8px;
 }
 .deloitte-feature-card h3{
  font-size:17px;
  font-weight:750;
- color:#0f172a;
+ color:#ffffff;
  margin-bottom:8px;
 }
 .deloitte-feature-card p{
  font-size:13.5px;
  line-height:1.7;
- color:#64748b;
+ color:#94a3b8;
 }
 
 /* COMPLETION OFFICE PILLS */
@@ -1459,19 +1560,19 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  display:flex;
  flex-direction:column;
  gap:3px;
- background:#ffffff;
- border:1px solid rgba(15, 23, 42, 0.1);
+ background:rgba(13, 24, 41, 0.72);
+ border:1px solid rgba(255, 255, 255, 0.1);
  padding:12px 18px;
  border-radius:10px;
  font-size:13px;
- box-shadow:0 2px 8px rgba(0,0,0,0.02);
+ box-shadow:0 4px 14px rgba(0,0,0,0.2);
 }
 .office-pill strong{
  font-weight:750;
- color:#0f172a;
+ color:#ffffff;
 }
 .office-pill span{
- color:#64748b;
+ color:#94a3b8;
  font-size:12px;
 }
 
@@ -1482,7 +1583,7 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  .earth-hud-card{position:static;width:100%;margin-top:20px}
 }
 
-/* DELOITTE-INSPIRED BRAND FILM ENHANCEMENTS */
+/* BRAND FILM ENHANCEMENTS */
 .deloitte-film-meta-header{
  display:flex;
  align-items:center;
@@ -1554,60 +1655,360 @@ html:has(#uzmanlik:target){scroll-padding-top:24px}
  flex-shrink:0;
 }
 
-/* DELOITTE EXECUTIVE CLEAN MINIMALIST SHEET EXTENSIONS */
+/* ==========================================================================
+   UNIFIED LUXURY ARCHITECTURAL DESIGN SYSTEM
+   Boraden Tri-Color: Lacivert (#00547c, #38bdf8), Turuncumsu Kırmızı (#cb6651), Yeşil (#41885f)
+   ========================================================================== */
 .expertise-sheet{
- background:#ffffff!important;
- border-top:1px solid #e2e8f0!important;
+ background:#07111e!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+ color:#f1f5f9!important;
 }
 .stats-ribbon{
- border-bottom:1px solid #e2e8f0!important;
+ border-bottom:1px solid rgba(255, 255, 255, 0.08)!important;
 }
 .stat-value{
- color:#0f172a!important;
+ color:#ffffff!important;
 }
 .stat-value em{
- color:#0284c7!important;
+ color:#cb6651!important; /* Boraden Turuncumsu Kırmızı */
 }
 .stat-meta{
- color:#334155!important;
+ color:#cbd5e1!important;
+}
+.stat-meta small{
+ color:#94a3b8!important;
+}
+
+/* ==========================================================================
+   BÜTÜNLEŞİK ÇÖZÜM MİMARİSİ: SOLDA BÜYÜK YAPBOZ, SAĞDA KARTLAR
+   ========================================================================== */
+.expertise-overview{
+ padding:75px 0 85px;
+ border-bottom:1px solid rgba(255, 255, 255, 0.08);
+}
+.expertise-heading h2{
+ color:#ffffff;
+}
+.expertise-heading h2 em{
+ color:#38bdf8;
+ font-style:normal;
+}
+.expertise-heading-lead, .expertise-lead{
+ color:#94a3b8;
+ font-size:15.5px;
+ line-height:1.8;
+ max-width:68ch;
+ margin-top:14px;
+}
+
+.expertise-split-stage{
+ display:grid;
+ grid-template-columns:1.15fr 1fr;
+ gap:clamp(28px, 3.5vw, 52px);
+ align-items:start;
+ margin-top:36px;
+}
+
+.expertise-puzzle-column{
+ position:sticky;
+ top:110px;
+ background:rgba(10, 20, 36, 0.75);
+ border:1px solid rgba(255, 255, 255, 0.09);
+ border-radius:20px;
+ padding:28px 24px;
+ box-shadow:0 24px 60px rgba(0, 0, 0, 0.5);
+ backdrop-filter:blur(20px);
+ -webkit-backdrop-filter:blur(20px);
+}
+.expertise-puzzle-column .puzzle-svg{
+ width:100%;
+ height:auto;
+ display:block;
+ filter:drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+}
+.puzzle-caption-hint, .cosmos-puzzle-cue{
+ display:flex;
+ align-items:center;
+ gap:8px;
+ font-size:12px;
+ color:#94a3b8;
+ margin-top:18px;
+ padding-top:14px;
+ border-top:1px solid rgba(255, 255, 255, 0.07);
+}
+
+.expertise-cards-column .expertise-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:16px;
 }
 .expertise-card{
- background:#ffffff!important;
- border:1px solid #e2e8f0!important;
- border-top:3px solid var(--card-tone)!important;
- border-radius:12px!important;
- box-shadow:0 4px 20px rgba(0,0,0,0.02)!important;
+ display:flex;
+ flex-direction:column;
+ background:rgba(13, 24, 41, 0.72)!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-top:3px solid var(--card-tone, #38bdf8)!important;
+ border-radius:14px!important;
+ padding:20px 22px;
+ text-decoration:none;
+ color:#f1f5f9;
+ box-shadow:0 8px 24px rgba(0, 0, 0, 0.25)!important;
+ backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);
+ transition:all .25s cubic-bezier(.16,1,.3,1)!important;
 }
-.expertise-card:hover{
- border-color:var(--card-tone)!important;
- box-shadow:0 16px 40px rgba(2, 132, 199, 0.08)!important;
- transform:translateY(-4px)!important;
+.expertise-card:hover, .expertise-card.is-selected{
+ border-color:var(--card-tone, #38bdf8)!important;
+ background:rgba(18, 33, 56, 0.88)!important;
+ box-shadow:0 16px 36px rgba(0, 0, 0, 0.45)!important;
+ transform:translateY(-3px)!important;
 }
-.home-impact{
- background:#f8fafc!important;
- border-top:1px solid #e2e8f0!important;
- border-bottom:1px solid #e2e8f0!important;
+.expertise-card-top{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ margin-bottom:12px;
 }
-.impact-card{
- background:#ffffff!important;
- border:1px solid #e2e8f0!important;
- border-radius:12px!important;
+.expertise-card-number{
+ font-size:13px;
+ font-weight:800;
+ letter-spacing:.08em;
+ color:var(--card-tone, #38bdf8);
 }
+.expertise-card-count{
+ font-size:11px;
+ font-weight:600;
+ color:#94a3b8;
+ background:rgba(255, 255, 255, 0.06);
+ padding:3px 8px;
+ border-radius:9999px;
+ border:1px solid rgba(255, 255, 255, 0.08);
+}
+.expertise-card h3{
+ font-size:17px;
+ font-weight:750;
+ color:#ffffff;
+ line-height:1.35;
+ margin:0 0 8px;
+}
+.expertise-card-desc{
+ font-size:12.5px;
+ line-height:1.65;
+ color:#94a3b8;
+ margin-bottom:14px;
+ flex-grow:1;
+}
+.expertise-card-link{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ font-size:12px;
+ font-weight:700;
+ color:var(--card-tone, #38bdf8);
+ margin-top:auto;
+}
+.expertise-card-link svg{
+ width:14px;
+ height:14px;
+ transition:transform .2s ease;
+}
+.expertise-card:hover .expertise-card-link svg{
+ transform:translateX(3px);
+}
+
+@media(max-width:1040px){
+ .expertise-split-stage{grid-template-columns:1fr}
+ .expertise-puzzle-column{position:static}
+}
+@media(max-width:620px){
+ .expertise-cards-column .expertise-grid{grid-template-columns:1fr}
+}
+
+/* ==========================================================================
+   ORTALARA ALINAN RİJİT EDİTORYAL YAYINLAR / BLOG BÖLÜMÜ
+   ========================================================================== */
+.journal{
+ padding:75px 0 85px!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-bottom:1px solid rgba(255, 255, 255, 0.08)!important;
+}
+.journal .section-heading h2{
+ color:#ffffff!important;
+}
+.journal .section-heading h2 em{
+ color:#38bdf8!important;
+ font-style:normal;
+}
+.journal-grid{
+ display:grid;
+ grid-template-columns:repeat(3, 1fr);
+ gap:24px;
+ margin-top:32px;
+}
+.journal-card{
+ background:rgba(13, 24, 41, 0.72)!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-radius:14px!important;
+ overflow:hidden;
+ transition:all .25s cubic-bezier(.16,1,.3,1);
+ box-shadow:0 8px 24px rgba(0, 0, 0, 0.3)!important;
+}
+.journal-card:hover{
+ border-color:rgba(56, 189, 248, 0.4)!important;
+ box-shadow:0 16px 40px rgba(0, 0, 0, 0.5)!important;
+ transform:translateY(-4px);
+}
+.journal-card a{
+ display:flex;
+ flex-direction:column;
+ padding:0 0 20px;
+ height:100%;
+ text-decoration:none;
+ color:inherit;
+}
+.journal-image{
+ aspect-ratio:16/10;
+ background:rgba(8, 16, 28, 0.9)!important;
+ border-radius:0!important;
+ border-bottom:1px solid rgba(255, 255, 255, 0.08);
+}
+.journal-card .card-meta{
+ padding:16px 20px 0;
+ color:#38bdf8!important;
+ font-weight:700;
+ font-size:11px;
+ letter-spacing:.06em;
+}
+.journal-card h3{
+ padding:8px 20px 0;
+ font-size:18px!important;
+ font-weight:750;
+ color:#ffffff!important;
+ line-height:1.35;
+}
+.journal-card p{
+ padding:8px 20px 0;
+ font-size:13px!important;
+ color:#94a3b8!important;
+ line-height:1.7;
+ flex-grow:1;
+}
+.quick-links{
+ display:grid;
+ grid-template-columns:repeat(3, 1fr);
+ gap:18px;
+ margin-top:40px;
+}
+.quick-links > a{
+ display:flex;
+ align-items:center;
+ gap:14px;
+ background:rgba(13, 24, 41, 0.65)!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-radius:12px;
+ padding:18px 22px!important;
+ color:#f1f5f9!important;
+ font-weight:600;
+ font-size:13.5px;
+ transition:all .25s ease;
+}
+.quick-links > a > span{
+ font-size:11px;
+ font-weight:800;
+ color:#38bdf8!important;
+ background:rgba(56, 189, 248, 0.1);
+ padding:3px 8px;
+ border-radius:6px;
+ border:1px solid rgba(56, 189, 248, 0.2);
+}
+.quick-links > a:hover{
+ border-color:#38bdf8!important;
+ background:rgba(18, 33, 56, 0.85)!important;
+ transform:translateY(-2px);
+}
+@media(max-width:860px){
+ .journal-grid{grid-template-columns:1fr}
+ .quick-links{grid-template-columns:1fr}
+}
+
+/* ==========================================================================
+   SEKTÖRLER, ETKİ, PERSPEKTİFLER & COMPLETION BÖLÜMLERİ
+   ========================================================================== */
 .home-sectors{
- background:#ffffff!important;
- border-top:1px solid #e2e8f0!important;
+ background:#07111e!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
 }
 .sector-matrix-card{
- background:#ffffff!important;
- border:1px solid #e2e8f0!important;
- border-radius:12px!important;
+ background:rgba(13, 24, 41, 0.72)!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-radius:14px!important;
+}
+.sector-matrix-card h3{
+ color:#ffffff!important;
+}
+.sector-matrix-desc, .sector-matrix-lead{
+ color:#94a3b8!important;
+}
+.sector-topic-tag{
+ background:rgba(255, 255, 255, 0.06)!important;
+ color:#cbd5e1!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+}
+.home-impact{
+ background:#060d18!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-bottom:1px solid rgba(255, 255, 255, 0.08)!important;
+}
+.impact-card{
+ background:rgba(13, 24, 41, 0.72)!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
+ border-radius:14px!important;
+}
+.impact-num{
+ color:#cb6651!important; /* Boraden Turuncumsu Kırmızı */
+}
+.impact-card h3{
+ color:#ffffff!important;
+}
+.impact-desc{
+ color:#94a3b8!important;
+}
+.impact-badge{
+ background:rgba(255, 255, 255, 0.06)!important;
+ color:#cbd5e1!important;
+ border:1px solid rgba(255, 255, 255, 0.08)!important;
 }
 .world-perspectives{
- background:#f8fafc!important;
- border-top:1px solid #e2e8f0!important;
+ background:#07111e!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+}
+.world-perspectives h2, .world-perspectives h3{
+ color:#ffffff!important;
+}
+.world-perspectives p{
+ color:#94a3b8!important;
 }
 .completion{
- background:#ffffff!important;
- border-top:1px solid #e2e8f0!important;
+ background:rgba(9, 18, 32, 0.95)!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+ color:#f1f5f9!important;
+}
+.completion h2, .completion h3{
+ color:#ffffff!important;
+}
+.completion p{
+ color:#94a3b8!important;
+}
+.footer{
+ background:#040810!important;
+ border-top:1px solid rgba(255, 255, 255, 0.08)!important;
+ color:#94a3b8!important;
+}
+.footer a{
+ color:#cbd5e1!important;
+}
+.footer a:hover{
+ color:#38bdf8!important;
 }
 
